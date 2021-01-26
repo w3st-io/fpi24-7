@@ -22,7 +22,7 @@ const router = new VueRouter({
 			component: Index,
 			meta: {
 				auth: true,
-				title: 'Home'
+				title: '24/7 Fire Protection Inc.'
 			},
 		},
 		// About //

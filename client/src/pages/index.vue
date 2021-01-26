@@ -1,21 +1,45 @@
 <template>
 	<div class="">
+		<!-- Caraousel -->
 		<BCaraousel :slideObjs="defaultData.caraousel" />
 
-		
 		<BContainer class="my-5">
 			<BRow>
+				<!-- Main -->
 				<BCol cols="12" lg="8">
 					<img :src="defaultData.content.r1.c1.image" alt="No Image" class="w-100">
 
-					<p class="mt-2 h2 text-center">
+					<p class="my-3 h2 text-center">
 						<BBadge
 							v-html="defaultData.content.r1.c1.imageText"
 							variant="danger"
 						/>
 					</p>
+
+					<BRow class="my-3">
+						<BCol
+							v-for="(col, index) in defaultData.content.r1.c1.r1.columns"
+							:key="index"
+							cols="12" sm="6" md="6" lg="6" xl="4"
+							class="mb-3"
+						>
+							<BCard class="shadow">
+								<div class="text-center">
+									<img :src="col.image" alt="Card Image" class="rounded">
+									<h4 class="text-primary">{{ col.title }}</h4>
+								</div>
+
+								<p class="text-dark">{{ col.description }}</p>
+
+								<BButton pill variant="primary" class="w-100">
+									Read More
+								</BButton>
+							</BCard>
+						</BCol>
+					</BRow>
 				</BCol>
 
+				<!-- Side -->
 				<BCol cols="12" lg="4">
 					<form action="" class="mb-4 card card-body shadow">
 						<!-- Quote title -->

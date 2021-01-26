@@ -2,7 +2,7 @@ const companyInfo = require('../companyInfo')
 
 
 const textHtml = `
-	<div class="mb-2 badge badge-dark shadow">
+	<div class="d-none d-md-block mb-2 badge badge-dark shadow">
 		<h1 class="m-0" style="text-shadow: none;">
 			${companyInfo.companyName}
 		</h1>
@@ -41,6 +41,34 @@ module.exports = {
 				caption2: companyInfo.companyCaption,
 				address: companyInfo.address,
 				googleMapsLink: companyInfo.googleMapsLink,
+
+				r1: {
+					columns: [
+						{
+							image: require('../../assets/images/pages/index/residential.webp'),
+							title: 'Residential',
+							description: 'Small, medium or large we offer professionally designed and installed wet and dry fire sprinkler systems.',
+							link: '',
+						},
+						{
+							image: require('../../assets/images/pages/index/commercial.webp'),
+							title: 'Commercial',
+							description: 'We provide quality design and installation for retail, office, store front, gyms, hospitals, schools and more.',
+							link: '',
+						},
+						{
+							image: require('../../assets/images/pages/index/industrial.webp'),
+							title: 'Industrial',
+							description: 'Whatever your storage needs, we can offer ESFR warehouse storage, control mode and density design fire protection.',
+							link: '',
+						}
+					]
+				},
+
+				r2: {
+					c1: {},
+					c2: {},
+				}
 			},
 		
 			c2: {
@@ -53,10 +81,6 @@ module.exports = {
 				phoneNumberLink: companyInfo.phoneNumberLink,
 				faxNumber: companyInfo.faxNumber,
 				faxNumberLink: companyInfo.faxNumberLink,
-			},
-		},
-		r2: {
-			c1: {
 			},
 		},
 	},

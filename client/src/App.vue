@@ -1,5 +1,5 @@
 <template>
-	<div id="app" :key="appKey">
+	<div id="app" :key="appKey" class="bg-light">
 		<NavBar @menu-btn-clicked="toggle()" />
 
 		<!-- Hidden Side Menu -->
