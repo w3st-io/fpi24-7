@@ -1,0 +1,13 @@
+$theme-colors: (
+    "primary": #005de7,
+    "danger": rgb(163, 0, 0),
+);
+
+
+// [IMPORT] //
+@import 'bootstrap/scss/bootstrap.scss';
+
+// [CONTAINER] //
+@media (min-width: 1600px) {
+    .container { max-width: 1500px; }
+}

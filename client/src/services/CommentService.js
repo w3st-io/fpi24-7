@@ -1,0 +1,140 @@
+// [IMPORT] //
+import axios from 'axios'
+
+
+// [AUTH-TOKEN-SETUP] //
+const authAxios = async () => {
+	return axios.create({
+		baseURL: '/api/comments',
+		headers: {
+			authorization: `Bearer ${localStorage.usertoken}`,
+			authorization2: `Bearer ${localStorage.admintoken}`
+		}
+	})
+}
+
+
+/******************* [CRUD] *******************/
+// [CREATE] Auth Required //
+async function s_create(cleanJSON) {
+	try {
+		const authAxios = await this.authAxios()
+		
+		return (await authAxios.post('/create', { cleanJSON })).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+// [UPDATE] Auth Required //
+async function s_update(comment_id, cleanJSON) {
+	try {
+		const authAxios = await this.authAxios()
+
+		return (await authAxios.post('/update', { comment_id, cleanJSON })).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+// [DELETE] Auth Required //
+async function s_delete(comment_id) {
+	try {
+		const authAxios = await this.authAxios()	
+
+		return (await authAxios.delete(`/delete/${comment_id}`)).data
+	}
+	catch (err) {
+		console.log('eerr', err);
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+/******************* [LIKE-SYSTEM] *******************/
+// ADD/REMOVE LIKE //
+async function s_like(comment) {
+	try {
+		const authAxios = await this.authAxios()
+
+		// Add the liker from the Post Object
+		return (
+			await authAxios.post(
+				'/like',
+				{
+					comment_id: comment._id,
+					commentUser_id: comment.user._id
+				}
+			)
+		).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+async function s_unlike(comment) {
+	try {
+		const authAxios = await this.authAxios()
+
+		// Remove the liker from the Post Object
+		return (await authAxios.post('/unlike', { comment_id: comment._id })).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+/******************* [REPORT] *******************/
+async function s_report(comment_id, reportType) {
+	try {
+		const authAxios = await this.authAxios()
+
+		return (await authAxios.post('/report', { comment_id, reportType })).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `CommentService: Error --> ${err}`
+		}
+	}
+}
+
+
+// [EXPORT] //
+export default {
+	authAxios,
+	s_create,
+	s_update,
+	s_delete,
+	s_like,
+	s_unlike,
+	s_report,
+}

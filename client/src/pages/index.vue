@@ -1,0 +1,128 @@
+<template>
+	<div class="">
+		<BCaraousel :slideObjs="defaultData.caraousel" />
+
+		
+		<BContainer class="my-5">
+			<BRow>
+				<BCol cols="12" lg="8">
+					<img :src="defaultData.content.r1.c1.image" alt="No Image" class="w-100">
+
+					<p class="mt-2 h2 text-center">
+						<BBadge
+							v-html="defaultData.content.r1.c1.imageText"
+							variant="danger"
+						/>
+					</p>
+				</BCol>
+
+				<BCol cols="12" lg="4">
+					<form action="" class="mb-4 card card-body shadow">
+						<!-- Quote title -->
+						<h3 class="mb-3 text-center">
+							{{ defaultData.content.r1.c2.getQuoteTitle }}
+						</h3>
+						<hr>
+
+						<input type="text" placeholder="Email" class="mt-3 form-control">
+						<input type="text" placeholder="Name" class="mt-3 form-control">
+						<input type="text" placeholder="Subject" class="mt-3 form-control">
+						<textarea
+							type="text" placeholder="Message" class="mt-3 form-control"
+						></textarea>
+
+						<!-- Submit -->
+						<BButton class="w-100 mt-3">Submit</BButton>
+					</form>
+
+					<BCard bg-variant="dark" class="text-light">
+						<!-- OperationsTitle -->
+						<h3 class="mb-3 text-center text-danger">
+							{{ defaultData.content.r1.c2.operationsTitle }}
+						</h3>
+						<hr class="border-light">
+
+						<!-- Hours -->
+						<p class="mt-3 h4 text-danger">Hours</p>
+						<BListGroup>
+							<BListGroupItem class="p-1 bg-dark font-weight-bold">
+								{{ defaultData.content.r1.c2.hours[0].days }}
+							</BListGroupItem>
+
+							<BListGroupItem class="p-1 bg-dark">
+								{{ defaultData.content.r1.c2.hours[0].hours }}
+							</BListGroupItem>
+
+							<BListGroupItem class="p-1 bg-dark font-weight-bold">
+								{{ defaultData.content.r1.c2.hours[1].days }}
+							</BListGroupItem>
+
+							<BListGroupItem class="p-1 bg-dark">
+								{{ defaultData.content.r1.c2.hours[0].hours }}
+							</BListGroupItem>
+						</BListGroup>
+
+						<!-- Location -->
+						<p class="mt-3 h4 text-danger">Location</p>
+						<a
+							:href="defaultData.content.r1.c2.googleMapsLink"
+							class="mt-3 text-light"
+						>{{ defaultData.content.r1.c2.address }}</a>
+
+						<!-- Phone # -->
+						<p class="h4 mt-3 text-danger">Phone Number</p>
+						<a
+							:href="defaultData.content.r1.c2.phoneNumberLink"
+							class="text-light"
+						>{{ defaultData.content.r1.c2.phoneNumber }}</a>
+
+						<!-- Fax # -->
+						<p class="h4 mt-3 text-danger">Fax Number:</p>
+						<a
+							:href="defaultData.content.r1.c2.faxNumberLink"
+							class="text-light"
+						>{{ defaultData.content.r1.c2.faxNumber }}</a>
+					</BCard>
+				</BCol>
+			</BRow>
+
+			<BRow>
+				<BCol cols="12">
+					
+				</BCol>
+			</BRow>
+		</BContainer>
+	</div>
+</template>
+
+<script>
+	import BCaraousel from '../components/display/BCarousel'
+	import defaultData from '../defaults/pages/index'
+	import router from '../router'
+
+	export default {
+		components: {
+			BCaraousel
+		},
+
+		data() {
+			return {
+				defaultData: defaultData,
+			}
+
+		},
+
+		methods: {
+			redirect() {
+				router.push({
+					name: 'post',
+					params: {
+						sort: 1,
+						limit: 5,
+						page: 1,
+					},
+				})
+			}
+		},
+	}
+</script>
