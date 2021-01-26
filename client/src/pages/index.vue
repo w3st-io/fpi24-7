@@ -16,7 +16,7 @@
 						/>
 					</p>
 
-					<BRow class="my-3">
+					<BRow class="mb-3">
 						<BCol
 							v-for="(col, index) in defaultData.content.r1.c1.r1.columns"
 							:key="index"
@@ -35,6 +35,24 @@
 									Read More
 								</BButton>
 							</BCard>
+						</BCol>
+					</BRow>
+
+					<BRow class="mb-3">
+						<BCol cols="12" md="7">
+							<div class="mb-3 text-center">
+								<img
+									:src="defaultData.content.r1.c1.r2.c1.image"
+									alt="Card Image"
+									class="w-100 rounded"
+								>
+							</div>
+						</BCol>
+
+						<BCol cols="12" md="5">
+							<p class="h5 mb-3">
+								{{ defaultData.content.r1.c1.r2.c2.description }}
+							</p>
 						</BCol>
 					</BRow>
 				</BCol>

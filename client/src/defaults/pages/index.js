@@ -66,8 +66,13 @@ module.exports = {
 				},
 
 				r2: {
-					c1: {},
-					c2: {},
+					c1: {
+						image: require('../../assets/images/pages/index/welcome.webp'),
+						
+					},
+					c2: {
+						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
+					},
 				}
 			},
 		
