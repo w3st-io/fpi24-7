@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --only=dev --prefix client && npm run build --prefix client"
   },
-  "author": "Eric Milholen",
+  "author": "Aleem Ahmed",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
