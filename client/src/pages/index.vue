@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div class="parallax" :style="`background-image: url(${defaultData.parallaxImage});`"></div>
+		<div class="parallax" :style="`background-image: url(${defaultData.parallaxImage});`">
+			<div class="text-center" style="padding-top: 270px;"></div>
+		</div>
 
 		<BContainer class="my-5">
 			<BRow>

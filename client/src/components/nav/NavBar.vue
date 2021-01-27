@@ -62,30 +62,27 @@
 
 			<BRow>
 				<!-- Logo & Title + Caption -->
-				<BCol cols="12" class="d-none d-md-block text-center">
-					<img
-						:src="companyInfo.companyLogo"
-						alt="Logo here"
-						class="p-1 ml-auto mb-4 bg-light rounded-lg"
-						style="max-width: 120px;"
-					>
-				</BCol>
-
 				<BCol cols="12" class="text-center">
-					<!-- Title + Caption -->
-					<RouterLink
-						to="/"
-						class="text-uppercase text-decoration-none text-light"
-					>
-						<h4 class="mb-3 text-primary font-weight-bold">
-							{{ companyInfo.companyName }}
-							<br>
-							<span
-								v-html="companyInfo.companyCaption"
-								class="h6 text-light font-weight-bold"
-							></span>
-						</h4>
-					</RouterLink>		
+					<div class="mb-4 content">
+						<img
+							:src="companyInfo.companyLogo"
+							class="ml-auto d-none d-md-block p-1 bg-light rounded-lg"
+							style="max-width: 110px;"
+						>
+
+						<div class="mr-auto">
+							<!-- Title + Caption -->
+							<RouterLink to="/" class="text-decoration-none">
+								<h4 class="text-primary font-weight-bold">
+									{{ companyInfo.companyName }}
+								</h4>
+								<h6
+									v-html="companyInfo.companyCaption"
+									class="h6 text-light font-weight-bold"
+								></h6>
+							</RouterLink>
+						</div>
+					</div>
 				</BCol>
 
 				<!-- Phone # -->
@@ -145,4 +142,16 @@
 		z-index: 10;
 		background-color: rgba(0, 0, 0, 0.726) !important;
 	}
+
+	.content {
+	display: flex;
+	}
+
+	.content img {
+	margin-right: 10px;
+	display: block;
+	}
+
+	.content h3,
+	.content p {margin: 0;}
 </style>
