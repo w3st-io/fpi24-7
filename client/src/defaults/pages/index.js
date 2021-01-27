@@ -21,8 +21,6 @@ const textHtml = `
 
 // [EXPORT] //
 module.exports = {
-	parallaxImage: require('../../assets/images/pages/index/sprinkler-system.jpg'),
-
 	content: {
 		r1: {
 			c1: {

@@ -1,8 +1,6 @@
 <template>
 	<div>
-		<div class="parallax" :style="`background-image: url(${defaultData.parallaxImage});`">
-			<div class="text-center" style="padding-top: 270px;"></div>
-		</div>
+		<Parallax />
 
 		<BContainer class="my-5">
 			<BRow>
@@ -136,12 +134,14 @@
 
 <script>
 	// [IMPORT] Personal //
+	import Parallax from '../components/cosmetic/Paralax'
 	import BCaraousel from '../components/display/BCarousel'
 	import defaultData from '../defaults/pages/index'
 	import router from '../router'
 
 	export default {
 		components: {
+			Parallax,
 			BCaraousel,
 		},
 
@@ -165,24 +165,3 @@
 		},
 	}
 </script>
-
-
-<style lang="scss">
-	.parallax {
-		/* Set a specific height */
-		min-height: 500px; 
-
-		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-	@media only screen and (max-device-width: 1366px) {
-		.parallax {
-			background-attachment: scroll;
-		}
-	}
-</style>
