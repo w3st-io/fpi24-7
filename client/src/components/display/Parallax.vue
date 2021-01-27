@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.parallax {
 		/* Set a specific height */
 		min-height: 500px; 
@@ -27,9 +27,7 @@ export default {
 	}
 
 	/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-	@media only screen and (max-device-width: 1366px) {
-		.parallax {
-			background-attachment: scroll;
-		}
+	@media only screen and (max-device-width: 320px) {
+		.parallax { background-attachment: scroll; }
 	}
 </style>

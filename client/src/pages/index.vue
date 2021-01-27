@@ -134,8 +134,8 @@
 
 <script>
 	// [IMPORT] Personal //
-	import Parallax from '../components/cosmetic/Paralax'
 	import BCaraousel from '../components/display/BCarousel'
+	import Parallax from '../components/display/Parallax'
 	import defaultData from '../defaults/pages/index'
 	import router from '../router'
 
