@@ -1,22 +1,23 @@
 <template>
 	<nav
-		class="bg-dark shadow opacity-90 nav-drawer-menu"
+		class="bg-dark shadow nav-drawer-menu"
 		:class="{ isOpen: sideMenuOpen }"
-		style="z-index: 1040;"
 	>
 		<BButton
-			variant="dark"
-			class="w-100 m-0 p-2 bg-secondary text-center text-primary"
+			v-show="sideMenuOpen"
+			variant="outline-primary"
+			class="w-100 my-3 p-2"
 			@click="closeMenu"
 		>
 			<span aria-hidden="true" style="font-size: 2em;">&times;</span>
 		</BButton>
 
-		<BButton variant="primary" class="w-100" @click="homeBtn()">
-			Forum
-		</BButton>
+		<RouterLink v-show="sideMenuOpen" to="/" class="h1" @click="homeBtn()">
+			Home
+		</RouterLink>
 	</nav>
 </template>
+
 <script>
 	// [IMPORT] //
 	import { EventBus } from '../../main'
@@ -31,13 +32,13 @@
 			}
 		},
 
-		data: function() {
+		data() {
 			return {
 				query: ''
 			}
 		},
 
-		created: async function() {
+		created() {
 			// [ON-EVENTBUS] //
 			EventBus.$on('navBarSideMenuBtnClicked', () => {
 				this.sideMenuOpen = !this.sideMenuOpen
@@ -60,11 +61,13 @@
 
 <style lang="scss" scoped>
 	.nav-drawer-menu {
-		position: fixed;
-		top: 0;
-		right: 0;
+		z-index: 2000;
 
-		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		height: 100vh;
 		width: 0;
 
 		overflow-x: hidden;

@@ -12,7 +12,7 @@ const textHtml = `
 	</div>
 	<br>
 	<a href="/company-info">
-		<button class="btn btn-lg btn-dark shadow">
+		<button class="btn btn-lg btn-primary shadow">
 			Our Services
 		</button>
 	</a>
@@ -23,22 +23,23 @@ const textHtml = `
 module.exports = {
 	parallaxImage: require('../../assets/images/pages/index/sprinkler-system.jpg'),
 
-	caraousel: [
-		{
-			textHtml: textHtml,
-			img: require('../../assets/images/pages/index/industry.jpg'),
-		},
-		{
-			textHtml: textHtml,
-			img: require('../../assets/images/pages/index/firetruck.jpg'),
-		},
-	],
-
 	content: {
 		r1: {
 			c1: {
 				image: require('../../assets/images/pages/index/service247.webp'),
 				imageText: 'Our Service 24/7<i>No Exception!</i>',
+
+				caraousel: [
+					{
+						textHtml: textHtml,
+						img: require('../../assets/images/pages/index/inspection.jpg'),
+					},
+					{
+						textHtml: textHtml,
+						img: require('../../assets/images/pages/index/industry.jpg'),
+					},
+				],
+
 				companyName: companyInfo.companyName,
 				caption2: companyInfo.companyCaption,
 				address: companyInfo.address,

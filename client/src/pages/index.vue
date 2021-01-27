@@ -4,23 +4,12 @@
 
 		<BContainer class="my-5">
 			<BRow>
-				<BCol cols="12" class="mb-5">
-					<!-- Caraousel -->
-					<BCaraousel :slideObjs="defaultData.caraousel" />
-				</BCol>
-			</BRow>
-
-			<BRow>
 				<!-- Main -->
 				<BCol cols="12" lg="8">
-					<img :src="defaultData.content.r1.c1.image" alt="No Image" class="w-100">
+					<!-- Caraousel -->
+					<BCaraousel :slideObjs="defaultData.content.r1.c1.caraousel" />
 
-					<p class="my-3 h2 text-center">
-						<BBadge
-							v-html="defaultData.content.r1.c1.imageText"
-							variant="danger"
-						/>
-					</p>
+					<p v-html="defaultData.content.r1.c1.imageText" class="my-3 h2 text-center"></p>
 
 					<BRow class="mb-3">
 						<BCol
@@ -85,13 +74,13 @@
 
 					<BCard bg-variant="dark" class="text-light">
 						<!-- OperationsTitle -->
-						<h3 class="mb-3 text-center text-danger">
+						<h3 class="mb-3 text-center text-primary">
 							{{ defaultData.content.r1.c2.operationsTitle }}
 						</h3>
 						<hr class="border-light">
 
 						<!-- Hours -->
-						<p class="mt-3 h4 text-danger">Hours</p>
+						<p class="mt-3 h4 text-primary">Hours</p>
 						<BListGroup>
 							<BListGroupItem class="p-1 bg-dark font-weight-bold">
 								{{ defaultData.content.r1.c2.hours[0].days }}
@@ -111,21 +100,21 @@
 						</BListGroup>
 
 						<!-- Location -->
-						<p class="mt-3 h4 text-danger">Location</p>
+						<p class="mt-3 h4 text-primary">Location</p>
 						<a
 							:href="defaultData.content.r1.c2.googleMapsLink"
 							class="mt-3 text-light"
 						>{{ defaultData.content.r1.c2.address }}</a>
 
 						<!-- Phone # -->
-						<p class="h4 mt-3 text-danger">Phone Number</p>
+						<p class="h4 mt-3 text-primary">Phone Number</p>
 						<a
 							:href="defaultData.content.r1.c2.phoneNumberLink"
 							class="text-light"
 						>{{ defaultData.content.r1.c2.phoneNumber }}</a>
 
 						<!-- Fax # -->
-						<p class="h4 mt-3 text-danger">Fax Number:</p>
+						<p class="h4 mt-3 text-primary">Fax Number:</p>
 						<a
 							:href="defaultData.content.r1.c2.faxNumberLink"
 							class="text-light"
@@ -186,5 +175,12 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+
+	/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+	@media only screen and (max-device-width: 1366px) {
+		.parallax {
+			background-attachment: scroll;
+		}
 	}
 </style>

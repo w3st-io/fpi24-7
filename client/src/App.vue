@@ -1,8 +1,5 @@
 <template>
 	<div id="app" :key="appKey" class="bg-light">
-		<!-- Hidden Side Menu -->
-		<SideMenu :sideMenuOpen="sideMenuOpen" @closeMenu="toggle()" />
-
 		<!-- Navbar -->
 		<NavBar @menu-btn-clicked="toggle()" />
 
@@ -21,7 +18,6 @@
 	// [IMPORT] Personal //
 	import Footer from '@/components/nav/Footer'
 	import NavBar from '@/components/nav/NavBar'
-	import SideMenu from '@/components/nav/SideMenu'
 	import Service from './services/Service'
 	import { EventBus } from './main'
 
@@ -30,7 +26,6 @@
 		components: {
 			Footer,
 			NavBar,
-			SideMenu
 		},
 
 		data() {
@@ -46,9 +41,6 @@
 				adminLoggedIn: false,
 				loggedIn: false,
 				decoded: {},
-
-				// [MENU] //
-				sideMenuOpen: false
 			}
 		},
 
@@ -71,8 +63,6 @@
 				catch (err) { `App: Error --> ${err}` }				
 			},
 
-			toggle() { this.sideMenuOpen = !this.sideMenuOpen },
-
 			forceRerender() { this.appKey++ },
 
 			log() {
@@ -88,13 +78,12 @@
 </script>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;1,300&display=swap');
 
-	h1, h2, h3, h4, h5, h6, button {
-		font-family: 'Archivo Black', sans-serif !important;
-	}
+	* { font-family: 'Comfortaa', sans-serif !important; }
 
-	* { font-family: 'Prompt', sans-serif !important; }
+	h1, h2, h3, h4, h5, h6, button {
+		font-family: 'Comfortaa', sans-serif !important;
+	}
 </style>

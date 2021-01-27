@@ -1,11 +1,9 @@
 <template>
-	<div class="">
-		<BContainer class="my-4">
-			<BCard bg-variant="light">
-				<h1>About</h1>
-			</BCard>
-		</BContainer>
-	</div>
+	<BContainer class="mb-4" style="margin-top: 240px;">
+		<BCard bg-variant="light">
+			<h1>About</h1>
+		</BCard>
+	</BContainer>
 </template>
 
 

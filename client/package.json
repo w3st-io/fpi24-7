@@ -16,6 +16,7 @@
     "socket.io-client": "^2.3.0",
     "vue": "^2.6.11",
     "vue-editor-js": "^2.0.2",
+    "vue-feather-icons": "^5.1.0",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
