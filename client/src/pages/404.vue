@@ -1,6 +1,6 @@
 <template>
-	<BContainer class="my-4">
-		<BCard bg-variant="light">
+	<BContainer class="nav-spacer">
+		<BCard bg-variant="light" class="my-4">
 			<h1>404 Not Found</h1>
 		</BCard>
 	</BContainer>

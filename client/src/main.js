@@ -9,6 +9,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App.vue'
 import router from './router'
 import './assets/styles/bootstrap-override.scss'
+import './assets/styles/style.scss'
 
 
 // [USE] //

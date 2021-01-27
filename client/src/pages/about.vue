@@ -1,6 +1,6 @@
-<template>
-	<BContainer class="mb-4" style="margin-top: 240px;">
-		<BCard bg-variant="light">
+<template >
+	<BContainer class="nav-spacer">
+		<BCard bg-variant="white" class="my-4">
 			<h1>About</h1>
 		</BCard>
 	</BContainer>

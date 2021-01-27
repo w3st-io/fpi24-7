@@ -1,50 +1,12 @@
 <template>
 	<div class="w-100 py-3 text-dark shadow position-absolute nav">
 		<BContainer>
-			<BRow>
-				<!-- Title + Caption & Phone # -->
-				<BCol cols="12" class="text-center">
-					<div class="d-none d-md-block">
-						<img
-							:src="companyInfo.companyLogo"
-							alt="Logo here"
-							class="p-1 mb-4 bg-light rounded-lg"
-							style="max-width: 120px;"
-						>
-					</div>
-
-					<!-- Title + Caption -->
-					<RouterLink
-						to="/"
-						class="text-uppercase text-decoration-none text-light"
-					>
-						<h4 class="text-primary font-weight-bold">
-							{{ companyInfo.companyName }}
-							<br>
-							<span
-								v-html="companyInfo.companyCaption"
-								class="h6 text-light font-weight-bold"
-							></span>
-						</h4>
-					</RouterLink>
-
-					<!-- Phone # -->
-					<a :href="companyInfo.phoneNumberLink" class="text-dark">
-						<h4 class="text-center">
-							<BButton variant="outline-light" class="mt-3 mx-auto rounded-pill">
-								Call Us: {{ companyInfo.phoneNumber }}
-							</BButton>
-						</h4>
-					</a>
-				</BCol>
-			</BRow>
-
 			<!-- Menu -->
-			<BRow>
+			<BRow class="mb-3">
 				<!-- Links -->
 				<BCol
 					cols="12"
-					class="mt-3 d-none d-md-block text-uppercase text-light text-center text-md-center"
+					class="d-none d-md-block text-uppercase text-light text-center text-md-center"
 				>
 					<RouterLink to="/" class=" text-dark">
 						<BButton variant="outline-primary" class="mx-2">
@@ -88,6 +50,7 @@
 					</RouterLink>
 				</BCol>
 
+				<!-- Hidden Side Menu Button -->
 				<BCol cols="12" class="d-block d-md-none">
 					<BButton
 						variant="outline-primary"
@@ -96,6 +59,48 @@
 					><MenuIcon /></BButton>
 				</BCol>
 			</BRow>
+
+			<BRow>
+				<!-- Logo & Title + Caption -->
+				<BCol cols="12" class="d-none d-md-block text-center">
+					<img
+						:src="companyInfo.companyLogo"
+						alt="Logo here"
+						class="p-1 ml-auto mb-4 bg-light rounded-lg"
+						style="max-width: 120px;"
+					>
+				</BCol>
+
+				<BCol cols="12" class="text-center">
+					<!-- Title + Caption -->
+					<RouterLink
+						to="/"
+						class="text-uppercase text-decoration-none text-light"
+					>
+						<h4 class="mb-3 text-primary font-weight-bold">
+							{{ companyInfo.companyName }}
+							<br>
+							<span
+								v-html="companyInfo.companyCaption"
+								class="h6 text-light font-weight-bold"
+							></span>
+						</h4>
+					</RouterLink>		
+				</BCol>
+
+				<!-- Phone # -->
+				<BCol cols="12">
+					<a :href="companyInfo.phoneNumberLink" class="text-dark">
+						<h4 class="text-center">
+							<BButton variant="outline-light" class="mx-auto rounded-pill">
+								Call Us: {{ companyInfo.phoneNumber }}
+							</BButton>
+						</h4>
+					</a>
+				</BCol>
+			</BRow>
+
+			
 		</BContainer>
 
 		<!-- Hidden Side Menu -->

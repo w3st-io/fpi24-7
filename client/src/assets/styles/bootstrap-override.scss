@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": rgb(163, 0, 0),
+	"primary": rgb(163, 0, 0),
 );
 
 
@@ -8,5 +8,5 @@ $theme-colors: (
 
 // [CONTAINER] //
 @media (min-width: 1600px) {
-    .container { max-width: 1500px; }
+	.container { max-width: 1500px; }
 }

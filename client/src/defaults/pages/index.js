@@ -27,7 +27,7 @@ module.exports = {
 		r1: {
 			c1: {
 				image: require('../../assets/images/pages/index/service247.webp'),
-				imageText: 'Our Service 24/7<i>No Exception!</i>',
+				imageText: '<b>Our Service 24/7!</b> <i>No Exception!</i>',
 
 				caraousel: [
 					{
