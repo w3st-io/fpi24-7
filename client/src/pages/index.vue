@@ -1,9 +1,15 @@
 <template>
-	<div class="">
-		<!-- Caraousel -->
-		<BCaraousel :slideObjs="defaultData.caraousel" />
+	<div>
+		<div class="parallax" :style="`background-image: url(${defaultData.parallaxImage});`"></div>
 
 		<BContainer class="my-5">
+			<BRow>
+				<BCol cols="12" class="mb-5">
+					<!-- Caraousel -->
+					<BCaraousel :slideObjs="defaultData.caraousel" />
+				</BCol>
+			</BRow>
+
 			<BRow>
 				<!-- Main -->
 				<BCol cols="12" lg="8">
@@ -138,20 +144,20 @@
 </template>
 
 <script>
+	// [IMPORT] Personal //
 	import BCaraousel from '../components/display/BCarousel'
 	import defaultData from '../defaults/pages/index'
 	import router from '../router'
 
 	export default {
 		components: {
-			BCaraousel
+			BCaraousel,
 		},
 
 		data() {
 			return {
 				defaultData: defaultData,
 			}
-
 		},
 
 		methods: {
@@ -168,3 +174,17 @@
 		},
 	}
 </script>
+
+
+<style lang="scss">
+	.parallax {
+		/* Set a specific height */
+		min-height: 500px; 
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>

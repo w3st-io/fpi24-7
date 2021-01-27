@@ -1,9 +1,10 @@
 <template>
 	<div id="app" :key="appKey" class="bg-light">
-		<NavBar @menu-btn-clicked="toggle()" />
-
 		<!-- Hidden Side Menu -->
 		<SideMenu :sideMenuOpen="sideMenuOpen" @closeMenu="toggle()" />
+
+		<!-- Navbar -->
+		<NavBar @menu-btn-clicked="toggle()" />
 
 		<!-- Router -->
 		<RouterView :key="$route.name + ($route.params.id || '')" />

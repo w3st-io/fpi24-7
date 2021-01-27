@@ -21,6 +21,8 @@ const textHtml = `
 
 // [EXPORT] //
 module.exports = {
+	parallaxImage: require('../../assets/images/pages/index/sprinkler-system.jpg'),
+
 	caraousel: [
 		{
 			textHtml: textHtml,
