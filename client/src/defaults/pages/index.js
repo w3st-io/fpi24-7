@@ -24,9 +24,6 @@ module.exports = {
 	content: {
 		r1: {
 			c1: {
-				image: require('../../assets/images/pages/index/service247.webp'),
-				imageText: '<b>Our Service 24/7!</b> <i>No Exception!</i>',
-
 				caraousel: [
 					{
 						textHtml: textHtml,
@@ -37,6 +34,8 @@ module.exports = {
 						img: require('../../assets/images/pages/index/industry.jpg'),
 					},
 				],
+
+				imageText: '<b>Our Service 24/7!</b> <i>No Exception!</i>',
 
 				companyName: companyInfo.companyName,
 				caption2: companyInfo.companyCaption,
