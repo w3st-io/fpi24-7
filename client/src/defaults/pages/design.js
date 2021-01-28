@@ -14,7 +14,7 @@ module.exports = {
 		c1: {
 			title: 'Fire Protection Design',
 			description: 'Our staff includes NICET certified technicians who use state-of-the-art CAD programs to produce accurate, detail oriented and  code compliant fire sprinkler plans for the use of obtaining permits, performing hydraulic calculations, guiding installation and recording \'as-built\' conditions upon project completion. Our engineering department provides fast and reliable plans and reports to expedite all phases of your project.',
-			listTitle: 'What We Provide',
+			listTitle: '',
 			list: [
 				'Fire Pumps Designed and Installed',
 				'Small, Medium and Large Residential projects',
@@ -34,7 +34,7 @@ module.exports = {
 
 	r4: {
 		c1: {
-			title: 'Fire Protection Design',
+			title: '',
 			description: 'All fire sprinkler design plans are closely reviewed by our Professional Engineers for code compliance and ease of installation. Because most projects continue to evolve from design to installation, we are able to adapt to the changes quickly and efficiently to make sure your projects flow effortlessly. ',
 			listTitle: 'What We Provide',
 			list: [

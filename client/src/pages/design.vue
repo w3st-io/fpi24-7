@@ -62,7 +62,7 @@
 				</BRow>
 
 				<!-- Row 4 -->
-				<BRow class="mb-5">
+				<BRow class="bg-light mb-5">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
 						<p>{{ defaultData.r3.c1.description }}</p>
