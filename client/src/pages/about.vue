@@ -8,7 +8,7 @@
 			<BCard bg-variant="white" v-rellax="{ speed: 10 }" class="my-4">
 				<!-- Row 1 -->
 				<BRow>
-					<BCol data-aos="fade-down-right" cols="12" md="6">
+					<BCol data-aos="fade-right" cols="12" md="6">
 						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
@@ -36,7 +36,7 @@
 					><img :src="defaultData.r2.c1.image" class="w-100"></BCol>
 
 					<!-- Text 2 -->
-					<BCol data-aos="fade-down-left" cols="12" md="8" class="mt-3">
+					<BCol data-aos="fade-left" cols="12" md="8" class="mt-3">
 						<h1 class="text-primary">{{ defaultData.r2.c2.title }}</h1>
 						<p>{{ defaultData.r2.c2.description }}</p>
 					</BCol>
@@ -46,6 +46,7 @@
 				<BRow class="mt-4">
 					<BCol
 						cols="12" md="4"
+						data-aos="fade-right"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
@@ -68,6 +69,7 @@
 
 					<BCol
 						cols="12" md="4"
+						data-aos="fade-up"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"

@@ -29,7 +29,7 @@ module.exports = {
 		},
 		c2: {
 			image: require('../../assets/images/pages/about/harry.webp'),
-			name: 'Harry Sam Martin',
+			name: 'Harry San Martin',
 			title: 'Co-Owner & President',
 			description: 'Co-Owner and President of 24/7, Harry manages all projects from installation to final inspection. With over 20 years within the industry Harry also trains and mentors all foremen and mechanics to insure all aspects of your projects are managed and completed in a timely fashion.',
 			contactEmail: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
