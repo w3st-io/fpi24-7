@@ -13,35 +13,30 @@
 							Home
 						</BButton>
 					</RouterLink>
-					<span class="text-light">|</span>
 
 					<RouterLink to="/about" class="text-light">
 						<BButton variant="outline-primary" class="mx-2">
 							About
 						</BButton>
 					</RouterLink>
-					<span class="text-light">|</span>
 
 					<RouterLink to="/about" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
 							Design
 						</BButton>
 					</RouterLink>
-					<span class="text-light">|</span>
 
 					<RouterLink to="/about" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
 							Installs
 						</BButton>
 					</RouterLink>
-					<span class="text-light">|</span>
 
 					<RouterLink to="/about" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
 							Services
 						</BButton>
 					</RouterLink>
-					<span class="text-light">|</span>
 
 					<RouterLink to="/about" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
@@ -73,7 +68,7 @@
 						<div class="mr-auto">
 							<!-- Title + Caption -->
 							<RouterLink to="/" class="text-weight-bold text-decoration-none">
-								<h4 class="text-primary font-weight-bold">
+								<h4 class="mt-4 text-primary font-weight-bold">
 									{{ companyInfo.companyName }}
 								</h4>
 								<h6
