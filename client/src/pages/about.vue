@@ -8,7 +8,7 @@
 			<BCard bg-variant="white" v-rellax="{ speed: 10 }" class="my-4">
 				<!-- Row 1 -->
 				<BRow>
-					<BCol data-aos="fade-right" cols="12" md="6">
+					<BCol data-aos="fade-up" cols="12" md="6">
 						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
@@ -36,7 +36,7 @@
 					><img :src="defaultData.r2.c1.image" class="w-100"></BCol>
 
 					<!-- Text 2 -->
-					<BCol data-aos="fade-left" cols="12" md="8" class="mt-3">
+					<BCol data-aos="fade-up" cols="12" md="8" class="mt-3">
 						<h1 class="text-primary">{{ defaultData.r2.c2.title }}</h1>
 						<p>{{ defaultData.r2.c2.description }}</p>
 					</BCol>
@@ -44,18 +44,21 @@
 
 				<!-- Row 3 -->
 				<BRow class="mt-4">
+					<!-- CEO -->
 					<BCol
 						cols="12" md="4"
-						data-aos="fade-right"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						data-rellax-desktop-speed="-1"
-						class="mt-3"
 					>
-						<h3 class="text-primary">{{ defaultData.r3.c1.name }}</h3>
-						<p>{{ defaultData.r3.c1.description }}</p>
+						<!-- Text -->
+						<div>
+							<h3 class="text-primary">{{ defaultData.r3.c1.name }}</h3>
+							<p>{{ defaultData.r3.c1.description }}</p>	
+						</div>
+						<!-- Image -->
 						<img
 							:src="defaultData.r3.c1.image"
 							class="w-100 mb-3 rounded-lg shadow"
@@ -67,22 +70,26 @@
 						</a>
 					</BCol>
 
+					<!-- Co-Owner -->
 					<BCol
 						cols="12" md="4"
-						data-aos="fade-up"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="3"
-						class="mt-5"
+						data-rellax-desktop-speed="2"
+						class="mt-3"
 					>
+						<!-- Image -->
 						<img
 							:src="defaultData.r3.c2.image"
 							class="w-100 mb-3 rounded-lg shadow"
 						>
-						<h3 class="text-primary">{{ defaultData.r3.c2.name }}</h3>
-						<p>{{ defaultData.r3.c2.description }}</p>
+						<!-- Text -->
+						<div>
+							<h3 class="text-primary">{{ defaultData.r3.c2.name }}</h3>
+							<p>{{ defaultData.r3.c2.description }}</p>
+						</div>
 
 						<a :href="defaultData.r3.c2.contactEmail">
 							<BButton size="sm" pill class="w-100 mb-3">
