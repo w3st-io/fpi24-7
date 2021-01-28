@@ -20,7 +20,7 @@
 						</BButton>
 					</RouterLink>
 
-					<RouterLink to="/about" class="text-dark">
+					<RouterLink to="/design" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
 							Design
 						</BButton>

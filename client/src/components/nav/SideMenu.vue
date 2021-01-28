@@ -23,6 +23,13 @@
 			class="w-100 p-2 text-primary"
 			@click="about()"
 		><span aria-hidden="true" style="font-size: 1.5em;">About</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="design()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Design</span></BButton>
 		<br>
 	</nav>
 </template>
@@ -62,7 +69,12 @@
 			about() {
 				router.push({ name: 'about' })
 				this.closeMenu()
-			}
+			},
+
+			design() {
+				router.push({ name: 'design' })
+				this.closeMenu()
+			},
 		}
 	}
 </script>

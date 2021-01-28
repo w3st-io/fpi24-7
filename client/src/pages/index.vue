@@ -7,26 +7,24 @@
 				<!-- Main -->
 				<BCol cols="12" lg="8">
 					<!-- Caraousel -->
-					<BCaraousel :slideObjs="defaultData.content.r1.c1.caraousel" />
-
-					<p v-html="defaultData.content.r1.c1.imageText" class="my-4 h2 text-center text-primary"></p>
+					<BCaraousel :slideObjs="defaultData.r1.c1.caraousel" class="mb-4" />
 
 					<BRow class="mb-3">
 						<BCol
-							v-for="(col, index) in defaultData.content.r1.c1.r1.columns"
+							v-for="(col, index) in defaultData.r1.c1.r1.columns"
 							:key="index"
 							cols="12" sm="6" md="6" lg="6" xl="4"
 							class="mb-3"
 						>
 							<BCard class="shadow">
 								<div class="text-center">
-									<img :src="col.image" alt="Card Image" class="rounded">
 									<h4 class="text-primary">{{ col.title }}</h4>
+									<img :src="col.image" alt="Card Image" class="rounded">
 								</div>
 
 								<p class="text-dark">{{ col.description }}</p>
 
-								<BButton pill variant="primary" class="w-100">
+								<BButton pill variant="outline-primary" class="w-100">
 									Read More
 								</BButton>
 							</BCard>
@@ -37,10 +35,18 @@
 						<BCol>
 							<BCard class="shadow">
 								<BRow>
+									<BCol cols="12">
+										<p
+											v-html="defaultData.r1.c1.r2.c1.text"
+											data-aos="zoom-in"
+											class="mb-4 h2 text-center text-primary"
+										></p>
+									</BCol>
+
 									<BCol cols="12" md="7">
 										<div class="mb-3 text-center">
 											<img
-												:src="defaultData.content.r1.c1.r2.c1.image"
+												:src="defaultData.r1.c1.r2.c1.image"
 												alt="Card Image"
 												class="w-100 rounded"
 											>
@@ -49,7 +55,7 @@
 
 									<BCol cols="12" md="5">
 										<p class="h5 mb-3">
-											{{ defaultData.content.r1.c1.r2.c2.description }}
+											{{ defaultData.r1.c1.r2.c2.description }}
 										</p>
 									</BCol>
 								</BRow>
@@ -63,7 +69,7 @@
 					<form action="" class="mb-4 card card-body shadow">
 						<!-- Quote title -->
 						<h3 class="mb-3 text-center">
-							{{ defaultData.content.r1.c2.getQuoteTitle }}
+							{{ defaultData.r1.c2.getQuoteTitle }}
 						</h3>
 						<hr>
 
@@ -81,7 +87,7 @@
 					<BCard bg-variant="dark" class="text-light">
 						<!-- OperationsTitle -->
 						<h3 class="mb-3 text-center text-primary">
-							{{ defaultData.content.r1.c2.operationsTitle }}
+							{{ defaultData.r1.c2.operationsTitle }}
 						</h3>
 						<hr class="border-light">
 
@@ -89,42 +95,42 @@
 						<p class="mt-3 h4 text-primary">Hours</p>
 						<BListGroup>
 							<BListGroupItem class="p-1 bg-dark font-weight-bold">
-								{{ defaultData.content.r1.c2.hours[0].days }}
+								{{ defaultData.r1.c2.hours[0].days }}
 							</BListGroupItem>
 
 							<BListGroupItem class="p-1 bg-dark">
-								{{ defaultData.content.r1.c2.hours[0].hours }}
+								{{ defaultData.r1.c2.hours[0].hours }}
 							</BListGroupItem>
 
 							<BListGroupItem class="p-1 bg-dark font-weight-bold">
-								{{ defaultData.content.r1.c2.hours[1].days }}
+								{{ defaultData.r1.c2.hours[1].days }}
 							</BListGroupItem>
 
 							<BListGroupItem class="p-1 bg-dark">
-								{{ defaultData.content.r1.c2.hours[0].hours }}
+								{{ defaultData.r1.c2.hours[0].hours }}
 							</BListGroupItem>
 						</BListGroup>
 
 						<!-- Location -->
 						<p class="mt-3 h4 text-primary">Location</p>
 						<a
-							:href="defaultData.content.r1.c2.googleMapsLink"
+							:href="defaultData.r1.c2.googleMapsLink"
 							class="mt-3 text-light"
-						>{{ defaultData.content.r1.c2.address }}</a>
+						>{{ defaultData.r1.c2.address }}</a>
 
 						<!-- Phone # -->
 						<p class="h4 mt-3 text-primary">Phone Number</p>
 						<a
-							:href="defaultData.content.r1.c2.phoneNumberLink"
+							:href="defaultData.r1.c2.phoneNumberLink"
 							class="text-light"
-						>{{ defaultData.content.r1.c2.phoneNumber }}</a>
+						>{{ defaultData.r1.c2.phoneNumber }}</a>
 
 						<!-- Fax # -->
 						<p class="h4 mt-3 text-primary">Fax Number:</p>
 						<a
-							:href="defaultData.content.r1.c2.faxNumberLink"
+							:href="defaultData.r1.c2.faxNumberLink"
 							class="text-light"
-						>{{ defaultData.content.r1.c2.faxNumber }}</a>
+						>{{ defaultData.r1.c2.faxNumber }}</a>
 					</BCard>
 				</BCol>
 			</BRow>

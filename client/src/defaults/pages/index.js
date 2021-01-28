@@ -21,72 +21,71 @@ const textHtml = `
 
 // [EXPORT] //
 module.exports = {
-	content: {
-		r1: {
-			c1: {
-				caraousel: [
-					{
-						textHtml: textHtml,
-						img: require('../../assets/images/pages/index/inspection.jpg'),
-					},
-					{
-						textHtml: textHtml,
-						img: require('../../assets/images/pages/index/industry.jpg'),
-					},
-				],
-
-				imageText: '<b>Our Service 24/7!</b> <i>No Exception!</i>',
-
-				companyName: companyInfo.companyName,
-				caption2: companyInfo.companyCaption,
-				address: companyInfo.address,
-				googleMapsLink: companyInfo.googleMapsLink,
-
-				r1: {
-					columns: [
-						{
-							image: require('../../assets/images/pages/index/residential.webp'),
-							title: 'Residential',
-							description: 'Small, medium or large we offer professionally designed and installed wet and dry fire sprinkler systems.',
-							link: '',
-						},
-						{
-							image: require('../../assets/images/pages/index/commercial.webp'),
-							title: 'Commercial',
-							description: 'We provide quality design and installation for retail, office, store front, gyms, hospitals, schools and more.',
-							link: '',
-						},
-						{
-							image: require('../../assets/images/pages/index/industrial.webp'),
-							title: 'Industrial',
-							description: 'Whatever your storage needs, we can offer ESFR warehouse storage, control mode and density design fire protection.',
-							link: '',
-						}
-					]
+	r1: {
+		// Main //
+		c1: {
+			caraousel: [
+				{
+					textHtml: textHtml,
+					img: require('../../assets/images/pages/index/inspection.jpg'),
 				},
+				{
+					textHtml: textHtml,
+					img: require('../../assets/images/pages/index/industry.jpg'),
+				},
+			],
 
-				r2: {
-					c1: {
-						image: require('../../assets/images/pages/index/welcome.webp'),
-						
+			companyName: companyInfo.companyName,
+			caption2: companyInfo.companyCaption,
+			address: companyInfo.address,
+			googleMapsLink: companyInfo.googleMapsLink,
+
+			r1: {
+				columns: [
+					{
+						image: require('../../assets/images/pages/index/residential.webp'),
+						title: 'Residential',
+						description: 'Small, medium or large we offer professionally designed and installed wet and dry fire sprinkler systems.',
+						link: '',
 					},
-					c2: {
-						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
+					{
+						image: require('../../assets/images/pages/index/commercial.webp'),
+						title: 'Commercial',
+						description: 'We provide quality design and installation for retail, office, store front, gyms, hospitals, schools and more.',
+						link: '',
 					},
-				}
+					{
+						image: require('../../assets/images/pages/index/industrial.webp'),
+						title: 'Industrial',
+						description: 'Whatever your storage needs, we can offer ESFR warehouse storage, control mode and density design fire protection.',
+						link: '',
+					}
+				]
 			},
-		
-			c2: {
-				getQuoteTitle: 'Get a Quote',
-				operationsTitle: 'Hours & Location',
-				address: companyInfo.address,
-				hours: companyInfo.hours,
-				googleMapsLink: companyInfo.googleMapsLink,
-				phoneNumber: companyInfo.phoneNumber,
-				phoneNumberLink: companyInfo.phoneNumberLink,
-				faxNumber: companyInfo.faxNumber,
-				faxNumberLink: companyInfo.faxNumberLink,
-			},
+
+			r2: {
+				c1: {
+					text: '<b>Our Service 24/7!</b> <i>No Exception!</i>',
+					image: require('../../assets/images/pages/index/welcome.webp'),
+					
+				},
+				c2: {
+					description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
+				},
+			}
+		},
+	
+		// Row //
+		c2: {
+			getQuoteTitle: 'Get a Quote',
+			operationsTitle: 'Hours & Location',
+			address: companyInfo.address,
+			hours: companyInfo.hours,
+			googleMapsLink: companyInfo.googleMapsLink,
+			phoneNumber: companyInfo.phoneNumber,
+			phoneNumberLink: companyInfo.phoneNumberLink,
+			faxNumber: companyInfo.faxNumber,
+			faxNumberLink: companyInfo.faxNumberLink,
 		},
 	},
 }

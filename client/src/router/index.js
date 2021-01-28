@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 // [IMPORT] Personal //
 import Index from '../pages'
 import About from '../pages/about'
+import Design from '../pages/design'
 import NotFound from '../pages/404'
 
 
@@ -22,7 +23,7 @@ const router = new VueRouter({
 			component: Index,
 			meta: {
 				auth: true,
-				title: '24/7 Fire Protection Inc.'
+				title: 'Home'
 			},
 		},
 		// About //
@@ -33,6 +34,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'About'
+			},
+		},
+		// Design //
+		{
+			path: '/design',
+			name: 'design',
+			component: Design,
+			meta: {
+				auth: true,
+				title: 'Design'
 			},
 		},
 		// [404] //
@@ -51,7 +62,7 @@ const router = new VueRouter({
 
 // [VUE-ROUTER-SET-TITLE] //
 router.beforeEach((to, from, next) => {
-	document.title = to.meta.title
+	document.title = `${to.meta.title} - 24/7 Fire Protection Inc `
 	next()
 })
 

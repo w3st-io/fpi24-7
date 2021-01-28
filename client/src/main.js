@@ -1,10 +1,11 @@
 // [IMPORT] //
+import AOS from 'aos'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue from 'vue'
 import Editor from 'vue-editor-js/src/index'
 import VueRellax from 'vue-rellax'
+import 'aos/dist/aos.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 
 // [IMPORT] Personal //
 import App from './App.vue'
@@ -28,5 +29,6 @@ export const EventBus = new Vue()
 Vue.config.productionTip = false
 new Vue({
   router,
+  created () { AOS.init() },
   render: h => h(App)
 }).$mount('#app')
