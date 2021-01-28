@@ -1,5 +1,5 @@
 <template>
-	<div class="parallax" :style="`background-image: url(${imgURL});`">
+	<div class="parallax" :style="`background-image: url(${imgURL});`" v-rellax="{ speed: 2 }">
 		<div class="text-center" style="padding-top: 270px;"></div>
 	</div>
 </template>
@@ -8,7 +8,7 @@
 export default {
 	props: {
 		imgURL: {
-			default: require('../../assets/images/pages/sprinkler-system.jpg')
+			default: require('../../assets/images/sprinkler-system.jpg')
 		}
 	},
 }

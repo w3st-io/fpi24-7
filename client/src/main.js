@@ -2,6 +2,7 @@
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue from 'vue'
 import Editor from 'vue-editor-js/src/index'
+import VueRellax from 'vue-rellax'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
@@ -16,6 +17,7 @@ import './assets/styles/style.scss'
 Vue.use(Editor)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(VueRellax)
 
 
 // [EXPORT] EventBus //

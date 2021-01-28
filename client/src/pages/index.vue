@@ -2,7 +2,7 @@
 	<div>
 		<Parallax />
 
-		<BContainer class="my-5">
+		<BContainer class="my-5" v-rellax="{ speed: 8 }">
 			<BRow>
 				<!-- Main -->
 				<BCol cols="12" lg="8">
@@ -136,7 +136,7 @@
 	// [IMPORT] Personal //
 	import BCaraousel from '../components/display/BCarousel'
 	import Parallax from '../components/display/Parallax'
-	import defaultData from '../defaults/pages/index'
+	import defaultData from '../defaults/pages'
 	import router from '../router'
 
 	export default {
