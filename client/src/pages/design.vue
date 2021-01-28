@@ -9,7 +9,7 @@
 				<!-- Row 1 -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
-						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
+						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
@@ -27,7 +27,7 @@
 				<BRow>
 					<BCol cols="12" md="12" class="my-4">
 						<BCard no-body bg-variant="primary" class="py-2 text-light">
-							<h3 class="m-0 text-center">{{ defaultData.r2.c1.title }}</h3>
+							<h2 class="m-0 text-center">{{ defaultData.r2.c1.title }}</h2>
 						</BCard>
 					</BCol>
 				</BRow>
@@ -49,10 +49,10 @@
 					</BCol>
 
 					<BCol cols="12" md="8" class="mt-3">
-						<h4 class="text-primary">{{ defaultData.r3.c1.title }}</h4>
+						<h3 class="text-primary">{{ defaultData.r3.c1.title }}</h3>
 						<p>{{ defaultData.r3.c1.description }}</p>
 
-						<h6 class="text-primary">{{ defaultData.r3.c1.listTitle }}</h6>
+						<h4 class="text-primary">{{ defaultData.r3.c1.listTitle }}</h4>
 						<ul>
 							<li v-for="(li, index) in defaultData.r3.c1.list" :key="index">
 								{{ li }}
@@ -64,10 +64,10 @@
 				<!-- Row 4 -->
 				<BRow class="mb-5">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
-						<h4 class="text-primary">{{ defaultData.r4.c1.title }}</h4>
+						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
 						<p>{{ defaultData.r3.c1.description }}</p>
 
-						<h6 class="text-primary">{{ defaultData.r4.c1.listTitle }}</h6>
+						<h4 class="text-primary">{{ defaultData.r4.c1.listTitle }}</h4>
 						<ul>
 							<li v-for="(li, index) in defaultData.r4.c1.list" :key="index">
 								{{ li }}
