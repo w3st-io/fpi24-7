@@ -68,7 +68,7 @@
 				<BCol cols="12" lg="4">
 					<form action="" class="mb-4 card card-body shadow">
 						<!-- Quote title -->
-						<h3 class="mb-3 text-center">
+						<h3 class="mb-3 text-center text-primary">
 							{{ defaultData.r1.c2.getQuoteTitle }}
 						</h3>
 						<hr>
