@@ -28,7 +28,7 @@ const router = new VueRouter({
 		// About //
 		{
 			path: '/about',
-			name: 'About',
+			name: 'about',
 			component: About,
 			meta: {
 				auth: true,

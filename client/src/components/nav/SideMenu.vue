@@ -5,16 +5,25 @@
 	>
 		<BButton
 			v-show="sideMenuOpen"
-			variant="outline-primary"
-			class="w-100 my-3 p-2"
+			variant="primary"
+			class="w-100 mb-3 text-light"
 			@click="closeMenu"
-		>
-			<span aria-hidden="true" style="font-size: 2em;">&times;</span>
-		</BButton>
+		><span aria-hidden="true" style="font-size: 2em;">&times;</span></BButton>
 
-		<RouterLink v-show="sideMenuOpen" to="/" class="h1" @click="homeBtn()">
-			Home
-		</RouterLink>
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="home()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Home</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="about()"
+		><span aria-hidden="true" style="font-size: 1.5em;">About</span></BButton>
+		<br>
 	</nav>
 </template>
 
@@ -32,12 +41,6 @@
 			}
 		},
 
-		data() {
-			return {
-				query: ''
-			}
-		},
-
 		created() {
 			// [ON-EVENTBUS] //
 			EventBus.$on('navBarSideMenuBtnClicked', () => {
@@ -51,10 +54,15 @@
 				this.$emit('closeMenu')
 			},
 
-			homeBtn() {
-				this.sideMenuOpen = !this.sideMenuOpen
+			home() {
 				router.push({ name: '/' })
+				this.closeMenu()
 			},
+
+			about() {
+				router.push({ name: 'about' })
+				this.closeMenu()
+			}
 		}
 	}
 </script>
@@ -63,7 +71,7 @@
 	.nav-drawer-menu {
 		z-index: 2000;
 
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 
