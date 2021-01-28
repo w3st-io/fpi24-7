@@ -3,7 +3,7 @@ const companyInfo = require('../companyInfo')
 
 const textHtml = `
 	<div class="d-none d-md-block mb-2 badge badge-dark shadow">
-		<h1 class="m-0" style="text-shadow: none;">
+		<h1 class="m-0 text-primary" style="text-shadow: none;">
 			${companyInfo.companyName}
 		</h1>
 		<h4 class="m-0" style="text-shadow: none;">

@@ -72,7 +72,7 @@
 
 						<div class="mr-auto">
 							<!-- Title + Caption -->
-							<RouterLink to="/" class="text-decoration-none">
+							<RouterLink to="/" class="text-weight-bold text-decoration-none">
 								<h4 class="text-primary font-weight-bold">
 									{{ companyInfo.companyName }}
 								</h4>

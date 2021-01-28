@@ -29,12 +29,12 @@
 				<BRow>
 					<!-- Image 2 -->
 					<BCol
-						cols="12" md="4" class="mt-3"
+						cols="12" md="4" class="mt-5"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1"
+						data-rellax-desktop-speed="3"
 					><img :src="defaultData.r2.c1.image" class="w-100"></BCol>
 
 					<!-- Text 2 -->
@@ -97,7 +97,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-2"
+						data-rellax-desktop-speed="-4"
 						class="mt-0"
 					>
 						<BCard bg-variant="primary" class="text-light shadow">

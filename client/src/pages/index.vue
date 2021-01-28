@@ -9,7 +9,7 @@
 					<!-- Caraousel -->
 					<BCaraousel :slideObjs="defaultData.content.r1.c1.caraousel" />
 
-					<p v-html="defaultData.content.r1.c1.imageText" class="my-3 h2 text-center"></p>
+					<p v-html="defaultData.content.r1.c1.imageText" class="my-4 h2 text-center text-primary"></p>
 
 					<BRow class="mb-3">
 						<BCol
@@ -33,21 +33,27 @@
 						</BCol>
 					</BRow>
 
-					<BRow class="mb-3">
-						<BCol cols="12" md="7">
-							<div class="mb-3 text-center">
-								<img
-									:src="defaultData.content.r1.c1.r2.c1.image"
-									alt="Card Image"
-									class="w-100 rounded"
-								>
-							</div>
-						</BCol>
+					<BRow class="mb-4">
+						<BCol>
+							<BCard class="shadow">
+								<BRow>
+									<BCol cols="12" md="7">
+										<div class="mb-3 text-center">
+											<img
+												:src="defaultData.content.r1.c1.r2.c1.image"
+												alt="Card Image"
+												class="w-100 rounded"
+											>
+										</div>
+									</BCol>
 
-						<BCol cols="12" md="5">
-							<p class="h5 mb-3">
-								{{ defaultData.content.r1.c1.r2.c2.description }}
-							</p>
+									<BCol cols="12" md="5">
+										<p class="h5 mb-3">
+											{{ defaultData.content.r1.c1.r2.c2.description }}
+										</p>
+									</BCol>
+								</BRow>
+							</BCard>
 						</BCol>
 					</BRow>
 				</BCol>
@@ -120,12 +126,6 @@
 							class="text-light"
 						>{{ defaultData.content.r1.c2.faxNumber }}</a>
 					</BCard>
-				</BCol>
-			</BRow>
-
-			<BRow>
-				<BCol cols="12">
-					
 				</BCol>
 			</BRow>
 		</BContainer>
