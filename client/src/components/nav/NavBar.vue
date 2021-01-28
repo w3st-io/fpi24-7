@@ -68,9 +68,9 @@
 						<div class="mr-auto">
 							<!-- Title + Caption -->
 							<RouterLink to="/" class="text-weight-bold text-decoration-none">
-								<h4 class="mt-4 text-primary font-weight-bold">
+								<h3 class="mt-4 mb-2 text-primary font-weight-bold">
 									{{ companyInfo.companyName }}
-								</h4>
+								</h3>
 								<h6
 									v-html="companyInfo.companyCaption"
 									class="h6 text-light font-weight-bold"

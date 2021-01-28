@@ -9,7 +9,7 @@
 				<!-- Row 1 -->
 				<BRow>
 					<BCol data-aos="fade-down-right" cols="12" md="6">
-						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
+						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
@@ -37,7 +37,7 @@
 
 					<!-- Text 2 -->
 					<BCol data-aos="fade-down-left" cols="12" md="8" class="mt-3">
-						<h3 class="text-primary">{{ defaultData.r2.c2.title }}</h3>
+						<h1 class="text-primary">{{ defaultData.r2.c2.title }}</h1>
 						<p>{{ defaultData.r2.c2.description }}</p>
 					</BCol>
 				</BRow>
@@ -53,7 +53,7 @@
 						data-rellax-desktop-speed="-1"
 						class="mt-3"
 					>
-						<h4 class="text-primary">{{ defaultData.r3.c1.name }}</h4>
+						<h3 class="text-primary">{{ defaultData.r3.c1.name }}</h3>
 						<p>{{ defaultData.r3.c1.description }}</p>
 						<img
 							:src="defaultData.r3.c1.image"
@@ -79,7 +79,7 @@
 							:src="defaultData.r3.c2.image"
 							class="w-100 mb-3 rounded-lg shadow"
 						>
-						<h4 class="text-primary">{{ defaultData.r3.c2.name }}</h4>
+						<h3 class="text-primary">{{ defaultData.r3.c2.name }}</h3>
 						<p>{{ defaultData.r3.c2.description }}</p>
 
 						<a :href="defaultData.r3.c2.contactEmail">
@@ -99,9 +99,9 @@
 						class="mt-0"
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
-							<h3 class="mb-3 text-center">
+							<h2 class="mb-3 text-center">
 								{{ defaultData.r3.c3.title }}
-							</h3>
+							</h2>
 
 							<ul>
 								<li
