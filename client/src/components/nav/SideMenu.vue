@@ -35,7 +35,7 @@
 			v-show="sideMenuOpen"
 			variant="outline-seconadry"
 			class="w-100 p-2 text-primary"
-			@click="isntalls()"
+			@click="installs()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Installs</span></BButton>
 		<br>
 	</nav>
