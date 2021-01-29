@@ -138,15 +138,13 @@
 		background-color: rgba(0, 0, 0, 0.726) !important;
 	}
 
-	.content {
-	display: flex;
-	}
+	.content { display: flex; }
 
 	.content img {
-	margin-right: 10px;
-	display: block;
+		margin-right: 10px;
+		display: block;
 	}
 
 	.content h3,
-	.content p {margin: 0;}
+	.content p { margin: 0; }
 </style>
