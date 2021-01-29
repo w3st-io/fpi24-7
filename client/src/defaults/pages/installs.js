@@ -8,7 +8,7 @@ module.exports = {
 		c2: { image: require('../../assets/images/pages/about/team.webp'), },
 	},
 
-	r2: { c1: { title: 'Installation' }, },
+	r2: { c1: { title: 'Installations' }, },
 
 	r3: {
 		c1: { image: require('../../assets/images/pages/installs/pi.webp'), },

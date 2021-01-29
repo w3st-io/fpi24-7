@@ -9,7 +9,7 @@
 				<!-- Row 1 -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
-						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
+						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 

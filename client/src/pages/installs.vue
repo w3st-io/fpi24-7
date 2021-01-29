@@ -9,7 +9,7 @@
 				<!-- Row 1 -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
-						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
+						<h2 class="text-primary">{{ defaultData.r1.c1.title }}</h2>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
@@ -80,7 +80,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-1"
+						data-rellax-desktop-speed=".2"
 					>
 						<img
 							:src="defaultData.r4.c2.image"
