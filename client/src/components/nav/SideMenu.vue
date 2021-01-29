@@ -30,6 +30,13 @@
 			class="w-100 p-2 text-primary"
 			@click="design()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Design</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="isntalls()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Installs</span></BButton>
 		<br>
 	</nav>
 </template>
@@ -73,6 +80,11 @@
 
 			design() {
 				router.push({ name: 'design' })
+				this.closeMenu()
+			},
+
+			installs() {
+				router.push({ name: 'installs' })
 				this.closeMenu()
 			},
 		}

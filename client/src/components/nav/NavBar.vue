@@ -26,7 +26,7 @@
 						</BButton>
 					</RouterLink>
 
-					<RouterLink to="/about" class="text-dark">
+					<RouterLink to="/installs" class="text-dark">
 						<BButton variant="outline-primary" class="mx-2">
 							Installs
 						</BButton>

@@ -32,7 +32,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="3"
+						data-rellax-desktop-speed="1"
 					><img :src="defaultData.r2.c1.image" class="w-100"></BCol>
 
 					<!-- Text 2 -->

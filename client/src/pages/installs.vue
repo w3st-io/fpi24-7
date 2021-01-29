@@ -50,7 +50,7 @@
 
 					<BCol cols="12" md="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r3.c2.title }}</h3>
-						<p>{{ defaultData.r3.c1.description }}</p>
+						<p>{{ defaultData.r3.c2.description }}</p>
 
 						<h4 class="text-primary">{{ defaultData.r3.c2.listTitle }}</h4>
 						<ul>
@@ -62,10 +62,10 @@
 				</BRow>
 
 				<!-- Row 4 -->
-				<BRow class="mb-5 bg-light">
+				<BRow class="bg-light">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
-						<p>{{ defaultData.r3.c1.description }}</p>
+						<p>{{ defaultData.r4.c1.description }}</p>
 
 						<h4 class="text-primary">{{ defaultData.r4.c1.listTitle }}</h4>
 						<ul>
@@ -88,6 +88,14 @@
 						>
 					</BCol>
 				</BRow>
+
+				<!-- Row 5 -->
+				<BRow class="bg-light">
+					<BCol cols="12" class="mt-3">
+						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
+						<p>{{ defaultData.r4.c1.description }}</p>
+					</BCol>
+				</BRow>
 			</BCard>
 		</BContainer>
 	</div>
@@ -97,7 +105,7 @@
 <script>
 	// [IMPORT] Personal //
 	import Parallax from '../components/display/Parallax'
-	import defaultData from '../defaults/pages/design'
+	import defaultData from '../defaults/pages/installs'
 	import router from '../router'
 
 	export default {

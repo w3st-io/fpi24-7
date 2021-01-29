@@ -7,6 +7,7 @@ import VueRouter from 'vue-router'
 import Index from '../pages'
 import About from '../pages/about'
 import Design from '../pages/design'
+import Installs from '../pages/installs'
 import NotFound from '../pages/404'
 
 
@@ -44,6 +45,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'Design'
+			},
+		},
+		// Installs //
+		{
+			path: '/installs',
+			name: 'installs',
+			component: Installs,
+			meta: {
+				auth: true,
+				title: 'Installs'
 			},
 		},
 		// [404] //

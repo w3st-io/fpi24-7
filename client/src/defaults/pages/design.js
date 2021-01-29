@@ -11,7 +11,8 @@ module.exports = {
 	r2: { c1: { title: 'Design & Engineering' }, },
 
 	r3: {
-		c1: {
+		c1: { image: require('../../assets/images/pages/design/fpd.webp'), },
+		c2: {
 			title: 'Fire Protection Design',
 			description: 'Our staff includes NICET certified technicians who use state-of-the-art CAD programs to produce accurate, detail oriented and  code compliant fire sprinkler plans for the use of obtaining permits, performing hydraulic calculations, guiding installation and recording \'as-built\' conditions upon project completion. Our engineering department provides fast and reliable plans and reports to expedite all phases of your project.',
 			listTitle: '',
@@ -29,7 +30,6 @@ module.exports = {
 				'On going industry and safety training for all fitters',
 			],
 		},
-		c2: { image: require('../../assets/images/pages/design/fpd.webp'), },
 	},
 
 	r4: {
