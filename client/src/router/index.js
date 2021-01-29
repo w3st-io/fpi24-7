@@ -8,6 +8,7 @@ import Index from '../pages'
 import About from '../pages/about'
 import Design from '../pages/design'
 import Installs from '../pages/installs'
+import Service from '../pages/service'
 import NotFound from '../pages/404'
 
 
@@ -55,6 +56,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'Installs'
+			},
+		},
+		// Service //
+		{
+			path: '/service',
+			name: 'service',
+			component: Service,
+			meta: {
+				auth: true,
+				title: 'Service'
 			},
 		},
 		// [404] //

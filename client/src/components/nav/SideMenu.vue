@@ -37,6 +37,13 @@
 			class="w-100 p-2 text-primary"
 			@click="installs()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Installs</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="service()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Service</span></BButton>
 		<br>
 	</nav>
 </template>
@@ -85,6 +92,11 @@
 
 			installs() {
 				router.push({ name: 'installs' })
+				this.closeMenu()
+			},
+
+			service() {
+				router.push({ name: 'service' })
 				this.closeMenu()
 			},
 		}

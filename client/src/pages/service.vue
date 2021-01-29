@@ -9,7 +9,7 @@
 				<!-- Row 1 -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
-						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
+						<h2 class="text-primary">{{ defaultData.r1.c1.title }}</h2>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
@@ -20,7 +20,7 @@
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						data-rellax-desktop-speed="2"
-					><img :src="defaultData.r1.c2.image" class="w-100"></BCol>
+					><img :src="defaultData.r1.c2.image" class="w-100 rounded-lg"></BCol>
 				</BRow>
 
 				<!-- Row 2 -->
@@ -62,7 +62,7 @@
 				</BRow>
 
 				<!-- Row 4 -->
-				<BRow class="mb-5 bg-light">
+				<BRow class="bg-light">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
 						<p>{{ defaultData.r4.c1.description }}</p>
@@ -80,7 +80,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-1"
+						data-rellax-desktop-speed=".2"
 					>
 						<img
 							:src="defaultData.r4.c2.image"
@@ -88,16 +88,23 @@
 						>
 					</BCol>
 				</BRow>
+
+				<!-- Row 5 -->
+				<BRow class="bg-light">
+					<BCol cols="12" class="mt-3">
+						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
+						<p>{{ defaultData.r4.c1.description }}</p>
+					</BCol>
+				</BRow>
 			</BCard>
 		</BContainer>
 	</div>
 </template>
 
-
 <script>
 	// [IMPORT] Personal //
 	import Parallax from '../components/display/Parallax'
-	import defaultData from '../defaults/pages/design'
+	import defaultData from '../defaults/pages/service'
 	import router from '../router'
 
 	export default {
@@ -107,7 +114,7 @@
 
 		data() {
 			return {
-				parallaxImg: require('../assets/images/s2.jpg'),
+				parallaxImg: require('../assets/images/s3.jpg'),
 				defaultData: defaultData,
 			}
 		},

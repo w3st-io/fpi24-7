@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- Parallax Image Above -->
-		<Parallax />
+		<Parallax :imgURL="parallaxImg" />
 
 		<!-- Content -->
 		<BContainer>
@@ -20,7 +20,7 @@
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						data-rellax-desktop-speed="2"
-					><img :src="defaultData.r1.c2.image" class="w-100"></BCol>
+					><img :src="defaultData.r1.c2.image" class="w-100 rounded-lg"></BCol>
 				</BRow>
 
 				<!-- Row 2 -->
@@ -33,7 +33,7 @@
 				</BRow>
 
 				<!-- Row 3 -->
-				<BRow class="">
+				<BRow>
 					<BCol
 						cols="12" md="4"
 						v-rellax
@@ -93,14 +93,13 @@
 				<BRow class="bg-light">
 					<BCol cols="12" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
-						<p>{{ defaultData.r4.c1.description }}</p>
+						<p>{{ defaultData.r5.c1.description }}</p>
 					</BCol>
 				</BRow>
 			</BCard>
 		</BContainer>
 	</div>
 </template>
-
 
 <script>
 	// [IMPORT] Personal //
@@ -115,6 +114,7 @@
 
 		data() {
 			return {
+				parallaxImg: require('../assets/images/s4.jpg'),
 				defaultData: defaultData,
 			}
 		},

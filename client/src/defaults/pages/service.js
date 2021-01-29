@@ -2,19 +2,19 @@
 module.exports = {
 	r1: {
 		c1: {
-			title: 'Each sprinkler system is installed by a fire sprinkler professional who has undergone extensive training in their craft.',
-			description: 'Safety, accuracy and efficiency are paramount when installing fire sprinkler systems. If its worth doing, its worth doing right, the first time.',
+			title: 'Fire sprinklers save lives and property. Be sure your systems are maintained and serviced by qualified licensed professionals.',
+			description: 'We provide an array of services including repair, maintenance, testing,  and quarterly and annual inspections. Our service crews are certified professionals in their field and we\'re on call 24 hours a day 7 days a week.',
 		},
-		c2: { image: require('../../assets/images/pages/about/team.webp'), },
+		c2: { image: require('../../assets/images/pages/service/service.webp'), },
 	},
 
-	r2: { c1: { title: 'Installations' }, },
+	r2: { c1: { title: 'Service/Inspections' }, },
 
 	r3: {
-		c1: { image: require('../../assets/images/pages/installs/pi.webp'), },
+		c1: { image: require('../../assets/images/pages/design/fpd.webp'), },
 		c2: {
-			title: 'Professional Installation',
-			description: 'We currently employ a highly qualified team of installers that specialize in all aspects of installation, including residential, commercial and industrial. We have crews devoted to various specialties including CPVC installers, steel pipe fitters and a crew that specializes in commercial relocation projects. We have multiple foreman for simultaneous projects and each installer is continuously trained to meet OSHA safety protocol and continuing education requirements.',
+			title: 'Maintenance & Repair',
+			description: '24/7 Fire Protection Inc., prides itself on quality service and repair with prompt courteous service. We provide a variety of inspection services geared toward the continued maintenance and operation of your facility\'s fire sprinkler systems. We provide pump tests, system testing, backflow certification and inspections. We provide computer generated reports for all tests and inspections. We are vested in helping you maintain your investment.',
 			listTitle: 'You Can Rely On Us For..',
 			list: [
 				'Professional and Courteous Service',
