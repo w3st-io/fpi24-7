@@ -9,6 +9,7 @@ module.exports = {
 			image: require('../../assets/images/pages/about/team.webp'),
 		},
 	},
+
 	r2: {
 		c1: {
 			image: require('../../assets/images/pages/about/rench.webp'),
@@ -18,6 +19,7 @@ module.exports = {
 			description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful. ',
 		},
 	},
+	
 	r3: {
 		title: 'Meet the Team',
 		c1: {

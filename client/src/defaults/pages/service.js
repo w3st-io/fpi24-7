@@ -1,5 +1,7 @@
 // [EXPORT] //
 module.exports = {
+	parallaxImg: require('../../assets/images/pages/service/parallax.jpg'),
+
 	r1: {
 		c1: {
 			title: 'Fire sprinklers save lives and property. Be sure your systems are maintained and serviced by qualified licensed professionals.',

@@ -21,6 +21,8 @@ const textHtml = `
 
 // [EXPORT] //
 module.exports = {
+	parallaxImg: require('../../assets/images/pages/index/parallax.jpg'),
+
 	r1: {
 		// Main //
 		c1: {

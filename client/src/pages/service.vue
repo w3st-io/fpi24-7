@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- Parallax Image Above -->
-		<Parallax :imgURL="parallaxImg" />
+		<Parallax :imgURL="defaultData.parallaxImg" />
 
 		<!-- Content -->
 		<BContainer>
@@ -114,7 +114,6 @@
 
 		data() {
 			return {
-				parallaxImg: require('../assets/images/s3.jpg'),
 				defaultData: defaultData,
 			}
 		},

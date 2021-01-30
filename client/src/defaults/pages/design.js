@@ -1,5 +1,7 @@
 // [EXPORT] //
 module.exports = {
+	parallaxImg: require('../../assets/images/pages/design/parallax.jpg'),
+
 	r1: {
 		c1: {
 			title: 'Good design practice and accurate plans equate to quicker approvals by city and state officials.',

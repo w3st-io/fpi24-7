@@ -8,7 +8,7 @@
 export default {
 	props: {
 		imgURL: {
-			default: require('../../assets/images/sprinkler-system.jpg')
+			default: require('../../assets/images/default-parallax.jpg')
 		}
 	},
 }

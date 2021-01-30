@@ -1,5 +1,7 @@
 // [EXPORT] //
 module.exports = {
+	parallaxImg: require('../../assets/images/pages/installs/parallax.jpg'),
+
 	r1: {
 		c1: {
 			title: 'Each sprinkler system is installed by a fire sprinkler professional who has undergone extensive training in their craft.',

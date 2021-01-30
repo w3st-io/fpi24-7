@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 // [IMPORT] Personal //
 import Index from '../pages'
 import About from '../pages/about'
+import ContactUs from '../pages/contact-us'
 import Design from '../pages/design'
 import Installs from '../pages/installs'
 import Service from '../pages/service'
@@ -36,6 +37,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'About'
+			},
+		},
+		// Contact Us //
+		{
+			path: '/contact-us',
+			name: 'contact-us',
+			component: ContactUs,
+			meta: {
+				auth: true,
+				title: 'Contact Us'
 			},
 		},
 		// Design //

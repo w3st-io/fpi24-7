@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Parallax :imgURL="parallaxImg" />
+		<Parallax :imgURL="defaultData.parallaxImg" />
 
 		<BContainer class="my-5" v-rellax="{ speed: 10 }">
 			<BRow>
@@ -153,7 +153,6 @@
 
 		data() {
 			return {
-				parallaxImg: require('../assets/images/s1.jpg'),
 				defaultData: defaultData,
 			}
 		},
