@@ -44,6 +44,13 @@
 			class="w-100 p-2 text-primary"
 			@click="service()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Service</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="contactUs()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Contact Us</span></BButton>
 		<br>
 	</nav>
 </template>
@@ -97,6 +104,11 @@
 
 			service() {
 				router.push({ name: 'service' })
+				this.closeMenu()
+			},
+
+			contactUs() {
+				router.push({ name: 'contact-us' })
 				this.closeMenu()
 			},
 		}

@@ -4,13 +4,13 @@
 			<BRow>
 				<!-- Logo -->
 				<BCol cols="lg">
-					<div class="content">
+					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
 						<img
 							:src="companyInfo.companyLogo"
 							class=" d-none d-lg-block p-1 bg-light rounded-lg"
 							style="max-width: 110px;"
 						>
-					</div>
+					</RouterLink>
 				</BCol>
 
 				<!-- Title & Nav Buttons -->
@@ -129,14 +129,4 @@
 		z-index: 10;
 		background-color: rgba(0, 0, 0, 0.726) !important;
 	}
-
-	.content { display: flex; }
-
-	.content img {
-		margin-right: 10px;
-		display: block;
-	}
-
-	.content h3,
-	.content p { margin: 0; }
 </style>
