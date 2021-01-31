@@ -52,6 +52,12 @@
 							class="text-center text-dark"
 						>
 							<h5 class="mb-3">{{ defaultData.r2.c2.address }}</h5>
+							
+							<div class="mb-3">
+								<BButton variant="primary">
+									Open Google Maps
+								</BButton>
+							</div>
 
 							<BCard variant="bg-white" class="mx-5 p-1 shadow">
 								<img

@@ -1,48 +1,79 @@
 <template>
 	<div class="w-100 py-3 text-dark shadow position-absolute nav">
 		<BContainer>
-			<!-- Menu -->
-			<BRow class="mb-3">
-				<!-- Links -->
-				<BCol
-					cols="12"
-					class="d-none d-md-block text-uppercase text-light text-center text-md-center"
-				>
-					<RouterLink to="/" class=" text-dark">
-						<BButton variant="outline-primary" class="mx-2">
-							Home
-						</BButton>
+			<BRow>
+				<!-- Logo -->
+				<BCol cols="lg">
+					<div class="content">
+						<img
+							:src="companyInfo.companyLogo"
+							class=" d-none d-lg-block p-1 bg-light rounded-lg"
+							style="max-width: 110px;"
+						>
+					</div>
+				</BCol>
+
+				<!-- Title & Nav Buttons -->
+				<BCol cols="12" lg="7">
+					<!-- Title + Caption -->
+					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
+						<h3 class="text-primary font-weight-bold">
+							{{ companyInfo.companyName }}
+						</h3>
+						<h6
+							v-html="companyInfo.companyCaption"
+							class="h6 text-light font-weight-bold"
+						></h6>
 					</RouterLink>
 
-					<RouterLink to="/about" class="text-light">
-						<BButton variant="outline-primary" class="mx-2">
-							About
-						</BButton>
-					</RouterLink>
+					<div  class="mb-3 d-none d-md-block text-center">
+						<RouterLink to="/" class="text-dark">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								Home
+							</BButton>
+						</RouterLink>
 
-					<RouterLink to="/design" class="text-dark">
-						<BButton variant="outline-primary" class="mx-2">
-							Design
-						</BButton>
-					</RouterLink>
+						<RouterLink to="/about" class="text-light">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								About
+							</BButton>
+						</RouterLink>
 
-					<RouterLink to="/installs" class="text-dark">
-						<BButton variant="outline-primary" class="mx-2">
-							Installs
-						</BButton>
-					</RouterLink>
+						<RouterLink to="/design" class="text-dark">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								Design
+							</BButton>
+						</RouterLink>
 
-					<RouterLink to="/service" class="text-dark">
-						<BButton variant="outline-primary" class="mx-2">
-							Service
-						</BButton>
-					</RouterLink>
+						<RouterLink to="/installs" class="text-dark">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								Installs
+							</BButton>
+						</RouterLink>
 
-					<RouterLink to="/contact-us" class="text-dark">
-						<BButton variant="outline-primary" class="mx-2">
-							Contact Us
-						</BButton>
-					</RouterLink>
+						<RouterLink to="/service" class="text-dark">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								Service
+							</BButton>
+						</RouterLink>
+
+						<RouterLink to="/contact-us" class="text-dark">
+							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+								Contact Us
+							</BButton>
+						</RouterLink>
+					</div>
+				</BCol>
+
+				<!-- Call Us -->
+				<BCol cols="lg">
+					<a :href="companyInfo.phoneNumberLink" class="text-dark">
+						<h4 class="text-center">
+							<BButton variant="outline-light" class="mx-auto rounded-pill">
+								Call Us: {{ companyInfo.phoneNumber }}
+							</BButton>
+						</h4>
+					</a>
 				</BCol>
 
 				<!-- Hidden Side Menu Button -->
@@ -54,45 +85,6 @@
 					><MenuIcon /></BButton>
 				</BCol>
 			</BRow>
-
-			<BRow>
-				<!-- Logo & Title + Caption -->
-				<BCol cols="12" class="text-center">
-					<div class="mb-4 content">
-						<img
-							:src="companyInfo.companyLogo"
-							class="ml-auto d-none d-md-block p-1 bg-light rounded-lg"
-							style="max-width: 110px;"
-						>
-
-						<div class="mr-auto">
-							<!-- Title + Caption -->
-							<RouterLink to="/" class="text-weight-bold text-decoration-none">
-								<h3 class="mt-4 mb-2 text-primary font-weight-bold">
-									{{ companyInfo.companyName }}
-								</h3>
-								<h6
-									v-html="companyInfo.companyCaption"
-									class="h6 text-light font-weight-bold"
-								></h6>
-							</RouterLink>
-						</div>
-					</div>
-				</BCol>
-
-				<!-- Phone # -->
-				<BCol cols="12">
-					<a :href="companyInfo.phoneNumberLink" class="text-dark">
-						<h4 class="text-center">
-							<BButton variant="outline-light" class="mx-auto rounded-pill">
-								Call Us: {{ companyInfo.phoneNumber }}
-							</BButton>
-						</h4>
-					</a>
-				</BCol>
-			</BRow>
-
-			
 		</BContainer>
 
 		<!-- Hidden Side Menu -->
