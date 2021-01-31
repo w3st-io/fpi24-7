@@ -134,37 +134,42 @@
 					</BCard>
 				</BCol>
 			</BRow>
-
-			<VueTinySlider
-				:controls="false"
-				:loop="true"
-				:items="2"
-				:gutter="20"
-				autoplay
-				:autoplay-timeout="1000"
-				:autoplayButton="false"
-				controlsPosition="bottom"
-			>
-				<div class="text-center">
-					<img :src="defaultData.r1.c1.r1.columns[0].image" alt="Card Image" class="rounded">
-				</div>
-				<div class="text-center">
-					<img :src="defaultData.r1.c1.r1.columns[1].image" alt="Card Image" class="rounded">
-				</div>
-				<div class="text-center">
-					<img :src="defaultData.r1.c1.r1.columns[2].image" alt="Card Image" class="rounded">
-				</div>
-				<div class="text-center">
-					<img :src="defaultData.r1.c1.r1.columns[1].image" alt="Card Image" class="rounded">
-				</div>
-			</VueTinySlider>
+		
+			<BCard bg-variant="white" class="shadow">
+				<h1 class="text-center text-primary">Our Afilliates</h1>
+				<VueTinySlider v-bind="tinySliderOptions" class="my-3">
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
+					</div>
+					<div class="text-center">
+						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+					</div>
+				</VueTinySlider>
+			</BCard>
 		</BContainer>
 	</div>
 </template>
 
 <script>
-	// [IMPORT] Personal //
+	// [IMPORT] //
 	import VueTinySlider from 'vue-tiny-slider'
+
+	// [IMPORT] Personal //
 	import BCaraousel from '../components/display/BCarousel'
 	import Parallax from '../components/display/Parallax'
 	import defaultData from '../defaults/pages'
@@ -180,6 +185,16 @@
 		data() {
 			return {
 				defaultData: defaultData,
+				tinySliderOptions: {
+					items: 5,
+					gutter: 20,
+					nav: false,
+					controls: false,
+					loop: true,
+					autoplay: true,
+					autoplayButtonOutput: false,
+					autoplayTimeout: 2000,
+				}
 			}
 		},
 
