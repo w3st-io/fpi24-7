@@ -9,6 +9,7 @@
 					<!-- Caraousel -->
 					<BCaraousel :slideObjs="defaultData.r1.c1.caraousel" class="mb-4" />
 
+					<!-- Row 1 -->
 					<BRow class="mb-3">
 						<BCol
 							v-for="(col, index) in defaultData.r1.c1.r1.columns"
@@ -31,6 +32,7 @@
 						</BCol>
 					</BRow>
 
+					<!-- Row 2 -->
 					<BRow class="mb-4">
 						<BCol>
 							<BCard class="shadow">
@@ -65,7 +67,7 @@
 				</BCol>
 
 				<!-- Side -->
-				<BCol cols="12" lg="4">
+				<BCol cols="12" lg="4" class="mb-3">
 					<form action="" class="mb-4 card card-body shadow">
 						<!-- Quote title -->
 						<h3 class="mb-3 text-center text-primary">
@@ -135,32 +137,36 @@
 				</BCol>
 			</BRow>
 		
-			<BCard bg-variant="white" class="shadow">
-				<h1 class="text-center text-primary">Our Afilliates</h1>
-				<VueTinySlider v-bind="tinySliderOptions" class="my-3">
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
-					</div>
-					<div class="text-center">
-						<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
-					</div>
-				</VueTinySlider>
-			</BCard>
+			<BRow>
+				<BCol cols="12">
+					<BCard bg-variant="white" class="shadow">
+						<h1 class="text-center text-primary">Our Afilliates</h1>
+						<VueTinySlider v-bind="tinySliderOptions" class="my-3">
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[1].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[2].image" class="rounded">
+							</div>
+							<div class="text-center">
+								<img :src="defaultData.r1.c1.r1.columns[0].image" class="rounded">
+							</div>
+						</VueTinySlider>
+					</BCard>
+				</BCol>
+			</BRow>
 		</BContainer>
 	</div>
 </template>

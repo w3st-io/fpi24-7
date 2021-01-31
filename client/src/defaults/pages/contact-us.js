@@ -14,8 +14,31 @@ module.exports = {
 			title: 'Call Us or Send Us a Fax',
 			phoneNumber: companyInfo.phoneNumber,
 			phoneNumberLink: companyInfo.phoneNumberLink,
+
 			faxNumber: companyInfo.faxNumber,
 			faxNumberLink: companyInfo.faxNumberLink,
+
+			r1: {
+				c1: { title: 'Send us an Email', },
+				columns: [
+					{
+						title: 'Click for Sales',
+						link: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',
+					},
+					{
+						title: 'Click for Scheduling',
+						link: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
+					},
+					{
+						title: 'Click for Design',
+						link: 'mailto:yandri@24-7fireprotection.com?subject=Design/Engineering%20Question',
+					},
+					{
+						title: 'Click for Billing',
+						link: 'mailto:lissette@24-7fireprotection.com?subject=Billing/Admin%20Question'
+					}
+				],
+			},
 		},
 
 		c2: {
@@ -27,22 +50,6 @@ module.exports = {
 	},
 
 	r3: {
-		c1: {
-			salesButtonTitle: 'Click for Sales',
-			salesLink: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',
-			
-			salesButtonScheduling: 'Click for Scheduling',
-			schedulingLink: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
-			
-			designButtonTitle: 'Click for Design',
-			designLink: 'mailto:yandri@24-7fireprotection.com?subject=Design/Engineering%20Question',
-			
-			billingButtonTitle: 'Click for Billing',
-			billingLink: 'mailto:lissette@24-7fireprotection.com?subject=Billing/Admin%20Question'
-		},
-	},
-
-	r4: {
 		c1: { Title: 'Plase Fill Out this Form to Contact Us', }
 	},
 

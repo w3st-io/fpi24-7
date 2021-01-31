@@ -26,20 +26,45 @@
 				<!-- Row 2 -->
 				<BRow class="my-4">
 					<BCol cols="12" lg="6" class="mb-3">
+						<!-- Title -->
 						<h3 class="text-primary text-center">
 							{{ defaultData.r2.c1.title }}
 						</h3>
+
 						<a :href="defaultData.r2.c1.phoneNumberLink">
-							<BButton pill class="my-3 w-100">
+							<BButton variant="primary" size="lg" pill class="my-3 w-100">
 								Call Us: {{ defaultData.r2.c1.phoneNumber }}
 							</BButton>
 						</a>
 
 						<a :href="defaultData.r2.c1.faxNumberLink">
-							<BButton pill class="my-3 w-100">
+							<BButton variant="secondary" size="lg" pill class="my-3 w-100">
 								Fax Us: {{ defaultData.r2.c1.faxNumber }}
 							</BButton>
 						</a>
+
+						<BRow class="mt-3">
+							<BCol cols="12">
+								<!-- Title -->
+								<h3 class="text-center text-primary">
+									{{ defaultData.r2.c1.r1.c1.title }}
+								</h3>
+							</BCol>
+
+							<!-- Emails Contact -->
+							<BCol
+								v-for="(col, index) in defaultData.r2.c1.r1.columns"
+								:key="index"
+								cols="12" md="6"
+								class="mb-3"
+							>
+								<a :href="col.link">
+									<BButton variant="primary" size="lg" pill class="w-100">
+										{{ col.title }}
+									</BButton>
+								</a>
+							</BCol>
+						</BRow>
 					</BCol>
 
 					<BCol cols="12" lg="6" class="mb-3">
@@ -54,7 +79,7 @@
 							<h5 class="mb-3">{{ defaultData.r2.c2.address }}</h5>
 							
 							<div class="mb-3">
-								<BButton variant="primary">
+								<BButton variant="primary" size="lg" pill>
 									Open Google Maps
 								</BButton>
 							</div>
@@ -67,6 +92,21 @@
 								>
 							</BCard>
 						</a>
+					</BCol>
+				</BRow>
+
+				<!-- Row 3 -->
+				<BRow class="my-4">
+					<BCol>
+					</BCol>
+				</BRow>
+
+				<!-- Row 4 -->
+				<BRow class="my-4">
+					<BCol>
+						<h3 class="text-center text-primary">
+							{{ defaultData.r5.c1.title }}
+						</h3>
 					</BCol>
 				</BRow>
 			</BCard>
