@@ -19,7 +19,8 @@
     "vue-editor-js": "^2.0.2",
     "vue-feather-icons": "^5.1.0",
     "vue-rellax": "^0.2.0",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
     "@editorjs/code": "^2.6.0",

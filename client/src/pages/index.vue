@@ -134,12 +134,37 @@
 					</BCard>
 				</BCol>
 			</BRow>
+
+			<VueTinySlider
+				:controls="false"
+				:loop="true"
+				:items="2"
+				:gutter="20"
+				autoplay
+				:autoplay-timeout="1000"
+				:autoplayButton="false"
+				controlsPosition="bottom"
+			>
+				<div class="text-center">
+					<img :src="defaultData.r1.c1.r1.columns[0].image" alt="Card Image" class="rounded">
+				</div>
+				<div class="text-center">
+					<img :src="defaultData.r1.c1.r1.columns[1].image" alt="Card Image" class="rounded">
+				</div>
+				<div class="text-center">
+					<img :src="defaultData.r1.c1.r1.columns[2].image" alt="Card Image" class="rounded">
+				</div>
+				<div class="text-center">
+					<img :src="defaultData.r1.c1.r1.columns[1].image" alt="Card Image" class="rounded">
+				</div>
+			</VueTinySlider>
 		</BContainer>
 	</div>
 </template>
 
 <script>
 	// [IMPORT] Personal //
+	import VueTinySlider from 'vue-tiny-slider'
 	import BCaraousel from '../components/display/BCarousel'
 	import Parallax from '../components/display/Parallax'
 	import defaultData from '../defaults/pages'
@@ -149,6 +174,7 @@
 		components: {
 			Parallax,
 			BCaraousel,
+			VueTinySlider,
 		},
 
 		data() {
@@ -171,3 +197,7 @@
 		},
 	}
 </script>
+
+<style lang="scss">
+	@import 'tiny-slider/src/tiny-slider';
+</style>
