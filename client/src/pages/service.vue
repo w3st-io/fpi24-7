@@ -93,7 +93,7 @@
 				<BRow class="bg-light">
 					<BCol cols="12" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
-						<p>{{ defaultData.r4.c1.description }}</p>
+						<p>{{ defaultData.r5.c1.description }}</p>
 					</BCol>
 				</BRow>
 			</BCard>
