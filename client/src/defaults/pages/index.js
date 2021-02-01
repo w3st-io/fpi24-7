@@ -110,8 +110,9 @@ module.exports = {
 					require('../../assets/images/affiliates/affiliation-njbia.png'),
 				],
 			},
+
 			c2: {
-				title: 'Follow Us on Social Media!',
+				title: 'Follow Us on Social Media',
 			},
 		}
 	},

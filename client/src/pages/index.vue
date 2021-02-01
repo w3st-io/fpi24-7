@@ -2,7 +2,7 @@
 	<div>
 		<Parallax :imgURL="defaultData.parallaxImg" />
 		
-		<section v-rellax="{ speed: 10 }">
+		<section v-rellax="{ speed: 5 }" class="pt-3">
 			<!-- Company Details -->
 			<BContainer>
 				<BRow>
@@ -145,18 +145,25 @@
 
 			<BContainer fluid>
 				<BRow>
-					<BCol cols="12" class="py-5 bg-light">
-						<h1 class="text-center text-dark">
+					<!-- Conveyor -->
+					<BCol cols="12" class="">
+						<h1 class="my-1 text-center text-primary">
 							{{ defaultData.con2.r1.c1.title }}
 						</h1>
-
-						<Conveyor :images="defaultData.con2.r1.c1.images" />
+			
+						<Conveyor
+							:images="defaultData.con2.r1.c1.images"
+							class="mb-4"
+						/>
 					</BCol>
-
-					<BCol cols="12" class="py-5 bg-primary">
-						<h1 class="text-center text-light">
+					
+					<!-- Social Media -->
+					<BCol cols="12" class="py-3 text-center text-light bg-primary">
+						<h1 class="mb-3">
 							{{ defaultData.con2.r1.c2.title }}
 						</h1>
+
+						<SocialMediaPlug size="46" />
 					</BCol>
 				</BRow>
 			</BContainer>
@@ -169,6 +176,7 @@
 	import BCaraousel from '../components/display/BCarousel'
 	import Conveyor from '../components/display/Conveyor'
 	import Parallax from '../components/display/Parallax'
+	import SocialMediaPlug from '../components/SocialMediaPlug'
 	import defaultData from '../defaults/pages'
 	import router from '../router'
 
@@ -177,6 +185,7 @@
 			BCaraousel,
 			Conveyor,
 			Parallax,
+			SocialMediaPlug,
 		},
 
 		data() {

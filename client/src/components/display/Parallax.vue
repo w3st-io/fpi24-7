@@ -1,23 +1,34 @@
 <template>
-	<div class="parallax" :style="`background-image: url(${imgURL});`" v-rellax="{ speed: 2 }">
-		<div class="text-center" style="padding-top: 270px;"></div>
-	</div>
+	<div
+		class="parallax"
+		:style="`
+			height: ${height}px;
+			background-image: url(${imgURL});
+		`"
+		v-rellax="{ speed: 2 }"
+	></div>
 </template>
 
 <script>
-export default {
-	props: {
-		imgURL: {
-			default: require('../../assets/images/default-parallax.jpg')
-		}
-	},
-}
+	export default {
+		props: {
+			imgURL: {
+				default: require('../../assets/images/default-parallax.jpg'),
+			},
+
+			height: {
+				default: 400,
+			},
+		},
+	}
 </script>
 
 <style lang="scss" scoped>
 	.parallax {
 		/* Set a specific height */
-		min-height: 500px; 
+		//min-height: 500px;
+		//max-height: 600px;
+		height: 400px;
 
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;

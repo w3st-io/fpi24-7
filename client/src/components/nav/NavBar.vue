@@ -67,6 +67,8 @@
 
 				<!-- Call Us -->
 				<BCol cols="lg">
+					<SocialMediaPlug size="34" class="d-none d-md-block mb-3" />
+
 					<a :href="companyInfo.phoneNumberLink" class="text-dark">
 						<h4 class="text-center">
 							<BButton variant="outline-light" class="mx-auto rounded-pill">
@@ -94,6 +96,7 @@
 
 <script>
 	// [IMPORT] Personal //
+	import SocialMediaPlug from '../SocialMediaPlug'
 	import { MenuIcon } from 'vue-feather-icons'
 
 	// [IMPORT] //
@@ -102,6 +105,7 @@
 
 	export default {
 		components: {
+			SocialMediaPlug,
 			MenuIcon,
 			SideMenu,
 		},

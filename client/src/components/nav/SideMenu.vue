@@ -51,7 +51,10 @@
 			class="w-100 p-2 text-primary"
 			@click="contactUs()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Contact Us</span></BButton>
-		<br>
+		
+
+		<SocialMediaPlug size="48" class="my-3" />
+
 	</nav>
 </template>
 
@@ -59,6 +62,7 @@
 	// [IMPORT] //
 	import { EventBus } from '../../main'
 	import router from '../../router'
+	import SocialMediaPlug from '../SocialMediaPlug'
 
 	// [EXPORT] //
 	export default {
@@ -67,6 +71,10 @@
 				type: Boolean,
 				required: true,
 			}
+		},
+
+		components: {
+			SocialMediaPlug,
 		},
 
 		created() {

@@ -18,5 +18,6 @@ module.exports = {
 	faxNumber: '(877) 643-8252',
 	faxNumberLink: 'tel:877-643-8252',
 
-	companyFacebook: 'https://www.facebook.com/247fireprotection',
+	facebookLink: 'https://www.facebook.com/247-Fire-Protection-Inc-408666163014552/',
+	instagramLink: 'https://www.instagram.com/247fireprotection/?hl=en',
 }
