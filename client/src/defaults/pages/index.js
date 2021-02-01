@@ -23,27 +23,28 @@ const textHtml = `
 module.exports = {
 	parallaxImg: require('../../assets/images/pages/index/parallax.jpg'),
 
-	con1: {
+	cnt1: {
 		r1: {
-			// Main //
+			// Main Column //
 			c1: {
-				caraousel: [
-					{
-						textHtml: textHtml,
-						img: require('../../assets/images/pages/index/inspection.jpg'),
-					},
-					{
-						textHtml: textHtml,
-						img: require('../../assets/images/pages/index/industry.jpg'),
-					},
-				],
-	
-				companyName: companyInfo.companyName,
-				caption2: companyInfo.companyCaption,
-				address: companyInfo.address,
-				googleMapsLink: companyInfo.googleMapsLink,
-	
+				// Caraousel //
 				r1: {
+					c1: {
+						caraousel: [
+							{
+								textHtml: textHtml,
+								img: require('../../assets/images/pages/index/inspection.jpg'),
+							},
+							{
+								textHtml: textHtml,
+								img: require('../../assets/images/pages/index/industry.jpg'),
+							},
+						],
+					}
+				},
+	
+				// Residential, Commercial, & Industrial Details //
+				r2: {
 					columns: [
 						{
 							image: require('../../assets/images/pages/index/residential.webp'),
@@ -66,23 +67,18 @@ module.exports = {
 					]
 				},
 	
-				r2: {
-					c1: { text: '<b>Our Service 24/7!</b> <i>No Exception!</i>', },
-					c2: {
-						image: require('../../assets/images/pages/index/welcome.webp'),
-						
-					},
+				// Our Service 24/7! No Exceptions //
+				r3: {
+					c1: {},
+					c2: { image: require('../../assets/images/pages/index/welcome.webp'), },
 					c3: {
 						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
 					},
 				}
 			},
 		
-			// Row //
+			// Side Column //
 			c2: {
-				title: 'Get a Quote',
-				
-				operationsTitle: 'Hours & Location',
 				hours: companyInfo.hours,
 				
 				address: companyInfo.address,
@@ -97,10 +93,10 @@ module.exports = {
 		},
 	},
 
-	con2: {
+	cnt2: {
+		// Conveyor //
 		r1: {
 			c1: {
-				title: 'Our Affiliates',
 				images: [
 					require('../../assets/images/affiliates/affiliation-afsa.png'),
 					require('../../assets/images/affiliates/affiliation-fssa.png'),
@@ -110,10 +106,9 @@ module.exports = {
 					require('../../assets/images/affiliates/affiliation-njbia.png'),
 				],
 			},
+		},
 
-			c2: {
-				title: 'Follow Us on Social Media',
-			},
-		}
+		// Social Media //
+		r2: { c1: {}, },
 	},
 }

@@ -2,19 +2,26 @@
 	<div>
 		<Parallax :imgURL="defaultData.parallaxImg" />
 		
-		<section v-rellax="{ speed: 5 }" class="pt-3">
+		<div class="pt-3" v-rellax="{ speed: 5 }">
 			<!-- Company Details -->
 			<BContainer>
 				<BRow>
-					<!-- Main -->
+					<!-- Main Column -->
 					<BCol cols="12" lg="8">
 						<!-- Caraousel -->
-						<BCaraousel :slideObjs="defaultData.con1.r1.c1.caraousel" class="mb-4" />
+						<BRow>
+							<BCol cols="12">
+								<BCaraousel
+									:slideObjs="defaultData.cnt1.r1.c1.r1.c1.caraousel"
+									class="mb-4"
+								/>
+							</BCol>
+						</BRow>
 
-						<!-- Row 1 -->
+						<!-- Residential, Commercial, & Industrial Details -->
 						<BRow class="mb-3">
 							<BCol
-								v-for="(col, index) in defaultData.con1.r1.c1.r1.columns"
+								v-for="(col, index) in defaultData.cnt1.r1.c1.r2.columns"
 								:key="index"
 								cols="12" sm="6" md="6" lg="6" xl="4"
 								class="mb-3"
@@ -36,25 +43,23 @@
 							</BCol>
 						</BRow>
 
-						<!-- Row 2 -->
+						<!-- Our Service 24/7! No Exceptions -->
 						<BRow class="mb-4">
 							<BCol>
 								<BCard class="shadow">
 									<BRow>
 										<!-- Title -->
 										<BCol cols="12">
-											<p
-												v-html="defaultData.con1.r1.c1.r2.c1.text"
-												data-aos="zoom-in"
-												class="mb-4 h2 text-center text-primary"
-											></p>
+											<p data-aos="zoom-in" class="mb-4 h2 text-center text-primary">
+												Our Service 24/7! <i>No Exceptions!</i>
+											</p>
 										</BCol>
 
 										<!-- Image -->
 										<BCol cols="12" md="7">
 											<div class="mb-3 text-center">
 												<img
-													:src="defaultData.con1.r1.c1.r2.c2.image"
+													:src="defaultData.cnt1.r1.c1.r3.c2.image"
 													alt="Card Image"
 													class="w-100 rounded"
 												>
@@ -64,7 +69,7 @@
 										<!-- Description -->
 										<BCol cols="12" md="5">
 											<p class="h5 mb-3">
-												{{ defaultData.con1.r1.c1.r2.c3.description }}
+												{{ defaultData.cnt1.r1.c1.r3.c3.description }}
 											</p>
 										</BCol>
 									</BRow>
@@ -73,12 +78,12 @@
 						</BRow>
 					</BCol>
 
-					<!-- Side -->
+					<!-- Side Column -->
 					<BCol cols="12" lg="4" class="mb-3">
+						<!-- Quote -->
 						<form action="" class="mb-4 card card-body shadow">
-							<!-- Quote title -->
 							<h3 class="mb-3 text-center text-primary">
-								{{ defaultData.con1.r1.c2.title }}
+								Get a Quote
 							</h3>
 							<hr>
 
@@ -90,13 +95,13 @@
 							></textarea>
 
 							<!-- Submit -->
-							<BButton class="w-100 mt-3">Submit</BButton>
+							<BButton type="submit" class="w-100 mt-3">Submit</BButton>
 						</form>
 
+						<!-- Operations -->
 						<BCard bg-variant="dark" class="text-light">
-							<!-- OperationsTitle -->
 							<h3 class="mb-3 text-center text-primary">
-								{{ defaultData.con1.r1.c2.operationsTitle }}
+								Hours & Location
 							</h3>
 							<hr class="border-light">
 
@@ -104,72 +109,74 @@
 							<p class="mt-3 h4 text-primary">Hours</p>
 							<BListGroup>
 								<BListGroupItem class="p-1 bg-dark font-weight-bold">
-									{{ defaultData.con1.r1.c2.hours[0].days }}
+									{{ defaultData.cnt1.r1.c2.hours[0].days }}
 								</BListGroupItem>
 
 								<BListGroupItem class="p-1 bg-dark">
-									{{ defaultData.con1.r1.c2.hours[0].hours }}
+									{{ defaultData.cnt1.r1.c2.hours[0].hours }}
 								</BListGroupItem>
 
 								<BListGroupItem class="p-1 bg-dark font-weight-bold">
-									{{ defaultData.con1.r1.c2.hours[1].days }}
+									{{ defaultData.cnt1.r1.c2.hours[1].days }}
 								</BListGroupItem>
 
 								<BListGroupItem class="p-1 bg-dark">
-									{{ defaultData.con1.r1.c2.hours[0].hours }}
+									{{ defaultData.cnt1.r1.c2.hours[0].hours }}
 								</BListGroupItem>
 							</BListGroup>
 
 							<!-- Location -->
 							<p class="mt-3 h4 text-primary">Location</p>
 							<a
-								:href="defaultData.con1.r1.c2.googleMapsLink"
+								:href="defaultData.cnt1.r1.c2.googleMapsLink"
 								class="mt-3 text-light"
-							>{{ defaultData.con1.r1.c2.address }}</a>
+							>{{ defaultData.cnt1.r1.c2.address }}</a>
 
 							<!-- Phone # -->
 							<p class="h4 mt-3 text-primary">Phone Number</p>
 							<a
-								:href="defaultData.con1.r1.c2.phoneNumberLink"
+								:href="defaultData.cnt1.r1.c2.phoneNumberLink"
 								class="text-light"
-							>{{ defaultData.con1.r1.c2.phoneNumber }}</a>
+							>{{ defaultData.cnt1.r1.c2.phoneNumber }}</a>
 
 							<!-- Fax # -->
 							<p class="h4 mt-3 text-primary">Fax Number:</p>
 							<a
-								:href="defaultData.con1.r1.c2.faxNumberLink"
+								:href="defaultData.cnt1.r1.c2.faxNumberLink"
 								class="text-light"
-							>{{ defaultData.con1.r1.c2.faxNumber }}</a>
+							>{{ defaultData.cnt1.r1.c2.faxNumber }}</a>
 						</BCard>
 					</BCol>
 				</BRow>
 			</BContainer>
 
 			<BContainer fluid>
+				<!-- Conveyor -->
 				<BRow>
-					<!-- Conveyor -->
 					<BCol cols="12" class="">
 						<h1 class="my-1 text-center text-primary">
-							{{ defaultData.con2.r1.c1.title }}
+							Our Affiliates
 						</h1>
 			
 						<Conveyor
-							:images="defaultData.con2.r1.c1.images"
+							:images="defaultData.cnt2.r1.c1.images"
 							class="mb-4"
 						/>
 					</BCol>
-					
-					<!-- Social Media -->
+				</BRow>
+				
+				<!-- Social Media -->
+				<BRow>	
 					<BCol cols="12" class="py-3 text-center text-light bg-primary">
 						<h1 class="mb-3">
-							{{ defaultData.con2.r1.c2.title }}
+							Follow Us on Social Media
 						</h1>
 
 						<SocialMediaPlug size="46" />
 					</BCol>
 				</BRow>
 			</BContainer>
-		</section>
+		</div>
 	</div>
 </template>
 
