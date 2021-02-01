@@ -78,12 +78,13 @@
 </script>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;1,300&display=swap');
+	// Cuprum // Zilla Slab //
+	@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
-	* { font-family: 'Comfortaa', sans-serif !important; }
+	* { font-family: 'Cuprum', 'Zilla Slab', sans-serif !important; }
 
 	h1, h2, h3, h4, h5, h6, button {
-		font-family: 'Comfortaa', sans-serif !important;
+		font-family: 'Cuprum', 'Zilla Slab', sans-serif !important;
 	}
 </style>

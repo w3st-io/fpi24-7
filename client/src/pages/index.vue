@@ -27,9 +27,11 @@
 
 									<p class="text-dark">{{ col.description }}</p>
 
-									<BButton pill variant="outline-primary" class="w-100">
-										Read More
-									</BButton>
+									<a href="/about">
+										<BButton pill variant="outline-primary" class="w-100">
+											Read More
+										</BButton>
+									</a>
 								</BCard>
 							</BCol>
 						</BRow>
