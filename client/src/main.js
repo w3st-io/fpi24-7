@@ -5,7 +5,7 @@ import Vue from 'vue'
 import Editor from 'vue-editor-js/src/index'
 import VueRellax from 'vue-rellax'
 import 'aos/dist/aos.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'tiny-slider/src/tiny-slider.scss'
 
 // [IMPORT] Personal //
 import App from './App.vue'

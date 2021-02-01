@@ -1,12 +1,13 @@
+// [BOOTSTRAP-OVERRIDES] //
 $theme-colors: (
-	"primary": rgb(163, 0, 0),
+	"primary": rgb(180, 0, 0),
 );
 
 
 // [IMPORT] //
 @import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
 
 // [CONTAINER] //
-@media (min-width: 1600px) {
-	.container { max-width: 1500px; }
-}
+@media (min-width: 1600px) { .container { max-width: 1500px; } }
