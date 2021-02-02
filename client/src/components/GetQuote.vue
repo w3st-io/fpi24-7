@@ -19,11 +19,14 @@
 
 			<!-- Submit -->
 			<BButton type="submit" class="w-100 mt-3">Submit</BButton>
+
+			<h6 v-if="error" class="mt-2 text-danger">{{ error }}</h6>
 		</form>
 	</div>
 </template>
 
 <script>
+	import router from '../router'
 	import mailService from '../services/mailService'
 
 	export default {
@@ -33,17 +36,27 @@
 				name: '',
 				subject: '',
 				message: '',
+				error: '',
 			}
 		},
 
 		methods: {
 			async submit() {
-				await mailService.s_getQuote(
+				if (!this.email || !this.name || !this.subject || !this.message) {
+					//this.error = 'Error: Please fill out all fields'
+					//return
+				}
+
+				const mObj = await mailService.s_getQuote(
 					this.email,
 					this.name,
 					this.subject,
 					this.message
 				)
+
+				if (mObj.status) { router.push({ name: 'about' }) }
+				else { this.error = mObj.message }
+
 			}
 		},
 	}

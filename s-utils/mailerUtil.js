@@ -19,25 +19,53 @@ const email = config.EMAIL
 const emailPassword = config.EMAIL_PASSWORD
 const baseURL = config.BASE_URL
 
+const auth = {
+	user: email,
+	pass: emailPassword
+}
 
 // [DEFAULT] //
 async function sendMail(to, subject, html) {
 	try {
-		// [VALIDATE] //
-		if (!validator.isEmail(to) || !validator.isAscii(subject)) {
+		// [VALIDATE] to //
+		if (!validator.isEmail(to)) {
 			return {
 				executed: true,
 				status: false,
-				message: 'mailerUtil: Invalid params'
+				message: 'mailerUtil: Invalid email'
+			}
+		}
+
+		// [VALIDATE] subject //
+		if (!validator.isAscii(subject)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid subject'
+			}
+		}
+
+		// [VALIDATE] html //
+		if (!html) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid html'
+			}
+		}
+
+		// [VALIDATE] html xss //
+		if (html.includes('<script') || html.includes('</script>')) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid html (XSS)'
 			}
 		}
 
 		const transporter = nodemailer.createTransport({
 			service: service,
-			auth: {
-				user: email,
-				pass: emailPassword
-			}
+			auth: auth
 		})
 
 		const mailOptions = {
@@ -84,10 +112,7 @@ async function sendVerificationMail(to, user_id, VCode) {
 
 		const transporter = nodemailer.createTransport({
 			service: service,
-			auth: {
-				user: email,
-				pass: emailPassword
-			}
+			auth: auth
 		})
 
 		const mailOptions = {
@@ -139,10 +164,7 @@ async function sendPasswordResetEmail(to, user_id, VCode) {
 
 		const transporter = nodemailer.createTransport({
 			service: service,
-			auth: {
-				user: email,
-				pass: emailPassword
-			}
+			auth: auth
 		})
 
 		const mailOptions = {
