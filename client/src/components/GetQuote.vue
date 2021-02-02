@@ -43,8 +43,8 @@
 		methods: {
 			async submit() {
 				if (!this.email || !this.name || !this.subject || !this.message) {
-					//this.error = 'Error: Please fill out all fields'
-					//return
+					this.error = 'Error: Please fill out all fields'
+					return
 				}
 
 				const mObj = await mailService.s_getQuote(
