@@ -126,20 +126,6 @@
 						<SocialMediaPlug size="46" />
 					</BCol>
 				</BRow>
-
-				<!-- Conveyor -->
-				<BRow>
-					<BCol cols="12" class="">
-						<h1 class="my-1 text-center text-primary">
-							Our Affiliates
-						</h1>
-			
-						<Conveyor
-							:images="defaultData.cnt2.r1.c1.images"
-							class="mb-4"
-						/>
-					</BCol>
-				</BRow>
 			</BContainer>
 		</div>
 	</div>
