@@ -8,6 +8,7 @@ import Index from '../pages'
 import About from '../pages/about'
 import ContactUs from '../pages/contact-us'
 import Design from '../pages/design'
+import EmailSent from '../pages/email-sent'
 import Installs from '../pages/installs'
 import Service from '../pages/service'
 import NotFound from '../pages/404'
@@ -57,6 +58,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'Design'
+			},
+		},
+		// Email //
+		{
+			path: '/email-sent',
+			name: 'email-sent',
+			component: EmailSent,
+			meta: {
+				auth: true,
+				title: 'Email Sent'
 			},
 		},
 		// Installs //

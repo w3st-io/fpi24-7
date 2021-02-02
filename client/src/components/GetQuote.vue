@@ -54,7 +54,7 @@
 					this.message
 				)
 
-				if (mObj.status) { router.push({ name: 'about' }) }
+				if (mObj.status) { router.push({ name: 'email-sent' }) }
 				else { this.error = mObj.message }
 
 			}
