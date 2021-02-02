@@ -17,48 +17,48 @@
 				<BCol cols="12" lg="7">
 					<!-- Title + Caption -->
 					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
-						<h3 class="text-primary font-weight-bold">
+						<h3 class="text-light font-weight-bold">
 							{{ companyInfo.companyName }}
 						</h3>
 						<h6
 							v-html="companyInfo.companyCaption"
-							class="h6 text-light font-weight-bold"
+							class="h6 text-primary font-weight-bold"
 						></h6>
 					</RouterLink>
 
 					<div  class="mb-3 d-none d-md-block text-center">
 						<RouterLink to="/" class="text-dark">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Home
 							</BButton>
 						</RouterLink>
 
 						<RouterLink to="/about" class="text-light">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								About
 							</BButton>
 						</RouterLink>
 
 						<RouterLink to="/design" class="text-dark">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Design
 							</BButton>
 						</RouterLink>
 
 						<RouterLink to="/installs" class="text-dark">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Installs
 							</BButton>
 						</RouterLink>
 
 						<RouterLink to="/service" class="text-dark">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Service
 							</BButton>
 						</RouterLink>
 
 						<RouterLink to="/contact-us" class="text-dark">
-							<BButton variant="outline-primary" size="sm" class="font-weight-bold mx-2">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Contact Us
 							</BButton>
 						</RouterLink>
@@ -81,7 +81,7 @@
 				<!-- Hidden Side Menu Button -->
 				<BCol cols="12" class="d-block d-md-none">
 					<BButton
-						variant="outline-primary"
+						variant="primary"
 						class="w-100"
 						@click="toggle()"
 					><MenuIcon /></BButton>

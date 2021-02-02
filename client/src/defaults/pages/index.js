@@ -1,6 +1,8 @@
+// [REQUIRE] Personal //
 const companyInfo = require('../companyInfo') 
 
 
+// [INIT] //
 const textHtml = `
 	<div class="d-none d-md-block mb-2 badge badge-dark shadow">
 		<h1 class="m-0 text-primary" style="text-shadow: none;">
@@ -45,31 +47,28 @@ module.exports = {
 	
 				// Residential, Commercial, & Industrial Details //
 				r2: {
-					columns: [
+					cx: [
 						{
-							image: require('../../assets/images/pages/index/residential.webp'),
 							title: 'Residential',
+							image: require('../../assets/images/pages/index/residential.webp'),
 							description: 'Small, medium or large we offer professionally designed and installed wet and dry fire sprinkler systems.',
-							link: '',
 						},
 						{
-							image: require('../../assets/images/pages/index/commercial.webp'),
 							title: 'Commercial',
+							image: require('../../assets/images/pages/index/commercial.webp'),
 							description: 'We provide quality design and installation for retail, office, store front, gyms, hospitals, schools and more.',
-							link: '',
 						},
 						{
-							image: require('../../assets/images/pages/index/industrial.webp'),
 							title: 'Industrial',
+							image: require('../../assets/images/pages/index/industrial.webp'),
 							description: 'Whatever your storage needs, we can offer ESFR warehouse storage, control mode and density design fire protection.',
-							link: '',
 						}
 					]
 				},
 	
 				// Our Service 24/7! No Exceptions //
 				r3: {
-					c1: {},
+					c1: { titleHTML: 'Our Service 24/7! <i>No Exceptions!</i>' },
 					c2: { image: require('../../assets/images/pages/index/welcome.webp'), },
 					c3: {
 						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
@@ -79,16 +78,11 @@ module.exports = {
 		
 			// Side Column //
 			c2: {
-				hours: companyInfo.hours,
-				
-				address: companyInfo.address,
-				googleMapsLink: companyInfo.googleMapsLink,
+				// Get Quote //
+				r1: { c1: {}, },
 
-				phoneNumber: companyInfo.phoneNumber,
-				phoneNumberLink: companyInfo.phoneNumberLink,
-
-				faxNumber: companyInfo.faxNumber,
-				faxNumberLink: companyInfo.faxNumberLink,
+				// Operations //
+				r2: { c1: {}, },
 			},
 		},
 	},

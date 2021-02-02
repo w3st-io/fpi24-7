@@ -8,9 +8,15 @@ module.exports = {
 	googleMapsLink: 'https://www.google.com/maps/place/146+Ralph+St,+Belleville,+NJ+07109/@40.792687,-74.1482512,17z/data=!3m1!4b1!4m5!3m4!1s0x89c255c74bb2dfdf:0xffb354082add8a7f!8m2!3d40.792687!4d-74.1460625',
 	googleMapsImage: require('../assets/images/gmapslocation.png'),
 	
-	hours: [
-		{ days: 'Monday - Friday', hours: '8:00 AM - 4:30 PM' },
-		{ days: 'Saturday', hours: '9:00 AM - 1:00 PM' },
+	hoursOfOperation: [
+		{
+			days: 'Monday - Friday',
+			hours: '8:00 AM - 4:30 PM'
+		},
+		{
+			days: 'Saturday',
+			hours: '9:00 AM - 1:00 PM'
+		},
 	],
 
 	phoneNumber: '(973) 525-9163',

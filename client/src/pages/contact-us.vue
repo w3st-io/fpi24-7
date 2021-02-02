@@ -8,12 +8,14 @@
 			<BCard bg-variant="white" v-rellax="{ speed: 10 }" class="my-4">
 				<!-- Row 1 -->
 				<BRow>
+					<!-- Main Title -->
 					<BCol cols="12" sm="8" class="">
 						<h1 class="m-0 text-primary text-center">
 							{{ defaultData.r1.c1.title }}
 						</h1>
 					</BCol>
 
+					<!-- Title Image -->
 					<BCol cols="12" sm="4" class="text-center" v-rellax="{ speed: 2 }" >
 						<img
 							:src="defaultData.r1.c2.image"
@@ -26,34 +28,41 @@
 				<!-- Row 2 -->
 				<BRow class="my-4">
 					<BCol cols="12" lg="6" class="mb-3">
-						<!-- Title -->
-						<h3 class="text-primary text-center">
-							{{ defaultData.r2.c1.title }}
-						</h3>
+						<!-- Call Us & fax Us -->
+						<BRow class="mb-3">
+							<BCol cols="12">
+								<!-- Title -->
+								<h3 class="text-primary text-center">
+									{{ defaultData.r2.c1.r1.c1.title }}
+								</h3>
 
-						<a :href="defaultData.r2.c1.phoneNumberLink">
-							<BButton variant="primary" size="lg" pill class="my-3 w-100">
-								Call Us: {{ defaultData.r2.c1.phoneNumber }}
-							</BButton>
-						</a>
+								<!-- Phone # -->
+								<a :href="defaultData.r2.c1.r1.c1.phoneNumberLink">
+									<BButton variant="primary" size="lg" pill class="my-3 w-100">
+										Call Us: {{ defaultData.r2.c1.r1.c1.phoneNumber }}
+									</BButton>
+								</a>
 
-						<a :href="defaultData.r2.c1.faxNumberLink">
-							<BButton variant="secondary" size="lg" pill class="my-3 w-100">
-								Fax Us: {{ defaultData.r2.c1.faxNumber }}
-							</BButton>
-						</a>
+								<!-- Fax # -->
+								<a :href="defaultData.r2.c1.r1.c1.faxNumberLink">
+									<BButton variant="secondary" size="lg" pill class="my-3 w-100">
+										Fax Us: {{ defaultData.r2.c1.r1.c1.faxNumber }}
+									</BButton>
+								</a>
+							</BCol>
+						</BRow>
 
 						<BRow class="mt-3">
 							<BCol cols="12">
 								<!-- Title -->
 								<h3 class="text-center text-primary">
-									{{ defaultData.r2.c1.r1.c1.title }}
+									{{ defaultData.r2.c1.r2.c1.title }}
 								</h3>
 							</BCol>
 
 							<!-- Emails Contact -->
 							<BCol
-								v-for="(col, index) in defaultData.r2.c1.r1.columns"
+								v-for="(col, index) in defaultData.r2.c1.r2.cx"
 								:key="index"
 								cols="12" md="6"
 								class="mb-3"

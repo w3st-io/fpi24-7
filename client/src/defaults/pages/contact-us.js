@@ -1,26 +1,38 @@
+// [REQUIRE] Personal //
 const companyInfo = require('../companyInfo')
+
+// [INIT] //
+const pageTitle = 'Contact Us!'
 
 // [EXPORT] //
 module.exports = {
 	parallaxImg: require('../../assets/images/pages/contact-us/parallax.png'),
 
+	// Header //
 	r1: {
-		c1: { title: 'Contact Us!', },
+		c1: { title: pageTitle, },
 		c2: { image: require('../../assets/images/pages/contact-us/c.png'), }
 	},
 
 	r2: {
 		c1: {
-			title: 'Call Us or Send Us a Fax',
-			phoneNumber: companyInfo.phoneNumber,
-			phoneNumberLink: companyInfo.phoneNumberLink,
-
-			faxNumber: companyInfo.faxNumber,
-			faxNumberLink: companyInfo.faxNumberLink,
-
+			// Call Us & fax Us //
 			r1: {
+				c1: {
+					title: 'Call Us or Send Us a Fax',
+
+					phoneNumber: companyInfo.phoneNumber,
+					phoneNumberLink: companyInfo.phoneNumberLink,
+
+					faxNumber: companyInfo.faxNumber,
+					faxNumberLink: companyInfo.faxNumberLink,
+				},
+			},
+
+			// Send Email //
+			r2: {
 				c1: { title: 'Send us an Email', },
-				columns: [
+				cx: [
 					{
 						title: 'Click for Sales',
 						link: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',

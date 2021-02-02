@@ -21,7 +21,7 @@
 						<!-- Residential, Commercial, & Industrial Details -->
 						<BRow class="mb-3">
 							<BCol
-								v-for="(col, index) in defaultData.cnt1.r1.c1.r2.columns"
+								v-for="(col, index) in defaultData.cnt1.r1.c1.r2.cx"
 								:key="index"
 								cols="12" sm="6" md="6" lg="6" xl="4"
 								class="mb-3"
@@ -35,7 +35,7 @@
 									<p class="text-dark">{{ col.description }}</p>
 
 									<a href="/about">
-										<BButton pill variant="outline-primary" class="w-100">
+										<BButton pill variant="primary" class="w-100">
 											Read More
 										</BButton>
 									</a>
@@ -50,9 +50,11 @@
 									<BRow>
 										<!-- Title -->
 										<BCol cols="12">
-											<p data-aos="zoom-in" class="mb-4 h2 text-center text-primary">
-												Our Service 24/7! <i>No Exceptions!</i>
-											</p>
+											<p
+												v-html="defaultData.cnt1.r1.c1.r3.c1.titleHTML"
+												ata-aos="zoom-in"
+												class="mb-4 h2 text-center text-primary"
+											></p>
 										</BCol>
 
 										<!-- Image -->
@@ -80,72 +82,21 @@
 
 					<!-- Side Column -->
 					<BCol cols="12" lg="4" class="mb-3">
-						<!-- Quote -->
-						<form action="" class="mb-4 card card-body shadow">
-							<h3 class="mb-3 text-center text-primary">
-								Get a Quote
-							</h3>
-							<hr>
-
-							<input type="text" placeholder="Email" class="mt-3 form-control">
-							<input type="text" placeholder="Name" class="mt-3 form-control">
-							<input type="text" placeholder="Subject" class="mt-3 form-control">
-							<textarea
-								type="text" placeholder="Message" class="mt-3 form-control"
-							></textarea>
-
-							<!-- Submit -->
-							<BButton type="submit" class="w-100 mt-3">Submit</BButton>
-						</form>
+						<!-- Get Quote -->
+						<BRow>
+							<BCol cols="12">
+								<BCard bg-variant="white" class="mb-4">
+									<GetQuote />
+								</BCard>
+							</BCol>
+						</BRow>
 
 						<!-- Operations -->
-						<BCard bg-variant="dark" class="text-light">
-							<h3 class="mb-3 text-center text-primary">
-								Hours & Location
-							</h3>
-							<hr class="border-light">
-
-							<!-- Hours -->
-							<p class="mt-3 h4 text-primary">Hours</p>
-							<BListGroup>
-								<BListGroupItem class="p-1 bg-dark font-weight-bold">
-									{{ defaultData.cnt1.r1.c2.hours[0].days }}
-								</BListGroupItem>
-
-								<BListGroupItem class="p-1 bg-dark">
-									{{ defaultData.cnt1.r1.c2.hours[0].hours }}
-								</BListGroupItem>
-
-								<BListGroupItem class="p-1 bg-dark font-weight-bold">
-									{{ defaultData.cnt1.r1.c2.hours[1].days }}
-								</BListGroupItem>
-
-								<BListGroupItem class="p-1 bg-dark">
-									{{ defaultData.cnt1.r1.c2.hours[0].hours }}
-								</BListGroupItem>
-							</BListGroup>
-
-							<!-- Location -->
-							<p class="mt-3 h4 text-primary">Location</p>
-							<a
-								:href="defaultData.cnt1.r1.c2.googleMapsLink"
-								class="mt-3 text-light"
-							>{{ defaultData.cnt1.r1.c2.address }}</a>
-
-							<!-- Phone # -->
-							<p class="h4 mt-3 text-primary">Phone Number</p>
-							<a
-								:href="defaultData.cnt1.r1.c2.phoneNumberLink"
-								class="text-light"
-							>{{ defaultData.cnt1.r1.c2.phoneNumber }}</a>
-
-							<!-- Fax # -->
-							<p class="h4 mt-3 text-primary">Fax Number:</p>
-							<a
-								:href="defaultData.cnt1.r1.c2.faxNumberLink"
-								class="text-light"
-							>{{ defaultData.cnt1.r1.c2.faxNumber }}</a>
-						</BCard>
+						<BRow>
+							<BCol cols="12">
+								<HoursAndContact />
+							</BCol>
+						</BRow>
 					</BCol>
 				</BRow>
 			</BContainer>
@@ -164,7 +115,7 @@
 						/>
 					</BCol>
 				</BRow>
-				
+
 				<!-- Social Media -->
 				<BRow>	
 					<BCol cols="12" class="py-3 text-center text-light bg-primary">
@@ -173,6 +124,20 @@
 						</h1>
 
 						<SocialMediaPlug size="46" />
+					</BCol>
+				</BRow>
+
+				<!-- Conveyor -->
+				<BRow>
+					<BCol cols="12" class="">
+						<h1 class="my-1 text-center text-primary">
+							Our Affiliates
+						</h1>
+			
+						<Conveyor
+							:images="defaultData.cnt2.r1.c1.images"
+							class="mb-4"
+						/>
 					</BCol>
 				</BRow>
 			</BContainer>
@@ -185,34 +150,24 @@
 	import BCaraousel from '../components/display/BCarousel'
 	import Conveyor from '../components/display/Conveyor'
 	import Parallax from '../components/display/Parallax'
+	import GetQuote from '../components/GetQuote'
 	import SocialMediaPlug from '../components/SocialMediaPlug'
 	import defaultData from '../defaults/pages'
-	import router from '../router'
+	import HoursAndContact from '../components/company-details/HoursAndContact'
 
 	export default {
 		components: {
 			BCaraousel,
 			Conveyor,
 			Parallax,
+			GetQuote,
 			SocialMediaPlug,
+			HoursAndContact,
 		},
 
 		data() {
 			return {
 				defaultData: defaultData,
-			}
-		},
-
-		methods: {
-			redirect() {
-				router.push({
-					name: 'post',
-					params: {
-						sort: 1,
-						limit: 5,
-						page: 1,
-					},
-				})
 			}
 		},
 	}

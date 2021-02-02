@@ -15,6 +15,17 @@ const config = require('./s-config')
 const rateLimiter = require('./s-rate-limiters')
 
 const a_ = require('./s-routes/api')
+//const a_admin_commentReports = require('./s-routes/api/admin/comment-reports')
+//const a_admins = require('./s-routes/api/admins')
+//const a_comments = require('./s-routes/api/comments')
+const a_mail = require('./s-routes/api/mail')
+//const a_users = require('./s-routes/api/users')
+
+//const p_ = require('./s-routes/pages')
+//const p_about = require('./s-routes/pages/about')
+//const p_admin_function_commentReports = require('./s-routes/pages/admin/function/comment-reports')
+//const p_comment_edit = require('./s-routes/pages/comment/edit')
+//const p_post = require('./s-routes/pages/post')
 
 // [INIT] Const //
 const port = config.PORT
@@ -59,6 +70,7 @@ app.use('/api', a_)
 //app.use('/api/admin/comment-reports', a_admin_commentReports)
 //app.use('/api/admins', a_admins)
 //app.use('/api/comments', a_comments)
+app.use('/api/mail', a_mail)
 //app.use('/api/users', a_users)
 //
 //app.use('/pages', p_)

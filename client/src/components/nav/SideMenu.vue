@@ -53,7 +53,7 @@
 		><span aria-hidden="true" style="font-size: 1.5em;">Contact Us</span></BButton>
 		
 
-		<SocialMediaPlug size="48" class="my-3" />
+		<SocialMediaPlug v-show="sideMenuOpen" size="48" class="my-3" />
 
 	</nav>
 </template>
