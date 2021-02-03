@@ -82,13 +82,6 @@
 			}
 		},
 
-		created() {
-			// [ON-EVENTBUS] //
-			EventBus.$on('navBarSideMenuBtnClicked', () => {
-				this.sideMenuOpen = !this.sideMenuOpen
-			})
-		},
-
 		methods: {
 			closeMenu() {
 				this.sideMenuOpen = !this.sideMenuOpen

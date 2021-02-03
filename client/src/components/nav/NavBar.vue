@@ -115,8 +115,6 @@
 				companyInfo: companyInfo,
 				loggedIn: false,
 				decoded: {},
-
-				// [MENU] //
 				sideMenuOpen: false
 			}
 		},
