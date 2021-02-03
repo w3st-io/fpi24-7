@@ -1,5 +1,5 @@
 // [IMPORT] //
-import AOS from 'aos'
+import aos from 'aos'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue from 'vue'
 import Editor from 'vue-editor-js/src/index'
@@ -29,6 +29,6 @@ export const EventBus = new Vue()
 Vue.config.productionTip = false
 new Vue({
   router,
-  created () { AOS.init() },
+  created() { aos.init() },
   render: h => h(App)
 }).$mount('#app')

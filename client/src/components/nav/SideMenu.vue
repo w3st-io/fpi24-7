@@ -54,7 +54,6 @@
 		
 
 		<SocialMediaPlug v-show="sideMenuOpen" size="48" class="my-3" />
-
 	</nav>
 </template>
 
@@ -75,6 +74,12 @@
 
 		components: {
 			SocialMediaPlug,
+		},
+
+		data() {
+			return {
+				query: ''
+			}
 		},
 
 		created() {

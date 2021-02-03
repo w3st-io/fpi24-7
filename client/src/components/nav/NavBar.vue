@@ -95,13 +95,13 @@
 </template>
 
 <script>
-	// [IMPORT] Personal //
-	import SocialMediaPlug from '../SocialMediaPlug'
+	// [IMPORT] //
 	import { MenuIcon } from 'vue-feather-icons'
 
-	// [IMPORT] //
+	// [IMPORT] Personal //
 	import SideMenu from '@/components/nav/SideMenu'
 	import companyInfo from '../../defaults/companyInfo'
+	import SocialMediaPlug from '../SocialMediaPlug'
 
 	export default {
 		components: {

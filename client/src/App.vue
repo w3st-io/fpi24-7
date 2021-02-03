@@ -1,11 +1,12 @@
 <template>
 	<div id="app" :key="appKey" class="bg-light">
 		<!-- Navbar -->
-		<NavBar @menu-btn-clicked="toggle()" />
+		<NavBar />
 
 		<!-- Router -->
 		<RouterView :key="$route.name + ($route.params.id || '')" />
 
+		<!-- Footer -->
 		<Footer />
 	</div>
 </template>
