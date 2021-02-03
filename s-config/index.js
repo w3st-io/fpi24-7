@@ -16,7 +16,12 @@ module.exports = {
 	EMAIL_SERVICE: process.env.EMAIL_SERVICE || '',
 	EMAIL: process.env.EMAIL || '',
 	EMAIL_PASSWORD: process.env.EMAIL_PASSWORD || '',
-	TO_EMAIL: process.env.TO_EMAIL || '',
+
+	// [EMAIL-RECIEVERS] //
+	ADMIN_EMAIL: process.env.ADMIN_EMAIL || '',
+	SERVICES_EMAIL: process.env.SERVICES_EMAIL || '',
+	INSTALLS_EMAIL: process.env.INSTALLS_EMAIL || '',
+	DESIGNS_EMAIL: process.env.DESIGNS_EMAIL || '',
 	
 	// [SECRET] //
 	SECRET_KEY: process.env.SECRET_KEY || 'secret',

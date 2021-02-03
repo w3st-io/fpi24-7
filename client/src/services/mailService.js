@@ -15,13 +15,14 @@ async function authAxios() {
 
 
 /******************* [URL + PORT] *******************/
-async function s_getQuote(email, name, subject, message) {
+async function s_getQuote(type, email, name, subject, message) {
 	const authAxios = await this.authAxios()
 
 	return (
 		await authAxios.post(
 			'/get-quote',
 			{
+				type: type,
 				email: email,
 				name: name,
 				subject: subject,

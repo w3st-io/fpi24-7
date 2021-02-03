@@ -6,9 +6,9 @@
 		<BButton
 			v-show="sideMenuOpen"
 			variant="primary"
-			class="w-100 mb-3 text-light"
+			class="w-100 mb-3 p-4 text-light"
 			@click="closeMenu"
-		><span aria-hidden="true" style="font-size: 2em;">&times;</span></BButton>
+		><XIcon size="36" /></BButton>
 
 		<BButton
 			v-show="sideMenuOpen"
@@ -59,7 +59,9 @@
 
 <script>
 	// [IMPORT] //
-	import { EventBus } from '../../main'
+	import { XIcon } from 'vue-feather-icons'
+
+	// [IMPORT] Personal //
 	import router from '../../router'
 	import SocialMediaPlug from '../SocialMediaPlug'
 
@@ -73,6 +75,7 @@
 		},
 
 		components: {
+			XIcon,
 			SocialMediaPlug,
 		},
 
