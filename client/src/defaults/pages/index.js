@@ -92,12 +92,10 @@ module.exports = {
 		r1: {
 			c1: {
 				images: [
-					require('../../assets/images/affiliates/affiliation-afsa.png'),
-					require('../../assets/images/affiliates/affiliation-fssa.png'),
 					require('../../assets/images/affiliates/affiliation-icc.png'),
+					require('../../assets/images/affiliates/affiliation-osha.png'),
 					require('../../assets/images/affiliates/affiliation-nfpa.png'),
 					require('../../assets/images/affiliates/affiliation-nicet.png'),
-					require('../../assets/images/affiliates/affiliation-njbia.png'),
 				],
 			},
 		},
