@@ -44,7 +44,7 @@ module.exports = {
 					title: 'Service Office Manager',
 				},
 				{
-					name: 'Lissette M.',
+					name: 'Giselle G.',
 					title: 'Contract Office Manager ',
 				},
 				{
