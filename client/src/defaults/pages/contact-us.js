@@ -8,66 +8,65 @@ const pageTitle = 'Contact Us!'
 module.exports = {
 	parallaxImg: require('../../assets/images/pages/contact-us/parallax.png'),
 
-	// Header //
-	r1: {
-		c1: { title: pageTitle, },
-		c2: { image: require('../../assets/images/pages/contact-us/c.png'), }
-	},
-
-	r2: {
-		c1: {
-			// Call Us & fax Us //
-			r1: {
-				c1: {
-					title: 'Call Us or Send Us a Fax',
-
-					phoneNumber: companyInfo.phoneNumber,
-					phoneNumberLink: companyInfo.phoneNumberLink,
-
-					faxNumber: companyInfo.faxNumber,
-					faxNumberLink: companyInfo.faxNumberLink,
+	cnt1: {
+		// Header //
+		r1: {
+			c1: { title: pageTitle, },
+			c2: { image: require('../../assets/images/pages/contact-us/c.png'), }
+		},
+	
+		r2: {
+			c1: {
+				// Call Us & fax Us //
+				r1: {
+					c1: {
+						title: 'Call Us or Send Us a Fax',
+	
+						phoneNumber: companyInfo.phoneNumber,
+						phoneNumberLink: companyInfo.phoneNumberLink,
+	
+						faxNumber: companyInfo.faxNumber,
+						faxNumberLink: companyInfo.faxNumberLink,
+					},
+				},
+	
+				// Send Email //
+				r2: {
+					c1: { title: 'Send us an Email', },
+					
+					cx: [
+						{
+							title: 'Click for Sales',
+							link: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',
+						},
+						{
+							title: 'Click for Scheduling',
+							link: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
+						},
+						{
+							title: 'Click for Design',
+							link: 'mailto:yandri@24-7fireprotection.com?subject=Design/Engineering%20Question',
+						},
+						{
+							title: 'Click for Billing',
+							link: 'mailto:lissette@24-7fireprotection.com?subject=Billing/Admin%20Question'
+						}
+					],
 				},
 			},
-
-			// Send Email //
-			r2: {
-				c1: { title: 'Send us an Email', },
-				cx: [
-					{
-						title: 'Click for Sales',
-						link: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',
-					},
-					{
-						title: 'Click for Scheduling',
-						link: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
-					},
-					{
-						title: 'Click for Design',
-						link: 'mailto:yandri@24-7fireprotection.com?subject=Design/Engineering%20Question',
-					},
-					{
-						title: 'Click for Billing',
-						link: 'mailto:lissette@24-7fireprotection.com?subject=Billing/Admin%20Question'
-					}
-				],
+	
+			c2: {
+				title: 'Our Location',
+				address: companyInfo.address,
+				googleMapsLink: companyInfo.googleMapsLink,
+				googleMapsImage: companyInfo.googleMapsImage,
 			},
 		},
-
-		c2: {
-			title: 'Our Location',
-			address: companyInfo.address,
-			googleMapsLink: companyInfo.googleMapsLink,
-			googleMapsImage: companyInfo.googleMapsImage,
+	
+		r3: {
+			c1: {
+				title: '>> Give us a call, day or night, and we’ll be there for your fire protection needs<<'
+			}
 		},
-	},
-
-	r3: {
-		c1: { Title: 'Plase Fill Out this Form to Contact Us', }
-	},
-
-	r5: {
-		c1: {
-			title: '>> Give us a call, day or night, and we’ll be there for your fire protection needs<<'
-		}
 	},
 }

@@ -11,14 +11,14 @@
 					<!-- Main Title -->
 					<BCol cols="12" sm="8" class="">
 						<h1 class="m-0 text-primary text-center">
-							{{ defaultData.r1.c1.title }}
+							{{ defaultData.cnt1.r1.c1.title }}
 						</h1>
 					</BCol>
 
 					<!-- Title Image -->
 					<BCol cols="12" sm="4" class="text-center" v-rellax="{ speed: 2 }" >
 						<img
-							:src="defaultData.r1.c2.image"
+							:src="defaultData.cnt1.r1.c2.image"
 							class="d-none d-sm-block w-100 p-3 bg-white rounded-lg shadow"
 						>
 					</BCol>
@@ -33,36 +33,37 @@
 							<BCol cols="12">
 								<!-- Title -->
 								<h3 class="text-primary text-center">
-									{{ defaultData.r2.c1.r1.c1.title }}
+									{{ defaultData.cnt1.r2.c1.r1.c1.title }}
 								</h3>
 
 								<!-- Phone # -->
-								<a :href="defaultData.r2.c1.r1.c1.phoneNumberLink">
+								<a :href="defaultData.cnt1.r2.c1.r1.c1.phoneNumberLink">
 									<BButton variant="primary" size="lg" pill class="my-3 w-100">
-										Call Us: {{ defaultData.r2.c1.r1.c1.phoneNumber }}
+										Call Us: {{ defaultData.cnt1.r2.c1.r1.c1.phoneNumber }}
 									</BButton>
 								</a>
 
 								<!-- Fax # -->
-								<a :href="defaultData.r2.c1.r1.c1.faxNumberLink">
+								<a :href="defaultData.cnt1.r2.c1.r1.c1.faxNumberLink">
 									<BButton variant="secondary" size="lg" pill class="my-3 w-100">
-										Fax Us: {{ defaultData.r2.c1.r1.c1.faxNumber }}
+										Fax Us: {{ defaultData.cnt1.r2.c1.r1.c1.faxNumber }}
 									</BButton>
 								</a>
 							</BCol>
 						</BRow>
 
+						<!-- Send us an Email + Get Quote -->
 						<BRow class="mt-3">
+							<!-- Title -->
 							<BCol cols="12">
-								<!-- Title -->
 								<h3 class="text-center text-primary">
-									{{ defaultData.r2.c1.r2.c1.title }}
+									{{ defaultData.cnt1.r2.c1.r2.c1.title }}
 								</h3>
 							</BCol>
 
 							<!-- Emails Contact -->
 							<BCol
-								v-for="(col, index) in defaultData.r2.c1.r2.cx"
+								v-for="(col, index) in defaultData.cnt1.r2.c1.r2.cx"
 								:key="index"
 								cols="12" md="6"
 								class="mb-3"
@@ -73,19 +74,27 @@
 									</BButton>
 								</a>
 							</BCol>
+
+							<!-- Get Quote -->
+							<BCol cols="12" class="mt-3">
+								<h3 class="text-center text-primary">
+									<GetQuote />
+								</h3>
+							</BCol>
 						</BRow>
 					</BCol>
 
+					<!-- Our Location -->
 					<BCol cols="12" lg="6" class="mb-3">
 						<h3 class="text-primary text-center">
-							{{ defaultData.r2.c2.title }}
+							{{ defaultData.cnt1.r2.c2.title }}
 						</h3>
 
 						<a
-							:href="defaultData.r2.c2.googleMapsLink"
+							:href="defaultData.cnt1.r2.c2.googleMapsLink"
 							class="text-center text-dark"
 						>
-							<h5 class="mb-3">{{ defaultData.r2.c2.address }}</h5>
+							<h5 class="mb-3">{{ defaultData.cnt1.r2.c2.address }}</h5>
 							
 							<div class="mb-3">
 								<BButton variant="primary" size="lg" pill>
@@ -95,7 +104,7 @@
 
 							<BCard variant="bg-white" class="mx-5 p-1 shadow">
 								<img
-									:src="defaultData.r2.c2.googleMapsImage"
+									:src="defaultData.cnt1.r2.c2.googleMapsImage"
 									alt="Google maps image here"
 									class="w-100"
 								>
@@ -107,14 +116,8 @@
 				<!-- Row 3 -->
 				<BRow class="my-4">
 					<BCol>
-					</BCol>
-				</BRow>
-
-				<!-- Row 4 -->
-				<BRow class="my-4">
-					<BCol>
 						<h3 class="text-center text-primary">
-							{{ defaultData.r5.c1.title }}
+							{{ defaultData.cnt1.r3.c1.title }}
 						</h3>
 					</BCol>
 				</BRow>
@@ -127,11 +130,13 @@
 <script>
 	// [IMPORT] Personal //
 	import Parallax from '../components/display/Parallax'
+	import GetQuote from '../components/GetQuote'
 	import defaultData from '../defaults/pages/contact-us'
 	import router from '../router'
 
 	export default {
 		components: {
+			GetQuote,
 			Parallax,
 		},
 
