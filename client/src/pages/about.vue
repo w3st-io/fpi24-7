@@ -33,11 +33,14 @@
 					</BCol>
 
 					<!-- [R3.C2] Staff -->
-					<BCol cols="12">
+					<BCol cols="12" class="mb-5">
 						<Conveyor
 							:images="defaultData.r2.c2.images"
+							:totalOnLg="4"
 							class="mb-4"
 						/>
+
+						<h5>{{ defaultData.r2.c2.description }}</h5>
 					</BCol>
 
 					<!-- [R3.C3] CEO -->

@@ -14,6 +14,7 @@
 							<BCol cols="12">
 								<BCaraousel
 									:slideObjs="defaultData.cnt1.r1.c1.r1.c1.caraousel"
+									:totalOnLg="4"
 									class="mb-4"
 								/>
 							</BCol>

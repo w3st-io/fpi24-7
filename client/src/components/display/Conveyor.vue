@@ -38,7 +38,12 @@
 			images: {
 				type: Array,
 				required: true,
-			}
+			},
+
+			totalOnLg: {
+				type: Number,
+				default: 5
+			},
 		},
 
 		components: {
@@ -48,7 +53,7 @@
 		data() {
 			return {
 				lg: {
-					items: 5,
+					items: this.totalOnLg,
 					gutter: 20,
 					nav: false,
 					controls: false,
@@ -58,7 +63,7 @@
 					autoplayTimeout: 2000,
 				},
 				md: {
-					items: 4,
+					items: this.totalOnLg - 1,
 					gutter: 20,
 					nav: false,
 					controls: false,
@@ -68,7 +73,7 @@
 					autoplayTimeout: 2000,
 				},
 				sm: {
-					items: 3,
+					items: this.totalOnLg - 2,
 					gutter: 20,
 					nav: false,
 					controls: false,
@@ -78,7 +83,7 @@
 					autoplayTimeout: 2000,
 				},
 				xs: {
-					items: 2,
+					items: this.totalOnLg - 3,
 					gutter: 20,
 					nav: false,
 					controls: false,
