@@ -23,6 +23,8 @@
 					><img :src="defaultData.r1.c2.image" class="w-100 shadow"></BCol>
 				</BRow>
 
+				<div class="my-4"><hr class="my-6"></div>
+
 				<!-- [R2] Meet the Staff -->
 				<BRow>
 					<!-- [R3.C1] Title -->

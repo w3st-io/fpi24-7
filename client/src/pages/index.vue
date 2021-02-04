@@ -92,22 +92,22 @@
 											></p>
 										</BCol>
 
+										<!-- [R1.C1.R3.C6] Our Service Description -->
+										<BCol cols="12" md="7">
+											<p class="h5 mb-3">
+												{{ defaultData.cnt1.r1.c1.r3.c5.description }}
+											</p>
+										</BCol>
+
 										<!-- [R1.C1.R3.C5] Our Service Image -->
-										<BCol cols="12" md="6">
+										<BCol cols="12" md="5">
 											<div class="mb-3 text-center">
 												<img
-													:src="defaultData.cnt1.r1.c1.r3.c5.image"
+													:src="defaultData.cnt1.r1.c1.r3.c6.image"
 													alt="Card Image"
 													class="w-100 rounded"
 												>
 											</div>
-										</BCol>
-
-										<!-- [R1.C1.R3.C6] Our Service Description -->
-										<BCol cols="12" md="6">
-											<p class="h5 mb-3">
-												{{ defaultData.cnt1.r1.c1.r3.c6.description }}
-											</p>
 										</BCol>
 									</BRow>
 								</BCard>
