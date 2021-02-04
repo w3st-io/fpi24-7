@@ -1,5 +1,6 @@
 // [EXPORT] //
 module.exports = {
+	// About //
 	r1: {
 		c1: {
 			title: 'About 24/7 Fire Protection Inc.',
@@ -10,33 +11,42 @@ module.exports = {
 		},
 	},
 
+	// Meet the Team //
 	r2: {
-		c1: {
-			image: require('../../assets/images/pages/about/rench.webp'),
-		},
+		// Title //
+		c1: { title: 'Meet the Team', },
+
+		// Staff //
 		c2: {
-			title: 'Our Mission',
-			description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful. ',
+			images: [
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/team.webp'),
+			],
 		},
-	},
-	
-	r3: {
-		title: 'Meet the Team',
-		c1: {
+
+		// CEO //
+		c3: {
 			image: require('../../assets/images/pages/about/jason.webp'),
 			name: 'Jason Tielve',
 			title: 'Co-Owner & CEO',
 			description: 'Co-Owner and CEO of 24/7, Jason brings his military service, 15 years of fire protection knowledge and business skills to build a team of qualified installers and personnel intent on providing quality driven, fire protection installation and service, adding value to your project\'s bottom line.',
 			comtactEmail: 'mailto:jason@24-7fireprotection.com?subject=Sales/Service Question',
 		},
-		c2: {
+
+		// Co-Owner //
+		c4: {
 			image: require('../../assets/images/pages/about/harry.webp'),
 			name: 'Harry San Martin',
 			title: 'Co-Owner & President',
 			description: 'Co-Owner and President of 24/7, Harry manages all projects from installation to final inspection. With over 20 years within the industry Harry also trains and mentors all foremen and mechanics to insure all aspects of your projects are managed and completed in a timely fashion.',
 			contactEmail: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
 		},
-		c3: {
+		c5: {
 			title: 'The 24/7 Staff',
 			staffMembers: [
 				{
@@ -53,5 +63,17 @@ module.exports = {
 				},
 			]
 		}
+	},
+
+	// Our Mission //
+	r3: {
+		c1: {
+			title: 'Our Mission',
+			description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful.',
+		},
+
+		c2: {
+			image: require('../../assets/images/our-mission.webp'),
+		},
 	},
 }

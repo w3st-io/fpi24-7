@@ -43,12 +43,12 @@
 							</BCol>
 						</BRow>
 
-						<!-- Our Service 24/7! No Exceptions -->
+						<!-- Our Mission + Our Service -->
 						<BRow class="mb-4">
 							<BCol>
 								<BCard class="shadow">
 									<BRow>
-										<!-- Title -->
+										<!-- Our Mission Title -->
 										<BCol cols="12">
 											<p
 												v-html="defaultData.cnt1.r1.c1.r3.c1.titleHTML"
@@ -57,8 +57,15 @@
 											></p>
 										</BCol>
 
-										<!-- Image -->
-										<BCol cols="12" md="7">
+										<!-- Our Mission Image -->
+										<BCol
+											cols="12" md="4"
+											v-rellax
+											data-rellax-xs-speed="0"
+											data-rellax-mobile-speed="0"
+											data-rellax-tablet-speed="0"
+											data-rellax-desktop-speed="1"
+										>
 											<div class="mb-3 text-center">
 												<img
 													:src="defaultData.cnt1.r1.c1.r3.c2.image"
@@ -68,10 +75,37 @@
 											</div>
 										</BCol>
 
-										<!-- Description -->
-										<BCol cols="12" md="5">
+										<!-- Our Mission Description -->
+										<BCol cols="12" md="8">
 											<p class="h5 mb-3">
 												{{ defaultData.cnt1.r1.c1.r3.c3.description }}
+											</p>
+										</BCol>
+										
+										<!-- Our Service Title -->
+										<BCol cols="12">
+											<p
+												v-html="defaultData.cnt1.r1.c1.r3.c4.titleHTML"
+												ata-aos="zoom-in"
+												class="mb-4 h2 text-center text-primary"
+											></p>
+										</BCol>
+
+										<!-- Our Service Image -->
+										<BCol cols="12" md="7">
+											<div class="mb-3 text-center">
+												<img
+													:src="defaultData.cnt1.r1.c1.r3.c5.image"
+													alt="Card Image"
+													class="w-100 rounded"
+												>
+											</div>
+										</BCol>
+
+										<!-- Our Service Description -->
+										<BCol cols="12" md="5">
+											<p class="h5 mb-3">
+												{{ defaultData.cnt1.r1.c1.r3.c6.description }}
 											</p>
 										</BCol>
 									</BRow>

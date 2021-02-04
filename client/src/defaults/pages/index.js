@@ -66,14 +66,19 @@ module.exports = {
 					]
 				},
 	
-				// Our Service 24/7! No Exceptions //
+				// Our Mission + Our Service //
 				r3: {
-					c1: { titleHTML: 'Our Service 24/7! <i>No Exceptions!</i>' },
-					c2: { image: require('../../assets/images/pages/index/welcome.webp'), },
+					c1: { titleHTML: 'Our Mission' },
+					c2: { image: require('../../assets/images/our-mission.webp'), },
 					c3: {
+						description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful.',
+					},
+					c4: { titleHTML: 'Our Service 24/7! <i>No Exceptions!</>' },
+					c5: { image: require('../../assets/images/pages/index/welcome.webp'), },
+					c6: {
 						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
 					},
-				}
+				},
 			},
 		
 			// Side Column //
