@@ -134,7 +134,7 @@
 
 					<!-- Text -->
 					<BCol cols="12" md="8" class="mt-3">
-						<p data-aos="fade-up">{{ defaultData.r3.c2.description }}</p>
+						<p>{{ defaultData.r3.c2.description }}</p>
 					</BCol>
 					
 					<!-- Image -->
