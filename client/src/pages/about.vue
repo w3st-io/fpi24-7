@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" v-rellax="{ speed: 10 }" class="my-4">
+			<BCard bg-variant="white" v-rellax="{ speed: 5 }" class="my-4">
 				<!-- [R1] About -->
 				<BRow>
 					<BCol data-aos="fade-up" cols="12" md="6">
