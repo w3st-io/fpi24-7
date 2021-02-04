@@ -40,7 +40,7 @@
 							class="mb-4"
 						/>
 
-						<h5>{{ defaultData.r2.c2.description }}</h5>
+						<p>{{ defaultData.r2.c2.description }}</p>
 					</BCol>
 
 					<!-- [R3.C3] CEO -->
@@ -50,7 +50,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-1"
+						data-rellax-desktop-speed="1.5"
 					>
 						<!-- Text -->
 						<div>
@@ -76,7 +76,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1"
+						data-rellax-desktop-speed="0"
 						class="mt-3"
 					>
 						<!-- Image -->
@@ -104,7 +104,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-3"
+						data-rellax-desktop-speed="-2"
 						class="mt-0"
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
