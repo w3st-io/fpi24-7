@@ -14,7 +14,7 @@
 							<BCol cols="12">
 								<BCaraousel
 									:slideObjs="defaultData.cnt1.r1.c1.r1.c1.caraousel"
-									:totalOnLg="4"
+									
 									class="mb-4"
 								/>
 							</BCol>
@@ -148,6 +148,7 @@
 			
 						<Conveyor
 							:images="defaultData.cnt2.r1.c1.images"
+							:totalOnLg="4"
 							class="mb-4"
 						/>
 					</BCol>
@@ -157,9 +158,7 @@
 				<BRow>
 					<!-- [R21.C1] -->
 					<BCol cols="12" class="py-3 text-center text-light bg-primary">
-						<h1 class="mb-3">
-							Follow Us on Social Media
-						</h1>
+						<h1 class="mb-3">Follow Us on Social Media</h1>
 
 						<SocialMediaPlug size="46" />
 					</BCol>
