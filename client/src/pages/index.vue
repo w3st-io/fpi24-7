@@ -3,12 +3,13 @@
 		<Parallax :imgURL="defaultData.parallaxImg" />
 		
 		<div class="pt-3" v-rellax="{ speed: 5 }">
-			<!-- Company Details -->
+			<!-- [CNT1] Company Details -->
 			<BContainer>
+				<!-- [R1] -->
 				<BRow>
-					<!-- Main Column -->
+					<!-- [R1.C1] Main Column -->
 					<BCol cols="12" lg="8">
-						<!-- Caraousel -->
+						<!-- [R1.C1.R1] Caraousel -->
 						<BRow>
 							<BCol cols="12">
 								<BCaraousel
@@ -18,7 +19,7 @@
 							</BCol>
 						</BRow>
 
-						<!-- Residential, Commercial, & Industrial Details -->
+						<!-- [R1.C1.R2] Residential, Commercial, & Industrial Details -->
 						<BRow class="mb-3">
 							<BCol
 								v-for="(col, index) in defaultData.cnt1.r1.c1.r2.cx"
@@ -43,23 +44,22 @@
 							</BCol>
 						</BRow>
 
-						<!-- Our Mission + Our Service -->
+						<!-- [R1.C1.R3] Our Mission + Our Service -->
 						<BRow class="mb-4">
 							<BCol>
 								<BCard class="shadow">
 									<BRow>
-										<!-- Our Mission Title -->
+										<!-- [R1.C1.R3.C1] Our Mission Title -->
 										<BCol cols="12">
-											<p
-												v-html="defaultData.cnt1.r1.c1.r3.c1.titleHTML"
-												ata-aos="zoom-in"
-												class="mb-4 h2 text-center text-primary"
-											></p>
+											<h1 class="mb-4 text-center text-primary">
+												{{ defaultData.cnt1.r1.c1.r3.c1.titleHTML }}
+											</h1>
 										</BCol>
 
-										<!-- Our Mission Image -->
+										<!-- [R1.C1.R3.C2] Our Mission Image -->
 										<BCol
 											cols="12" md="4"
+											data-aos="zoom-in"
 											v-rellax
 											data-rellax-xs-speed="0"
 											data-rellax-mobile-speed="0"
@@ -75,14 +75,14 @@
 											</div>
 										</BCol>
 
-										<!-- Our Mission Description -->
+										<!-- [R1.C1.R3.C3] Our Mission Description -->
 										<BCol cols="12" md="8">
-											<p class="h5 mb-3">
+											<p  class="h5 mb-3">
 												{{ defaultData.cnt1.r1.c1.r3.c3.description }}
 											</p>
 										</BCol>
-										
-										<!-- Our Service Title -->
+
+										<!-- [R1.C1.R3.C4] Our Service Title -->
 										<BCol cols="12">
 											<p
 												v-html="defaultData.cnt1.r1.c1.r3.c4.titleHTML"
@@ -91,8 +91,8 @@
 											></p>
 										</BCol>
 
-										<!-- Our Service Image -->
-										<BCol cols="12" md="7">
+										<!-- [R1.C1.R3.C5] Our Service Image -->
+										<BCol cols="12" md="6">
 											<div class="mb-3 text-center">
 												<img
 													:src="defaultData.cnt1.r1.c1.r3.c5.image"
@@ -102,8 +102,8 @@
 											</div>
 										</BCol>
 
-										<!-- Our Service Description -->
-										<BCol cols="12" md="5">
+										<!-- [R1.C1.R3.C6] Our Service Description -->
+										<BCol cols="12" md="6">
 											<p class="h5 mb-3">
 												{{ defaultData.cnt1.r1.c1.r3.c6.description }}
 											</p>
@@ -114,7 +114,7 @@
 						</BRow>
 					</BCol>
 
-					<!-- Side Column -->
+					<!-- [R1.C2] Side Column -->
 					<BCol cols="12" lg="4" class="mb-3">
 						<!-- Get Quote -->
 						<BRow>
@@ -135,9 +135,11 @@
 				</BRow>
 			</BContainer>
 
+			<!-- [CNT2] -->
 			<BContainer fluid>
-				<!-- Conveyor -->
+				<!-- [R1] Conveyor -->
 				<BRow>
+					<!-- [R1.C1] -->
 					<BCol cols="12" class="">
 						<h1 class="my-1 text-center text-primary">
 							Our Affiliates
@@ -150,8 +152,9 @@
 					</BCol>
 				</BRow>
 
-				<!-- Social Media -->
-				<BRow>	
+				<!-- [R2] Social Media -->
+				<BRow>
+					<!-- [R21.C1] -->
 					<BCol cols="12" class="py-3 text-center text-light bg-primary">
 						<h1 class="mb-3">
 							Follow Us on Social Media

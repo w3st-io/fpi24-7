@@ -35,11 +35,15 @@ module.exports = {
 						caraousel: [
 							{
 								textHtml: textHtml,
-								img: require('../../assets/images/pages/index/inspection.jpg'),
+								img: require('../../assets/images/pages/index/industry.jpg'),
 							},
 							{
 								textHtml: textHtml,
-								img: require('../../assets/images/pages/index/industry.jpg'),
+								img: require('../../assets/images/pages/index/building.jpg'),
+							},
+							{
+								textHtml: textHtml,
+								img: require('../../assets/images/pages/index/inspection.jpg'),
 							},
 						],
 					}
@@ -80,15 +84,6 @@ module.exports = {
 					},
 				},
 			},
-		
-			// Side Column //
-			c2: {
-				// Get Quote //
-				r1: { c1: {}, },
-
-				// Operations //
-				r2: { c1: {}, },
-			},
 		},
 	},
 
@@ -104,8 +99,5 @@ module.exports = {
 				],
 			},
 		},
-
-		// Social Media //
-		r2: { c1: {}, },
 	},
 }
