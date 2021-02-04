@@ -23,15 +23,12 @@
 					><img :src="defaultData.r1.c2.image" class="w-100 shadow"></BCol>
 				</BRow>
 
-				<div class="my-4"><hr class="my-6"></div>
-
 				<!-- [R2] Meet the Staff -->
 				<BRow>
-					<!-- [R3.C1] Title -->
-					<BCol cols="12" class="mt-2">
-						<h1 class="text-center text-primary">
-							{{ defaultData.r2.c1.title }}
-						</h1>
+					<BCol cols="12" md="12" class="my-4">
+						<BCard no-body bg-variant="primary" class="py-2 text-light">
+							<h2 class="m-0 text-center">{{ defaultData.r2.c1.title }}</h2>
+						</BCard>
 					</BCol>
 
 					<!-- [R3.C2] Staff -->
@@ -126,25 +123,29 @@
 					</BCol>
 				</BRow>
 
-				<div class="my-4"><hr class="my-6"></div>
-
 				<!-- [R3] Our Mission -->
 				<BRow>
-					<!-- Image -->
+					<!-- Title -->
+					<BCol cols="12" md="12" class="my-4">
+						<BCard no-body bg-variant="primary" class="py-2 text-light">
+							<h2 class="m-0 text-center">{{ defaultData.r3.c1.title }}</h2>
+						</BCard>
+					</BCol>
+
+					<!-- Text -->
 					<BCol cols="12" md="8" class="mt-3">
-						<h1 class="text-primary">{{ defaultData.r3.c1.title }}</h1>
-						<p data-aos="fade-up">{{ defaultData.r3.c1.description }}</p>
+						<p data-aos="fade-up">{{ defaultData.r3.c2.description }}</p>
 					</BCol>
 					
-					<!-- Text -->
+					<!-- Image -->
 					<BCol
 						cols="12" md="4" class="mt-5"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="2"
-					><img :src="defaultData.r3.c2.image" class="w-100"></BCol>
+						data-rellax-desktop-speed="1"
+					><img :src="defaultData.r3.c3.image" class="w-100"></BCol>
 				</BRow>
 			</BCard>
 		</BContainer>

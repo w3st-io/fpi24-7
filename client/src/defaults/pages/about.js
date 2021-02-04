@@ -68,13 +68,12 @@ module.exports = {
 
 	// Our Mission //
 	r3: {
-		c1: {
-			title: 'Our Mission',
+		c1: { title: 'Our Mission', },
+
+		c2: {
 			description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful.',
 		},
 
-		c2: {
-			image: require('../../assets/images/our-mission.webp'),
-		},
+		c3: { image: require('../../assets/images/our-mission.webp'), },
 	},
 }
