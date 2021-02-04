@@ -26,7 +26,7 @@
 				<!-- [R2] Meet the Staff -->
 				<BRow>
 					<!-- [R3.C1] Title -->
-					<BCol cols="12">
+					<BCol cols="12" class="mt-2">
 						<h1 class="text-center text-primary">
 							{{ defaultData.r2.c1.title }}
 						</h1>
