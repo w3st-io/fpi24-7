@@ -101,7 +101,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-4"
+						data-rellax-desktop-speed="-3"
 						class="mt-0"
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
@@ -138,7 +138,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1"
+						data-rellax-desktop-speed="2"
 					><img :src="defaultData.r3.c2.image" class="w-100"></BCol>
 				</BRow>
 			</BCard>
