@@ -126,7 +126,7 @@
 					</BCol>
 				</BRow>
 
-				<div class="my-5"><hr class="my-6"></div>
+				<div class="my-4"><hr class="my-6"></div>
 
 				<!-- [R3] Our Mission -->
 				<BRow>
