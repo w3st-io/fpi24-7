@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Parallax :imgURL="defaultData.parallaxImg" />
+		<Parallax :imgURL="PageData.parallaxImg" />
 		
 		<div class="pt-3" v-rellax="{ speed: 5 }">
 			<!-- [CNT1] Company Details -->
@@ -13,8 +13,7 @@
 						<BRow>
 							<BCol cols="12">
 								<BCaraousel
-									:slideObjs="defaultData.cnt1.r1.c1.r1.c1.caraousel"
-									
+									:slideObjs="PageData.cnt1.r1.c1.r1.c1.caraousel"
 									class="mb-4"
 								/>
 							</BCol>
@@ -23,7 +22,7 @@
 						<!-- [R1.C1.R2] Residential, Commercial, & Industrial Details -->
 						<BRow class="mb-3">
 							<BCol
-								v-for="(col, index) in defaultData.cnt1.r1.c1.r2.cx"
+								v-for="(col, index) in PageData.cnt1.r1.c1.r2.cx"
 								:key="index"
 								cols="12" sm="6" md="6" lg="6" xl="4"
 								class="mb-3"
@@ -53,7 +52,7 @@
 										<!-- [R1.C1.R3.C1] Our Mission Title -->
 										<BCol cols="12">
 											<h1 class="mb-4 text-center text-primary">
-												{{ defaultData.cnt1.r1.c1.r3.c1.titleHTML }}
+												{{ PageData.cnt1.r1.c1.r3.c1.titleHTML }}
 											</h1>
 										</BCol>
 
@@ -69,7 +68,7 @@
 										>
 											<div class="mb-3 text-center">
 												<img
-													:src="defaultData.cnt1.r1.c1.r3.c2.image"
+													:src="PageData.cnt1.r1.c1.r3.c2.image"
 													alt="Card Image"
 													class="w-100 rounded"
 												>
@@ -79,14 +78,14 @@
 										<!-- [R1.C1.R3.C3] Our Mission Description -->
 										<BCol cols="12" md="8">
 											<p  class="h5 mb-3">
-												{{ defaultData.cnt1.r1.c1.r3.c3.description }}
+												{{ PageData.cnt1.r1.c1.r3.c3.description }}
 											</p>
 										</BCol>
 
 										<!-- [R1.C1.R3.C4] Our Service Title -->
 										<BCol cols="12">
 											<p
-												v-html="defaultData.cnt1.r1.c1.r3.c4.titleHTML"
+												v-html="PageData.cnt1.r1.c1.r3.c4.titleHTML"
 												ata-aos="zoom-in"
 												class="mb-4 h2 text-center text-primary"
 											></p>
@@ -95,7 +94,7 @@
 										<!-- [R1.C1.R3.C6] Our Service Description -->
 										<BCol cols="12" md="7">
 											<p class="h5 mb-3">
-												{{ defaultData.cnt1.r1.c1.r3.c5.description }}
+												{{ PageData.cnt1.r1.c1.r3.c5.description }}
 											</p>
 										</BCol>
 
@@ -103,7 +102,7 @@
 										<BCol cols="12" md="5">
 											<div class="mb-3 text-center">
 												<img
-													:src="defaultData.cnt1.r1.c1.r3.c6.image"
+													:src="PageData.cnt1.r1.c1.r3.c6.image"
 													alt="Card Image"
 													class="w-100 rounded"
 												>
@@ -147,7 +146,7 @@
 						</h1>
 			
 						<Conveyor
-							:images="defaultData.cnt2.r1.c1.images"
+							:images="PageData.cnt2.r1.c1.images"
 							:totalOnLg="4"
 							class="mb-4"
 						/>
@@ -175,7 +174,7 @@
 	import Parallax from '../components/display/Parallax'
 	import GetQuote from '../components/GetQuote'
 	import SocialMediaPlug from '../components/SocialMediaPlug'
-	import defaultData from '../defaults/pages'
+	import PageData from '../defaults/pages'
 	import HoursAndContact from '../components/company-details/HoursAndContact'
 
 	export default {
@@ -190,7 +189,7 @@
 
 		data() {
 			return {
-				defaultData: defaultData,
+				PageData: PageData,
 			}
 		},
 	}
