@@ -93,9 +93,9 @@ module.exports = {
 			c1: {
 				images: [
 					require('../../assets/images/affiliates/affiliation-icc.png'),
-					require('../../assets/images/affiliates/affiliation-osha.png'),
 					require('../../assets/images/affiliates/affiliation-nfpa.png'),
 					require('../../assets/images/affiliates/affiliation-nicet.png'),
+					require('../../assets/images/affiliates/affiliation-osha.png'),
 				],
 			},
 		},
