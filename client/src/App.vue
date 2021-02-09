@@ -18,9 +18,9 @@
 	// [IMPORT] Personal //
 	import Footer from '@/components/nav/Footer'
 	import NavBar from '@/components/nav/NavBar'
-	import { EventBus } from './main'
+	import Socket from '@/components/socket'
+	import { EventBus } from '@/main'
 	import Service from '@/services/Service'
-	import Socket from './components/socket'
 
 	export default {
 		components: {
@@ -37,6 +37,10 @@
 		},
 
 		async created() {
+			this.forceRerender()
+
+			await this.setNodeEnv()
+
 			EventBus.$on('force-rerender', () => { this.forceRerender() })
 
 			// [LOG] //
@@ -49,6 +53,8 @@
 			async setNodeEnv() {
 				try {
 					this.reqData = await Service.index()
+
+					console.log('sdfsdfs', this.reqData);
 
 					if (this.reqData.status) {
 						localStorage.setItem('node_env', this.reqData.node_env)
