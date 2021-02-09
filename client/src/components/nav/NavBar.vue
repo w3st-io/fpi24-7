@@ -7,7 +7,7 @@
 					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
 						<img
 							:src="companyInfo.companyLogo"
-							class=" d-none d-lg-block p-1 bg-light rounded-lg"
+							class="d-none d-lg-block p-1 bg-light rounded-lg"
 							style="max-width: 110px;"
 						>
 					</RouterLink>
