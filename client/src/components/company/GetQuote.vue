@@ -36,7 +36,9 @@
 			></textarea>
 
 			<!-- Submit -->
-			<BButton type="submit" class="w-100 mt-3">Submit</BButton>
+			<BButton :disabled="loading" type="submit" class="w-100 mt-3">
+				Submit
+			</BButton>
 
 			<h6 v-if="error" class="mt-2 text-danger">{{ error }}</h6>
 		</form>
@@ -63,6 +65,7 @@
 				subject: '',
 				message: '',
 				error: '',
+				loading: false,
 			}
 		},
 
@@ -78,6 +81,8 @@
 					return
 				}
 
+				this.loading = true
+
 				const mObj = await MailService.s_getQuote(
 					this.type,
 					this.email,
@@ -86,8 +91,13 @@
 					this.message
 				)
 
+				// [LOG] //
+				console.log('MailService.s_getQuote:', mObj)
+
 				if (mObj.status) { router.push({ name: 'email-sent' }) }
 				else { this.error = mObj.message }
+
+				this.loading = false
 			}
 		},
 	}

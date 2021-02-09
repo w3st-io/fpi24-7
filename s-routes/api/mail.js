@@ -55,7 +55,6 @@ router.post(
 						<p>${req.body.message}</p>
 					`
 
-
 					// [MAIL-UTIL] //
 					const mObj = await mailerUtil.sendMail(toEmail, subject, html)
 			
