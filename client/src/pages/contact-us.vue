@@ -52,33 +52,12 @@
 							</BCol>
 						</BRow>
 
-						<!-- Send us an Email + Get Quote -->
+						<!-- Get a Quote -->
 						<BRow class="mt-3">
-							<!-- Title -->
-							<BCol cols="12">
-								<h3 class="text-center text-primary">
-									{{ defaultData.cnt1.r2.c1.r2.c1.title }}
-								</h3>
-							</BCol>
-
-							<!-- Emails Contact -->
-							<BCol
-								v-for="(col, index) in defaultData.cnt1.r2.c1.r2.cx"
-								:key="index"
-								cols="12" md="6"
-								class="mb-3"
-							>
-								<a :href="col.link">
-									<BButton variant="primary" size="lg" pill class="w-100">
-										{{ col.title }}
-									</BButton>
-								</a>
-							</BCol>
-
-							<!-- Get Quote -->
+							<!-- Get a Quote -->
 							<BCol cols="12" class="mt-3">
 								<h3 class="text-center text-primary">
-									<GetQuote />
+									<GetQuote :title="defaultData.cnt1.r2.c1.r2.c1.title" />
 								</h3>
 							</BCol>
 						</BRow>

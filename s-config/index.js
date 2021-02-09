@@ -28,9 +28,12 @@ module.exports = {
 
 	// [EMAIL-RECIEVERS] //
 	ADMIN_EMAIL: process.env.ADMIN_EMAIL || '',
-	SERVICES_EMAIL: process.env.SERVICES_EMAIL || '',
-	INSTALLS_EMAIL: process.env.INSTALLS_EMAIL || '',
+	BILLINGS_EMAIL: process.env.BILLINGS_EMAIL || '',
 	DESIGNS_EMAIL: process.env.DESIGNS_EMAIL || '',
+	INSTALLS_EMAIL: process.env.INSTALLS_EMAIL || '',
+	SALES_EMAIL: process.env.SALES_EMAIL || '',
+	SCHEDULING_EMAIL: process.env.SCHEDULING_EMAIL || '',
+	SERVICES_EMAIL: process.env.SERVICES_EMAIL || '',
 	
 	// [SECRET] //
 	SECRET_KEY: process.env.SECRET_KEY || 'secret',

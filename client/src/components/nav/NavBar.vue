@@ -14,7 +14,7 @@
 				</BCol>
 
 				<!-- Title & Nav Buttons -->
-				<BCol cols="12" lg="7">
+				<BCol cols="12" lg="8">
 					<!-- Title + Caption -->
 					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
 						<h3 class="text-light font-weight-bold">
@@ -26,7 +26,7 @@
 						></h6>
 					</RouterLink>
 
-					<div  class="mb-3 d-none d-md-block text-center">
+					<div class="mb-3 d-none d-md-block text-center">
 						<RouterLink to="/" class="text-dark">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Home
@@ -54,6 +54,18 @@
 						<RouterLink to="/service" class="text-dark">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Service
+							</BButton>
+						</RouterLink>
+
+						<RouterLink to="/careers" class="text-dark">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
+								Careers
+							</BButton>
+						</RouterLink>
+
+						<RouterLink to="/gallery" class="text-dark">
+							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
+								Gallery
 							</BButton>
 						</RouterLink>
 

@@ -3,15 +3,18 @@
 		<!-- Get a Quote -->
 		<form @submit.prevent="submit">
 			<h3 class="mb-3 text-center text-primary">
-				Get a Quote
+				{{ title }}
 			</h3>
 			<hr>
 
 			<!-- Type -->
-			<select v-model="type" class="form-select w-100 p-2" placeholder="s">
+			<select v-model="type" class="form-select w-100 p-2">
 				<option disabled value="">Please choose service type</option>
+				<option value="billings">Billings</option>
 				<option value="designs">Designs</option>
 				<option value="installs">Installs</option>
+				<option value="sales">Sales</option>
+				<option value="scheduling">Scheduling</option>
 				<option value="services">Services</option>
 			</select>
 
@@ -45,6 +48,13 @@
 	import MailService from '@/services/MailService'
 
 	export default {
+		props: {
+			title: {
+				type: String,
+				default: 'Get a Quote',
+			}
+		},
+
 		data() {
 			return {
 				type: '',

@@ -33,25 +33,6 @@ module.exports = {
 				// Send Email //
 				r2: {
 					c1: { title: 'Send us an Email', },
-					
-					cx: [
-						{
-							title: 'Click for Sales',
-							link: 'mailto:chrisc@24-7fireprotection.com?subject=Sales/Service Question',
-						},
-						{
-							title: 'Click for Scheduling',
-							link: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
-						},
-						{
-							title: 'Click for Design',
-							link: 'mailto:yandri@24-7fireprotection.com?subject=Design/Engineering%20Question',
-						},
-						{
-							title: 'Click for Billing',
-							link: 'mailto:lissette@24-7fireprotection.com?subject=Billing/Admin%20Question'
-						}
-					],
 				},
 			},
 	
