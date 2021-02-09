@@ -26,7 +26,7 @@ module.exports = {
 			},
 
 			{
-				image: require('../../assets/images/pages/gallery/mcgowan-cliffside-park.jpg'),
+				image: require('../../assets/images/pages/gallery/mcgowan-cliffside-park-nj.jpg'),
 				description: 'McGowan Cliffside Park NJ', 
 			},
 		],
