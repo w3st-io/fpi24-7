@@ -28,8 +28,8 @@
 							>
 						
 							<h6 class="text-center mt-4">
-								<span class="text-white">.</span>
 								{{ col.description }}
+								<span class="text-white">.</span>
 							</h6>
 						</BCard>
 					</BCol>
