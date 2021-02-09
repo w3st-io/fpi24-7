@@ -17,7 +17,7 @@ const config = require('../s-config')
 const service = config.EMAIL_SERVICE
 const email = config.EMAIL
 const emailPassword = config.EMAIL_PASSWORD
-const baseURL = config.BASE_URL
+const baseURL = config.CLIENT_BASE_URL
 
 const auth = {
 	user: email,

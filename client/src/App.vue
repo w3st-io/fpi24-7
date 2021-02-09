@@ -8,46 +8,35 @@
 
 		<!-- Footer -->
 		<Footer />
+
+		<!-- Socket -->
+		<Socket />
 	</div>
 </template>
 
 <script>
-	// [IMPORT] //
-	import io from 'socket.io-client'
-
-
 	// [IMPORT] Personal //
 	import Footer from '@/components/nav/Footer'
 	import NavBar from '@/components/nav/NavBar'
-	import Service from './services/Service'
 	import { EventBus } from './main'
-
+	import Service from '@/services/Service'
+	import Socket from './components/socket'
 
 	export default {
 		components: {
 			Footer,
 			NavBar,
+			Socket,
 		},
 
 		data() {
 			return {
-				// [APP] //
 				appKey: 0,
 				reqData: {},
-				message: '',
-
-				socket: 5000,
-
-				// [USER] //
-				adminLoggedIn: false,
-				loggedIn: false,
-				decoded: {},
 			}
 		},
 
 		async created() {
-			await this.setSocket()
-
 			EventBus.$on('force-rerender', () => { this.forceRerender() })
 
 			// [LOG] //
@@ -55,16 +44,18 @@
 		},
 
 		methods: {
-			async setSocket() {
-				try {
-					this.reqData = await Service.getSocketBaseUrl()
-
-					if (this.reqData) { this.socket = io(this.reqData) }
-				}
-				catch (err) { `App: Error --> ${err}` }				
-			},
-
 			forceRerender() { this.appKey++ },
+
+			async setNodeEnv() {
+				try {
+					this.reqData = await Service.index()
+
+					if (this.reqData.status) {
+						localStorage.setItem('node_env', this.reqData.node_env)
+					}	
+				}
+				catch (err) { console.log(`App: Error --> ${err}`) }
+			},
 
 			log() {
 				console.log('%%% [APP] %%%')

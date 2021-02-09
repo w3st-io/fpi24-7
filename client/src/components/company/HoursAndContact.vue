@@ -1,9 +1,7 @@
 <template>
 	<!-- Operations -->
 	<BCard bg-variant="dark" class="text-light">
-		<h3 class="mb-3 text-center text-primary">
-			Hours & Location
-		</h3>
+		<h3 class="mb-3 text-center text-primary">Hours & Location</h3>
 		<hr class="border-light">
 
 		<!-- Hours Of Operation -->
@@ -44,7 +42,7 @@
 </template>
 
 <script>
-	import companyInfo from '../../defaults/companyInfo'
+	import companyInfo from '@/defaults/companyInfo'
 
 	export default {
 		data() {

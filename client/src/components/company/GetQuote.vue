@@ -41,8 +41,8 @@
 </template>
 
 <script>
-	import router from '../router'
-	import mailService from '../services/mailService'
+	import router from '@/router'
+	import MailService from '@/services/MailService'
 
 	export default {
 		data() {
@@ -68,7 +68,7 @@
 					return
 				}
 
-				const mObj = await mailService.s_getQuote(
+				const mObj = await MailService.s_getQuote(
 					this.type,
 					this.email,
 					this.name,

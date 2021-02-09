@@ -129,8 +129,8 @@
 
 <script>
 	// [IMPORT] Personal //
+	import GetQuote from '../components/company/GetQuote'
 	import Parallax from '../components/display/Parallax'
-	import GetQuote from '../components/GetQuote'
 	import defaultData from '../defaults/pages/contact-us'
 	import router from '../router'
 

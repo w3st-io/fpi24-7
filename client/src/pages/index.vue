@@ -169,13 +169,13 @@
 
 <script>
 	// [IMPORT] Personal //
+	import HoursAndContact from '../components/company/HoursAndContact'
+	import GetQuote from '../components/company/GetQuote'
 	import BCaraousel from '../components/display/BCarousel'
 	import Conveyor from '../components/display/Conveyor'
 	import Parallax from '../components/display/Parallax'
-	import GetQuote from '../components/GetQuote'
 	import SocialMediaPlug from '../components/SocialMediaPlug'
 	import PageData from '../defaults/pages'
-	import HoursAndContact from '../components/company-details/HoursAndContact'
 
 	export default {
 		components: {

@@ -4,9 +4,18 @@ require('dotenv').config()
 
 // [EXPORT] //
 module.exports = {
-	// [URL + PORT] //
-	BASE_URL: process.env.BASE_URL || 'http://localhost:8080',
-	SOCKET_BASE_URL: process.env.BASE_URL || 'http://localhost:5000',
+	// [APP] //
+	NODE_ENV: process.env.NODE_ENV || 'development',
+
+	// [FUNCTIONALITY] //
+	ADMIN_USER_SYSTEM: process.env.ADMIN_USER_SYSTEM || true,
+	PAYMENT_SYSTEM: process.env.PAYMENT_SYSTEM || true,
+
+	// [URL] //
+	CLIENT_BASE_URL: process.env.BASE_URL || 'http://localhost:8080',
+	SERVER_BASE_URL: process.env.BASE_URL || 'http://localhost:5000',
+
+	// [PORT] //
 	PORT: process.env.PORT || 5000,
 	
 	// [MONGODB] //
