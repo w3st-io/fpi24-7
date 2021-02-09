@@ -13,6 +13,7 @@
 				<option value="billings">Billings</option>
 				<option value="designs">Designs</option>
 				<option value="installs">Installs</option>
+				<option value="report">Report Bug on Site</option>
 				<option value="sales">Sales</option>
 				<option value="scheduling">Scheduling</option>
 				<option value="services">Services</option>
