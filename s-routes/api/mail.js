@@ -26,14 +26,22 @@ router.post(
 				req.body.message
 			) {
 				if (
+					req.body.type == 'billings' ||
 					req.body.type == 'designs' ||
 					req.body.type == 'installs' ||
+					req.body.type == 'report' ||
+					req.body.type == 'sales' ||
+					req.body.type == 'scheduling' ||
 					req.body.type == 'services'
 				) {
 					// Determin toEmail //
 					let toEmail = null
+					if (req.body.type == 'billings') { toEmail = config.BILLINGS_EMAIL }
 					if (req.body.type == 'designs') { toEmail = config.DESIGNS_EMAIL }
 					if (req.body.type == 'installs') { toEmail = config.INSTALLS_EMAIL }
+					if (req.body.type == 'report') { toEmail = config.ADMIN_EMAIL }
+					if (req.body.type == 'sales') { toEmail = config.SALES_EMAIL }
+					if (req.body.type == 'scheduling') { toEmail = config.SCHEDULING_EMAIL }
 					if (req.body.type == 'services') { toEmail = config.SERVICES_EMAIL }
 					
 					// [INIT] //
@@ -48,7 +56,6 @@ router.post(
 						<h3 style="margin: 0; margin-top: 20px;">Message:</h3>
 						<p>${req.body.message}</p>
 					`
-
 
 					// [MAIL-UTIL] //
 					const mObj = await mailerUtil.sendMail(toEmail, subject, html)

@@ -5,10 +5,10 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" v-rellax="{ speed: 5 }" class="my-4">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
 				<!-- Row 1 -->
 				<BRow>
-					<BCol cols="12" md="7" lg="8" >
+					<BCol cols="12" md="7" lg="8">
 						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
 						<p>{{ defaultData.r1.c1.description }}</p>
 					</BCol>

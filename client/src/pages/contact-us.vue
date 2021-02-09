@@ -5,11 +5,11 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" v-rellax="{ speed: 5 }" class="my-4">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
 				<!-- Row 1 -->
-				<BRow>
+				<BRow class="mb-4">
 					<!-- Main Title -->
-					<BCol cols="12" sm="8" class="">
+					<BCol cols="12" md="8">
 						<h1 class="m-0 text-primary text-center">
 							{{ defaultData.cnt1.r1.c1.title }}
 						</h1>
@@ -19,14 +19,13 @@
 					<BCol cols="12" sm="4" class="text-center" v-rellax="{ speed: 2 }" >
 						<img
 							:src="defaultData.cnt1.r1.c2.image"
-							class="d-none d-sm-block w-100 p-3 bg-white rounded-lg shadow"
+							class="d-none d-md-block w-100 p-3 bg-white rounded-lg shadow"
 						>
 					</BCol>
-
 				</BRow>
 
 				<!-- Row 2 -->
-				<BRow class="my-4">
+				<BRow class="mb-4">
 					<BCol cols="12" lg="6" class="mb-3">
 						<!-- Call Us & fax Us -->
 						<BRow class="mb-3">
@@ -52,33 +51,12 @@
 							</BCol>
 						</BRow>
 
-						<!-- Send us an Email + Get Quote -->
+						<!-- Get a Quote -->
 						<BRow class="mt-3">
-							<!-- Title -->
-							<BCol cols="12">
-								<h3 class="text-center text-primary">
-									{{ defaultData.cnt1.r2.c1.r2.c1.title }}
-								</h3>
-							</BCol>
-
-							<!-- Emails Contact -->
-							<BCol
-								v-for="(col, index) in defaultData.cnt1.r2.c1.r2.cx"
-								:key="index"
-								cols="12" md="6"
-								class="mb-3"
-							>
-								<a :href="col.link">
-									<BButton variant="primary" size="lg" pill class="w-100">
-										{{ col.title }}
-									</BButton>
-								</a>
-							</BCol>
-
-							<!-- Get Quote -->
+							<!-- Get a Quote -->
 							<BCol cols="12" class="mt-3">
 								<h3 class="text-center text-primary">
-									<GetQuote />
+									<GetQuote :title="defaultData.cnt1.r2.c1.r2.c1.title" />
 								</h3>
 							</BCol>
 						</BRow>
@@ -114,7 +92,7 @@
 				</BRow>
 
 				<!-- Row 3 -->
-				<BRow class="my-4">
+				<BRow class="mb-4">
 					<BCol>
 						<h3 class="text-center text-primary">
 							{{ defaultData.cnt1.r3.c1.title }}
@@ -129,10 +107,10 @@
 
 <script>
 	// [IMPORT] Personal //
-	import Parallax from '../components/display/Parallax'
-	import GetQuote from '../components/GetQuote'
-	import defaultData from '../defaults/pages/contact-us'
-	import router from '../router'
+	import GetQuote from '@/components/company/GetQuote'
+	import Parallax from '@/components/display/Parallax'
+	import defaultData from '@/defaults/pages/contact-us'
+	import router from '@/router'
 
 	export default {
 		components: {

@@ -52,15 +52,15 @@ module.exports = {
 			staffMembers: [
 				{
 					name: 'Jose C.',
-					title: 'Service Office Manager',
+					title: 'Office Manager',
 				},
 				{
 					name: 'Giselle G.',
-					title: 'Contract Office Manager ',
+					title: 'Service Coordinator',
 				},
 				{
 					name: 'Andrew & Yandri',
-					title: 'Engineering',
+					title: 'Design Project Manager',
 				},
 			]
 		}

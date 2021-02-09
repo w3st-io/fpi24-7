@@ -15,25 +15,12 @@ const router = express.Router().use(cors())
 router.get(
 	'/',
 	async (req, res) => {
-		res.status(200).send({
-			base_url: config.BASE_URL,
-			socket_base_url: config.SOCKET_BASE_URL,
+		res.send({
+			executed: true,
+			status: true,
+			node_env: config.NODE_ENV,
 		})
 	}
-)
-
-
-// [BASE-URL] //
-router.get(
-	'/get-base-url',
-	async (req, res) => { res.status(200).send(config.BASE_URL) }
-)
-
-	
-// [SOCKET-BASE-URL] //
-router.get(
-	'/get-socket-base-url',
-	async (req, res) => { res.status(200).send(config.SOCKET_BASE_URL) }
 )
 
 

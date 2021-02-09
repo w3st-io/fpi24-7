@@ -5,7 +5,7 @@
 			height: ${height}px;
 			background-image: url(${imgURL});
 		`"
-		v-rellax="{ speed: 2 }"
+		v-rellax="{ speed: rellaxNumber }"
 	></div>
 </template>
 
@@ -18,6 +18,11 @@
 
 			height: {
 				default: 400,
+			},
+
+			rellaxNumber: {
+				type: Number,
+				default: 2,
 			},
 		},
 	}
