@@ -2,6 +2,8 @@
 	<div class="nav-spacer">
 		<BContainer class="my-5">
 			<form @submit.prevent="sendFile" enctype="multipart/form-data">
+				<input type="text">
+
 				<input
 					type="file"
 					ref="file"
@@ -10,8 +12,6 @@
 
 				<button type="submit">submit</button>
 			</form>
-
-			{{ file }}
 		</BContainer>
 	</div>
 </template>
@@ -36,10 +36,11 @@
 				try {
 					const formData = new FormData()
 					formData.append('file', this.file)
+					formData.append('to', 'test')
 
 					this.reqData = await axios.post(
 						'/api/careers/apply',
-						formData
+						formData,
 					)
 
 					console.log('reqData', this.reqData.data)

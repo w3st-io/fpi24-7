@@ -6,6 +6,7 @@ const multer = require('multer')
 
 
 // [REQUIRE] Personal //
+const config = require('../../s-config')
 const mailerUtil = require('../../s-utils/mailerUtil')
 
 
@@ -35,34 +36,36 @@ router.post(
 	upload.single('file'),
 	async (req, res) => {
 		try {
+			// [SEND-MAIL] //
+			/*
 			const mailObj = await mailerUtil.sendMail(
-				'aleem.ahmed1997@gmail.com',
+				config.CAREERS_EMAIL,
 				'Subject',
 				'<h1>HTML</h1>',
 				[ { path: req.file.path } ]
 			)
+			*/
+
+			console.log(req.file, 'TO:', req.body.to,);
 			
-			if (mailObj.status) {
-				// [DELETE] //
-				fs.unlink(req.file.path, async (err) => {
-					if (!err) {
-						res.status(200).send({
-							executed: true,
-							status: true,
-							message: mailObj.message,
-						})
-					}
-					else {
-						res.status(200).send({
-							executed: true,
-							status: true,
-							location: '/api/careers/apply',
-							message: `Caught Error: --> ${err}`,
-						})
-					}
-				})
-			}
-			else { res.status(200).send(mailObj) }
+			// [DELETE] //
+			fs.unlink(req.file.path, async (err) => {
+				if (!err) {
+					res.status(200).send({
+						executed: true,
+						status: true,
+						//message: mailObj.message,
+					})
+				}
+				else {
+					res.status(200).send({
+						executed: true,
+						status: true,
+						location: '/api/careers/apply',
+						message: `Caught Error: --> ${err}`,
+					})
+				}
+			})
 		}
 		catch (err) {
 			res.status(200).send({
