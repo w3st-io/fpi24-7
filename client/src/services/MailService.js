@@ -15,26 +15,52 @@ async function authAxios() {
 
 
 /******************* [URL + PORT] *******************/
-async function s_getQuote(type, email, name, subject, message) {
-	const authAxios = await this.authAxios()
+async function s_getQuote(subject, type, clientEmail, name, message) {
+	try {
+		const authAxios = await this.authAxios()
 
-	return (
-		await authAxios.post(
-			'/get-quote',
-			{
-				type: type,
-				email: email,
-				name: name,
-				subject: subject,
-				message: message,
-			}
-		)
-	).data
+		return (
+			await authAxios.post(
+				'/get-quote',
+				{
+					subject: subject,
+					type: type,
+					clientEmail: clientEmail,
+					name: name,
+					message: message,
+				}
+			)
+		).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			error: `MailService: Error --> ${err}`,
+		}
+	}
+}
+
+
+async function s_careers(formData) {
+	try {
+		const authAxios = await this.authAxios()
+
+		return (await authAxios.post('/careers', formData)).data
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			error: `MailService: Error --> ${err}`,
+		}
+	}
 }
 
 
 // [EXPORT] //
 export default {
 	authAxios,
-	s_getQuote
+	s_getQuote,
+	s_careers,
 }

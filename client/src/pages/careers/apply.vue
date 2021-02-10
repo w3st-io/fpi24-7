@@ -1,29 +1,118 @@
 <template>
 	<div class="nav-spacer">
 		<BContainer class="my-5">
-			<form @submit.prevent="sendFile" enctype="multipart/form-data">
-				<input type="text">
+			<BRow class="mb-3">
+				<BCol cols="12">
+					<!-- Title -->
+					<h1 class="text-center text-primary">Apply for a Career!</h1>
+					<h4 class="text-center text-secondary">
+						Send us an email and we will gladly review your request!
+					</h4>
+				</BCol>
+			</BRow>
 
-				<input
-					type="file"
-					ref="file"
-					@change="selectFile"
-				>
+			<BRow>
+				<BCol cols="12" md="4">
+					<h3 class="text-center text-primary">
+						Positions Available
+					</h3>
+					<hr>
+				</BCol>
 
-				<button type="submit">submit</button>
-			</form>
+				<BCol cols="12" md="8">
+					<form @submit.prevent="sendFile" enctype="multipart/form-data">
+						<!-- Client Email -->
+						<label for="client-email" class="w-100 h3 form-label text-primary">
+							Your Email
+						</label>
+						<input
+							v-model="clientEmail"
+							name="client-email"
+							type="email"
+							class="form-control mb-3"
+							placeholder="Your email here"
+						>
+
+						<!-- Name -->
+						<label for="name" class="w-100 h3 form-label text-primary">
+							Your Name
+						</label>
+						<input
+							v-model="name"
+							name="name"
+							type="text"
+							class="form-control mb-3"
+							placeholder="Your name here"
+						>
+
+						<!-- Subject -->
+						<label for="subject" class="w-100 h3 form-label text-primary">
+							Subject
+						</label>
+						<input
+							v-model="subject"
+							name="subject"
+							type="text"
+							class="form-control mb-3"
+							placeholder="Please type your subject"
+						>
+
+						<!-- Message -->
+						<label for="message" class="w-100 h3 form-label text-primary">
+							Message
+						</label>
+						<textarea
+							v-model="message"
+							name="message"
+							cols="30" rows="10"
+							class="form-control w-100 mb-3"
+						></textarea>
+						<hr>
+						
+						<!-- Attachments -->
+						<label for="file" class="w-100 h3 form-label text-primary">
+							Please Attach Your Resume Here
+						</label>
+						<input
+							name="file"
+							type="file"
+							ref="file"
+							class="mb-3"
+							@change="selectFile"
+						>
+						<hr>
+
+						<!-- Submit -->
+						<BButton
+							type="submit"
+							variant="primary"
+							size="lg"
+							class="w-100"
+						>submit</BButton>
+					</form>
+				</BCol>
+			</BRow>
+
+
+			<h6 v-if="error" class="text-danger">{{ error }}</h6>
 		</BContainer>
 	</div>
 </template>
 
 <script>
-	import axios from 'axios'
+	import MailService from '../../services/MailService'
 
 	export default {
 		data() {
 			return {
+				subject: '',
+				clientEmail: '',
+				name: '',
+				message: '',
 				file: '',
+
 				reqData: {},
+				error: '',
 			}
 		},
 
@@ -35,19 +124,17 @@
 			async sendFile() {
 				try {
 					const formData = new FormData()
+					formData.append('subject', this.subject)
+					formData.append('clientEmail', this.clientEmail)
+					formData.append('name', this.name)
+					formData.append('message', this.message)
 					formData.append('file', this.file)
-					formData.append('to', 'test')
 
-					this.reqData = await axios.post(
-						'/api/careers/apply',
-						formData,
-					)
+					this.reqData = await MailService.s_careers(formData)
 
 					console.log('reqData', this.reqData.data)
 				}
-				catch (error) {
-					console.log('s', error)
-				}
+				catch (err) { this.error = err }
 			},
 		},
 	}

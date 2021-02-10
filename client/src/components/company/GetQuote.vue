@@ -2,9 +2,7 @@
 	<div>
 		<!-- Get a Quote -->
 		<form @submit.prevent="submit">
-			<h3 class="mb-3 text-center text-primary">
-				{{ title }}
-			</h3>
+			<h3 class="mb-3 text-center text-primary">{{ title }}</h3>
 			<hr>
 
 			<!-- Type -->
@@ -20,7 +18,7 @@
 			</select>
 
 			<!-- Email -->
-			<input v-model="email" type="email" placeholder="Email" class="mt-3 form-control">
+			<input v-model="clientEmail" type="email" placeholder="Your email" class="mt-3 form-control">
 
 			<!-- Name -->
 			<input v-model="name" type="text" placeholder="Name" class="mt-3 form-control">
@@ -60,10 +58,10 @@
 
 		data() {
 			return {
-				type: '',
-				email: '',
-				name: '',
 				subject: '',
+				type: '',
+				clientEmail: '',
+				name: '',
 				message: '',
 				error: '',
 				loading: false,
@@ -77,7 +75,7 @@
 					return
 				}
 					
-				if (!this.type || !this.email || !this.name || !this.subject || !this.message) {
+				if (!this.type || !this.clientEmail || !this.name || !this.subject || !this.message) {
 					this.error = 'Error: Please fill out all fields'
 					return
 				}
@@ -85,10 +83,10 @@
 				this.loading = true
 
 				const mObj = await MailService.s_getQuote(
-					this.type,
-					this.email,
-					this.name,
 					this.subject,
+					this.type,
+					this.clientEmail,
+					this.name,
 					this.message
 				)
 
