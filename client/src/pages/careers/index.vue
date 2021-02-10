@@ -66,7 +66,7 @@
 				<BRow>
 					<BCol cols="12">
 						<div class="text-center">
-							<RouterLink to="/">
+							<RouterLink to="/careers/apply">
 								<BButton variant="primary" size="lg">
 									Apply Now
 								</BButton>
