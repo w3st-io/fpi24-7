@@ -54,7 +54,7 @@
 				try {
 					this.reqData = await Service.index()
 
-					console.log('sdfsdfs', this.reqData);
+					console.log('reqData:', this.reqData)
 
 					if (this.reqData.status) {
 						localStorage.setItem('node_env', this.reqData.node_env)

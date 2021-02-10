@@ -15,6 +15,7 @@ const config = require('./s-config')
 const rateLimiter = require('./s-rate-limiters')
 
 const a_ = require('./s-routes/api')
+const a_careers = require('./s-routes/api/careers')
 const a_mail = require('./s-routes/api/mail')
 
 // [INIT] Const //
@@ -57,6 +58,7 @@ app.use(rateLimiter.limiter)
 
 // [USE] Personal // API // Pages //
 app.use('/api', a_)
+app.use('/api/careers', a_careers)
 app.use('/api/mail', a_mail)
 
 

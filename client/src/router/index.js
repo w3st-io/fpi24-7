@@ -6,7 +6,8 @@ import VueRouter from 'vue-router'
 // [IMPORT] Personal //
 import Index from '../pages'
 import About from '../pages/about'
-import Careers from '../pages/careers'
+import careers from '../pages/careers'
+import careers_apply from '../pages/careers/apply'
 import ContactUs from '../pages/contact-us'
 import Design from '../pages/design'
 import EmailSent from '../pages/email-sent'
@@ -46,10 +47,19 @@ const router = new VueRouter({
 		{
 			path: '/careers',
 			name: 'careers',
-			component: Careers,
+			component: careers,
 			meta: {
 				auth: true,
 				title: 'Careers'
+			},
+		},
+		{
+			path: '/careers/apply',
+			name: 'careers_apply',
+			component: careers_apply,
+			meta: {
+				auth: true,
+				title: 'apply'
 			},
 		},
 		// Contact Us //

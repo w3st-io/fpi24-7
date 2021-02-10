@@ -19,10 +19,10 @@ router.get(
 			executed: true,
 			status: true,
 			node_env: config.NODE_ENV,
+			__dirname: __dirname
 		})
 	}
 )
-
 
 // [EXPORT] //
 module.exports = router
