@@ -25,14 +25,14 @@ const auth = {
 }
 
 // [DEFAULT] //
-async function sendMail(to, subject, html) {
+async function sendMail(to, subject, html, attachments) {
 	try {
 		// [VALIDATE] to //
 		if (!validator.isEmail(to)) {
 			return {
 				executed: true,
 				status: false,
-				message: 'mailerUtil: Invalid email'
+				message: 'mailerUtil: Invalid email',
 			}
 		}
 
@@ -41,7 +41,7 @@ async function sendMail(to, subject, html) {
 			return {
 				executed: true,
 				status: false,
-				message: 'mailerUtil: Invalid subject'
+				message: 'mailerUtil: Invalid subject',
 			}
 		}
 
@@ -50,7 +50,7 @@ async function sendMail(to, subject, html) {
 			return {
 				executed: true,
 				status: false,
-				message: 'mailerUtil: Invalid html'
+				message: 'mailerUtil: Invalid html',
 			}
 		}
 
@@ -59,7 +59,18 @@ async function sendMail(to, subject, html) {
 			return {
 				executed: true,
 				status: false,
-				message: 'mailerUtil: Invalid html (XSS)'
+				message: 'mailerUtil: Invalid html (XSS)',
+			}
+		}
+
+		// [VALIDATE] html xss //
+		if (attachments) {
+			if (!Array.isArray(attachments)) {
+				return {
+					executed: true,
+					status: false,
+					message: 'mailerUtil: Attachments must be an array',
+				}
 			}
 		}
 
@@ -72,7 +83,8 @@ async function sendMail(to, subject, html) {
 			from: email,
 			to: to,
 			subject: subject,
-			html: html
+			html: html,
+			attachments: attachments,
 		}
 
 		// [SEND-MAIL] //
@@ -81,6 +93,7 @@ async function sendMail(to, subject, html) {
 		return {
 			executed: true,
 			status: true,
+			send: true,
 			message: 'Email Sent',
 		}
 	}
