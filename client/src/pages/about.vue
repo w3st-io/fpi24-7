@@ -19,7 +19,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="2"
+						data-rellax-desktop-speed="1"
 					><img :src="defaultData.r1.c2.image" class="w-100 shadow"></BCol>
 				</BRow>
 
@@ -49,7 +49,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1.5"
+						data-rellax-desktop-speed="1"
 					>
 						<!-- Text -->
 						<div>

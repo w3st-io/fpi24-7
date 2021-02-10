@@ -2,7 +2,7 @@
 	<div>
 		<Parallax :imgURL="PageData.parallaxImg" />
 		
-		<div class="pt-3" v-rellax="{ speed: 5 }">
+		<div class="pt-3" v-rellax="{ speed: 7 }">
 			<!-- [CNT1] Company Details -->
 			<BContainer>
 				<!-- [R1] -->
@@ -64,7 +64,7 @@
 											data-rellax-xs-speed="0"
 											data-rellax-mobile-speed="0"
 											data-rellax-tablet-speed="0"
-											data-rellax-desktop-speed="1"
+											data-rellax-desktop-speed="0.5"
 										>
 											<div class="mb-3 text-center">
 												<img
@@ -169,13 +169,13 @@
 
 <script>
 	// [IMPORT] Personal //
-	import HoursAndContact from '../components/company/HoursAndContact'
-	import GetQuote from '../components/company/GetQuote'
-	import BCaraousel from '../components/display/BCarousel'
-	import Conveyor from '../components/display/Conveyor'
-	import Parallax from '../components/display/Parallax'
-	import SocialMediaPlug from '../components/SocialMediaPlug'
-	import PageData from '../defaults/pages'
+	import HoursAndContact from '@/components/company/HoursAndContact'
+	import GetQuote from '@/components/company/GetQuote'
+	import BCaraousel from '@/components/display/BCarousel'
+	import Conveyor from '@/components/display/Conveyor'
+	import Parallax from '@/components/display/Parallax'
+	import SocialMediaPlug from '@/components/SocialMediaPlug'
+	import PageData from '@/defaults/pages'
 
 	export default {
 		components: {

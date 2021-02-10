@@ -16,7 +16,7 @@
 					<BCol
 						v-for="(col, index) in defaultData.r2.cx"
 						:key="index"
-						cols="12" sm="6" md="4" lg="3"
+						cols="12" sm="6" md="4" lg="3" xl="3"
 						class="mb-3"
 					>
 						<BCard bg-variant="white" class="rounded-0 shadow">
