@@ -150,7 +150,7 @@ async function sendFpiEmail(subject, type, clientEmail, name, message, attachmen
 
 		// [INIT] //
 		const to = fpiToEmail(type)
-		const subject2 = `Get Quote - Customer Subject: ${subject}`
+		const subject2 = `Client Subject: ${subject}`
 		const html = fpiTemplate(type, clientEmail, name, message)
 
 		const transporter = nodemailer.createTransport({
