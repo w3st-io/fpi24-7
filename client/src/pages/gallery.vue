@@ -1,7 +1,7 @@
 <template>
 	<BContainer class="nav-spacer">
 		<div class="my-3">
-			<!-- Row 1 -->
+			<!-- [R1] -->
 			<BRow>
 				<BCol cols="12" class="mb-3">
 					<h1 class="text-center text-primary">

@@ -6,7 +6,7 @@
 		<!-- Content -->
 		<BContainer>
 			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
-				<!-- Row 1 -->
+				<!-- [R1] -->
 				<BRow class="mb-4">
 					<!-- Main Title -->
 					<BCol cols="12" md="8">
@@ -24,7 +24,7 @@
 					</BCol>
 				</BRow>
 
-				<!-- Row 2 -->
+				<!-- [R2] -->
 				<BRow class="mb-4">
 					<BCol cols="12" lg="6" class="mb-3">
 						<!-- Call Us & fax Us -->
@@ -91,7 +91,7 @@
 					</BCol>
 				</BRow>
 
-				<!-- Row 3 -->
+				<!-- [R3] -->
 				<BRow class="mb-4">
 					<BCol>
 						<h3 class="text-center text-primary">

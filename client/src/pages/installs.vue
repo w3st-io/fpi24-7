@@ -6,7 +6,7 @@
 		<!-- Content -->
 		<BContainer>
 			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
-				<!-- Row 1 -->
+				<!-- [R1] -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
 						<h2 class="text-primary">{{ defaultData.r1.c1.title }}</h2>
@@ -23,7 +23,7 @@
 					><img :src="defaultData.r1.c2.image" class="w-100 rounded-lg"></BCol>
 				</BRow>
 
-				<!-- Row 2 -->
+				<!-- [R2] -->
 				<BRow>
 					<BCol cols="12" md="12" class="my-4">
 						<BCard no-body bg-variant="primary" class="py-2 text-light">
@@ -32,7 +32,7 @@
 					</BCol>
 				</BRow>
 
-				<!-- Row 3 -->
+				<!-- [R3] -->
 				<BRow>
 					<BCol
 						cols="12" md="4"
@@ -61,7 +61,7 @@
 					</BCol>
 				</BRow>
 
-				<!-- Row 4 -->
+				<!-- [R4] -->
 				<BRow class="bg-light">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
@@ -89,7 +89,7 @@
 					</BCol>
 				</BRow>
 
-				<!-- Row 5 -->
+				<!-- [R5] -->
 				<BRow class="bg-light">
 					<BCol cols="12" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
