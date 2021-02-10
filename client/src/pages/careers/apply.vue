@@ -84,6 +84,7 @@
 
 						<!-- Submit -->
 						<BButton
+							:disabled="loading"
 							type="submit"
 							variant="primary"
 							size="lg"
@@ -100,6 +101,7 @@
 </template>
 
 <script>
+	import router from '@/router'
 	import MailService from '../../services/MailService'
 
 	export default {
@@ -110,7 +112,7 @@
 				name: '',
 				message: '',
 				file: '',
-
+				loading: false,
 				reqData: {},
 				error: '',
 			}
@@ -123,6 +125,16 @@
 
 			async sendFile() {
 				try {
+					if (this.type == '') {
+						this.error = 'Error: Please Select a service type'
+						return
+					}
+						
+					if (!this.clientEmail || !this.name || !this.subject || !this.message) {
+						this.error = 'Error: Please fill out all fields'
+						return
+					}
+
 					const formData = new FormData()
 					formData.append('subject', this.subject)
 					formData.append('clientEmail', this.clientEmail)
@@ -130,9 +142,17 @@
 					formData.append('message', this.message)
 					formData.append('file', this.file)
 
+					this.loading = true
+					
 					this.reqData = await MailService.s_careers(formData)
 
-					console.log('reqData', this.reqData)
+					// [LOG] //
+					console.log('MailService.s_careers:', this.reqData)
+
+					if (this.reqData.status) { router.push({ name: 'email-sent' }) }
+					else { this.error = this.reqData.message }
+
+					this.loading = false
 				}
 				catch (err) { this.error = err }
 			},
