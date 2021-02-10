@@ -49,6 +49,20 @@
 			v-show="sideMenuOpen"
 			variant="outline-seconadry"
 			class="w-100 p-2 text-primary"
+			@click="careers()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Careers</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
+			@click="gallery()"
+		><span aria-hidden="true" style="font-size: 1.5em;">Gallery</span></BButton>
+
+		<BButton
+			v-show="sideMenuOpen"
+			variant="outline-seconadry"
+			class="w-100 p-2 text-primary"
 			@click="contactUs()"
 		><span aria-hidden="true" style="font-size: 1.5em;">Contact Us</span></BButton>
 		
@@ -113,6 +127,16 @@
 
 			service() {
 				router.push({ name: 'service' })
+				this.closeMenu()
+			},
+
+			careers() {
+				router.push({ name: 'careers' })
+				this.closeMenu()
+			},
+
+			gallery() {
+				router.push({ name: 'gallery' })
 				this.closeMenu()
 			},
 
