@@ -132,7 +132,7 @@
 
 					this.reqData = await MailService.s_careers(formData)
 
-					console.log('reqData', this.reqData.data)
+					console.log('reqData', this.reqData)
 				}
 				catch (err) { this.error = err }
 			},

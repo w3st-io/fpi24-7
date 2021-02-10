@@ -96,35 +96,50 @@ router.post(
 	async (req, res) => {
 		try {
 			// [MAIL-UTIL] //
-			const mObj = await mailerUtil.sendFpiEmail(
-				req.body.subject,
-				'careers',
-				req.body.clientEmail,
-				req.body.name,
-				req.body.message,
-				[ { path: req.file.path } ]
-			)
+			if (req.file) {
+				const mObj = await mailerUtil.sendFpiEmail(
+					req.body.subject,
+					'careers',
+					req.body.clientEmail,
+					req.body.name,
+					req.body.message,
+					[ { path: req.file.path } ]
+				)
 
-			console.log(mObj);
-			
-			// [DELETE] //
-			fs.unlink(req.file.path, async (err) => {
-				if (!err) {
-					res.status(200).send({
-						executed: true,
-						status: true,
-						message: mObj.message,
-					})
-				}
-				else {
-					res.status(200).send({
-						executed: true,
-						status: true,
-						location: '/api/mail/careers',
-						message: `Caught Error: --> ${err}`,
-					})
-				}
-			})
+				// [DELETE] //
+				fs.unlink(req.file.path, async (err) => {
+					if (!err) {
+						res.status(200).send({
+							executed: true,
+							status: true,
+							message: mObj.message,
+						})
+					}
+					else {
+						res.status(200).send({
+							executed: true,
+							status: true,
+							location: '/api/mail/careers',
+							message: `Caught Error: --> ${err}`,
+						})
+					}
+				})
+			}
+			else {
+				const mObj = await mailerUtil.sendFpiEmail(
+					req.body.subject,
+					'careers',
+					req.body.clientEmail,
+					req.body.name,
+					req.body.message,
+				)
+
+				res.status(200).send({
+					executed: true,
+					status: true,
+					message: mObj.message,
+				})
+			}
 		}
 		catch (err) {
 			res.status(200).send({
