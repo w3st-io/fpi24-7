@@ -118,24 +118,42 @@ router.post(
 						[ { path: req.file.path } ],
 					)
 
-					// [DELETE] //
-					fs.unlink(req.file.path, async (err) => {
-						if (!err) {
-							res.status(200).send({
-								executed: true,
-								status: true,
-								message: mObj.message,
-							})
-						}
-						else {
-							res.status(200).send({
-								executed: true,
-								status: true,
-								location: '/api/mail/careers',
-								message: `/api/mail/careers: Error --> ${err}`,
-							})
-						}
-					})
+					if (mObj.status) {
+						// [DELETE] //
+						fs.unlink(req.file.path, async (err) => {
+							if (!err) {
+								res.status(200).send({
+									executed: true,
+									status: true,
+									message: mObj.message,
+								})
+							}
+							else {
+								res.status(200).send({
+									executed: true,
+									status: true,
+									location: '/api/mail/careers',
+									message: `/api/mail/careers: Error --> ${err}`,
+								})
+							}
+						})
+					}
+					else {
+						// [DELETE] //
+						fs.unlink(req.file.path, async (err) => {
+							if (!err) {
+								res.status(200).send(mObj)
+							}
+							else {
+								res.status(200).send({
+									executed: true,
+									status: true,
+									location: '/api/mail/careers',
+									message: `/api/mail/careers: Error --> ${err}`,
+								})
+							}
+						})
+					}
 				}
 				else {
 					const mObj = await mailerUtil.sendCareersEmail(

@@ -257,7 +257,7 @@ async function sendCareersEmail(subject, clientEmail, name, message, position, a
 		}
 
 		// [VALIDATE] position //
-		if (!validator.isEmail(position)) {
+		if (!validator.isAscii(position)) {
 			return {
 				executed: true,
 				status: false,
