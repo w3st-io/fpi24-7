@@ -131,7 +131,7 @@ router.post(
 							else {
 								res.status(200).send({
 									executed: true,
-									status: true,
+									status: false,
 									location: '/api/mail/careers',
 									message: `/api/mail/careers: Error --> ${err}`,
 								})
@@ -147,7 +147,7 @@ router.post(
 							else {
 								res.status(200).send({
 									executed: true,
-									status: true,
+									status: false,
 									location: '/api/mail/careers',
 									message: `/api/mail/careers: Error --> ${err}`,
 								})
