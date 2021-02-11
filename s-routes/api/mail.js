@@ -105,7 +105,7 @@ router.post(
 					req.body.position == 'fire-sprinkler-inspector' ||
 					req.body.position == 'extinguisher-inspector' ||
 					req.body.position == 'installers'
-				) &&
+				)
 			) {
 				// [MAIL-UTIL] //
 				if (req.file) {
