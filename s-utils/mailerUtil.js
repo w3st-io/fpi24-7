@@ -21,14 +21,34 @@ const auth = {
 
 
 function fpiToEmail(type) {
-	if (type == 'billings') { return toEmail = config.BILLINGS_EMAIL }
-	if (type == 'careers') { return toEmail = config.CAREERS_EMAIL }
-	if (type == 'designs') { return toEmail = config.DESIGNS_EMAIL }
-	if (type == 'installs') { return toEmail = config.INSTALLS_EMAIL }
-	if (type == 'report') { return toEmail = config.ADMIN_EMAIL }
-	if (type == 'sales') { return toEmail = config.SALES_EMAIL }
-	if (type == 'scheduling') { return toEmail = config.SCHEDULING_EMAIL }
-	if (type == 'services') { return toEmail = config.SERVICES_EMAIL }
+	switch(type) {
+		case 'billings':
+			return config.BILLINGS_EMAIL 
+
+		case 'careers':
+			return config.CAREERS_EMAIL
+
+		case 'designs':
+			return config.DESIGNS_EMAIL
+
+		case 'installs':
+			return config.INSTALLS_EMAIL
+
+		case 'report':
+			return config.ADMIN_EMAIL
+
+		case 'sales':
+			return config.SALES_EMAIL
+
+		case 'services':
+			return config.SCHEDULING_EMAIL
+
+		case 'scheduling':
+			return config.SERVICES_EMAIL
+
+		default:
+			return config.ADMIN_EMAIL 
+	}
 }
 
 
@@ -125,6 +145,33 @@ async function sendGetQuoteEmail(subject, type, clientEmail, name, message, atta
 			}
 		}
 
+		// [VALIDATE] type //
+		if (!validator.isAscii(type)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid type',
+			}
+		}
+
+		// [VALIDATE] clientEmail //
+		if (!validator.isEmail(clientEmail)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: clientEmail not an email',
+			}
+		}
+
+		// [VALIDATE] name //
+		if (!validator.isAscii(name)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid name',
+			}
+		}
+
 		// [VALIDATE] html xss //
 		if (attachments) {
 			if (!Array.isArray(attachments)) {
@@ -188,6 +235,33 @@ async function sendCareersEmail(subject, clientEmail, name, message, position, a
 				executed: true,
 				status: false,
 				message: 'mailerUtil: Invalid subject',
+			}
+		}
+
+		// [VALIDATE] clientEmail //
+		if (!validator.isEmail(clientEmail)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: clientEmail not an email',
+			}
+		}
+
+		// [VALIDATE] name //
+		if (!validator.isAscii(name)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid name',
+			}
+		}
+
+		// [VALIDATE] position //
+		if (!validator.isEmail(position)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid position',
 			}
 		}
 

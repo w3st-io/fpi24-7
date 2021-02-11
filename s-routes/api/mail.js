@@ -99,7 +99,13 @@ router.post(
 				validator.isAscii(req.body.clientEmail) &&
 				validator.isAscii(req.body.name) &&
 				req.body.message &&
-				validator.isAscii(req.body.position)
+				validator.isAscii(req.body.position) &&
+				(
+					req.body.position == 'engineering' ||
+					req.body.position == 'fire-sprinkler-inspector' ||
+					req.body.position == 'extinguisher-inspector' ||
+					req.body.position == 'installers'
+				) &&
 			) {
 				// [MAIL-UTIL] //
 				if (req.file) {

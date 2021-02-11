@@ -17,10 +17,39 @@
 						Positions Available
 					</h3>
 					<hr>
+
+					<BListGroup>
+						<BListGroupItem variant="primary">
+							<h3 class="m-0">Engineering</h3>
+						</BListGroupItem>
+						<BListGroupItem variant="primary">
+							<h3 class="m-0">Fire Sprinkler Inspector</h3>
+						</BListGroupItem>
+						<BListGroupItem variant="primary">
+							<h3 class="m-0">Extinguisher Inspector</h3>
+						</BListGroupItem>
+						<BListGroupItem variant="primary">
+							<h3 class="m-0">Installers</h3>
+						</BListGroupItem>
+					</BListGroup>
+					<hr>
+
 				</BCol>
 
 				<BCol cols="12" md="8">
 					<form @submit.prevent="sendFile" enctype="multipart/form-data">
+						<!-- Position -->
+						<label for="position" class="w-100 h3 form-label text-primary">
+							Position
+						</label>
+						<select v-model="position" name="position" class="form-select w-100 mb-3 p-2">
+							<option disabled value="">Please choose a position</option>
+							<option value="engineering">Engineering</option>
+							<option value="fire-sprinkler-inspector">Fire Sprinkler Inspector</option>
+							<option value="extinguisher-inspector">Extinguisher Inspector</option>
+							<option value="installers">Installers</option>
+						</select>
+
 						<!-- Client Email -->
 						<label for="client-email" class="w-100 h3 form-label text-primary">
 							Your Email
@@ -91,11 +120,13 @@
 							class="w-100"
 						>submit</BButton>
 					</form>
+
+					<!-- Error -->
+					<h6 v-if="error" class="mt-3 text-danger">{{ error }}</h6>
 				</BCol>
 			</BRow>
 
 
-			<h6 v-if="error" class="text-danger">{{ error }}</h6>
 		</BContainer>
 	</div>
 </template>
@@ -111,7 +142,7 @@
 				clientEmail: '',
 				name: '',
 				message: '',
-				position: 'position',
+				position: '',
 				file: '',
 				loading: false,
 				reqData: {},
@@ -126,12 +157,18 @@
 
 			async sendFile() {
 				try {
-					if (this.type == '') {
-						this.error = 'Error: Please Select a service type'
+					if (this.position == '') {
+						this.error = 'Error: Please Select a position type'
 						return
 					}
 						
-					if (!this.clientEmail || !this.name || !this.subject || !this.message) {
+					if (
+						!this.clientEmail ||
+						!this.name ||
+						!this.subject ||
+						!this.message ||
+						!this.position
+					) {
 						this.error = 'Error: Please fill out all fields'
 						return
 					}
