@@ -4,17 +4,17 @@ import VueRouter from 'vue-router'
 
 
 // [IMPORT] Personal //
-import Index from '../pages'
-import About from '../pages/about'
+import index from '../pages'
+import about from '../pages/about'
 import careers from '../pages/careers'
 import careers_apply from '../pages/careers/apply'
-import ContactUs from '../pages/contact-us'
-import Design from '../pages/design'
-import EmailSent from '../pages/email-sent'
-import Gallery from '../pages/gallery'
-import Installs from '../pages/installs'
-import Service from '../pages/service'
-import NotFound from '../pages/404'
+import contactUs from '../pages/contact-us'
+import design from '../pages/design'
+import emailSent from '../pages/email-sent'
+import gallery from '../pages/gallery'
+import installs from '../pages/installs'
+import service from '../pages/service'
+import notFound from '../pages/404'
 
 
 Vue.use(VueRouter)
@@ -27,7 +27,7 @@ const router = new VueRouter({
 		{
 			path: '/',
 			name: '/',
-			component: Index,
+			component: index,
 			meta: {
 				auth: true,
 				title: 'Home'
@@ -37,7 +37,7 @@ const router = new VueRouter({
 		{
 			path: '/about',
 			name: 'about',
-			component: About,
+			component: about,
 			meta: {
 				auth: true,
 				title: 'About'
@@ -66,7 +66,7 @@ const router = new VueRouter({
 		{
 			path: '/contact-us',
 			name: 'contact-us',
-			component: ContactUs,
+			component: contactUs,
 			meta: {
 				auth: true,
 				title: 'Contact Us'
@@ -76,7 +76,7 @@ const router = new VueRouter({
 		{
 			path: '/design',
 			name: 'design',
-			component: Design,
+			component: design,
 			meta: {
 				auth: true,
 				title: 'Design'
@@ -86,7 +86,7 @@ const router = new VueRouter({
 		{
 			path: '/email-sent',
 			name: 'email-sent',
-			component: EmailSent,
+			component: emailSent,
 			meta: {
 				auth: true,
 				title: 'Email Sent'
@@ -96,7 +96,7 @@ const router = new VueRouter({
 		{
 			path: '/gallery',
 			name: 'gallery',
-			component: Gallery,
+			component: gallery,
 			meta: {
 				auth: true,
 				title: 'Gallery'
@@ -106,7 +106,7 @@ const router = new VueRouter({
 		{
 			path: '/installs',
 			name: 'installs',
-			component: Installs,
+			component: installs,
 			meta: {
 				auth: true,
 				title: 'Installs'
@@ -116,7 +116,7 @@ const router = new VueRouter({
 		{
 			path: '/service',
 			name: 'service',
-			component: Service,
+			component: service,
 			meta: {
 				auth: true,
 				title: 'Service'
@@ -126,7 +126,7 @@ const router = new VueRouter({
 		{
 			path: '/**',
 			name: '404',
-			component: NotFound,
+			component: notFound,
 			meta: {
 				auth: true,
 				title: '404 Not Found..'

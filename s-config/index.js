@@ -26,7 +26,7 @@ module.exports = {
 	EMAIL: process.env.EMAIL || '',
 	EMAIL_PASSWORD: process.env.EMAIL_PASSWORD || '',
 
-	// [EMAIL-RECIEVERS] //
+	// [EMAIL-RECEIVERS] //
 	ADMIN_EMAIL: process.env.ADMIN_EMAIL || '',
 	BILLINGS_EMAIL: process.env.BILLINGS_EMAIL || '',
 	CAREERS_EMAIL: process.env.CAREERS_EMAIL || '',

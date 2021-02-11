@@ -18,13 +18,28 @@
 			</select>
 
 			<!-- Email -->
-			<input v-model="clientEmail" type="email" placeholder="Your email" class="mt-3 form-control">
+			<input
+				v-model="clientEmail"
+				type="email"
+				placeholder="Your email"
+				class="mt-3 form-control"
+			>
 
 			<!-- Name -->
-			<input v-model="name" type="text" placeholder="Name" class="mt-3 form-control">
+			<input
+				v-model="name"
+				type="text"
+				placeholder="Name"
+				class="mt-3 form-control"
+			>
 
 			<!-- Subject -->
-			<input v-model="subject" type="text" placeholder="Subject" class="mt-3 form-control">
+			<input
+				v-model="subject"
+				type="text"
+				placeholder="Subject"
+				class="mt-3 form-control"
+			>
 
 			<!-- Message -->
 			<textarea

@@ -6,7 +6,6 @@ const http = require('http')
 const mongoose = require('mongoose')
 const path = require('path')
 const socketIO = require('socket.io')
-require('dotenv').config()
 
 
 // [REQUIRE] Personal // Other // API // Pages //
@@ -16,6 +15,7 @@ const rateLimiter = require('./s-rate-limiters')
 
 const a_ = require('./s-routes/api')
 const a_mail = require('./s-routes/api/mail')
+
 
 // [INIT] Const //
 const port = config.PORT
@@ -61,7 +61,7 @@ app.use('/api/mail', a_mail)
 
 
 // [HEROKU] Set Static Folder for Heroku //
-if (process.env.NODE_ENV == 'production') {
+if (config.NODE_ENV == 'production') {
 	app.use(express.static('client/dist'))
 
 	app.get('*', (req, res) => {

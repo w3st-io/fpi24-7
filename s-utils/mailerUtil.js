@@ -40,10 +40,10 @@ function fpiToEmail(type) {
 		case 'sales':
 			return config.SALES_EMAIL
 
-		case 'services':
+		case 'scheduling':
 			return config.SCHEDULING_EMAIL
 
-		case 'scheduling':
+		case 'services':
 			return config.SERVICES_EMAIL
 
 		default:

@@ -1,3 +1,4 @@
+// ORDER: to, subject, type, user_id, clientEmail, name, message, position, html, attachments
 // [REQUIRE] //
 const cors = require('cors')
 const express = require('express')
@@ -17,15 +18,10 @@ const router = express.Router().use(cors())
 // [MULTER] //
 const upload = multer({
 	storage: multer.diskStorage({
-		destination: function (req, file, callBack) {
-			callBack(null, './s-uploads')
-		},
+		destination: function (req, file, callBack) { callBack(null, './s-uploads') },
 	
 		filename: function (req, file, callBack) {
-			callBack(
-				null,
-				`${new Date().toISOString()}-${file.originalname}`
-			)
+			callBack(null, `${new Date().toISOString()}-${file.originalname}`)
 		}
 	})
 })
