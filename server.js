@@ -9,8 +9,8 @@ const socketIO = require('socket.io')
 
 
 // [REQUIRE] Personal // Other // API // Pages //
-const s_socket = require('./s-socket')
 const config = require('./s-config')
+const s_socket = require('./s-socket')
 const rateLimiter = require('./s-rate-limiters')
 
 const a_ = require('./s-routes/api')
