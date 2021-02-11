@@ -175,7 +175,8 @@ router.post(
 				res.status(200).send({
 					executed: true,
 					status: false,
-					message: `/api/mail/careers: Invalid params`
+					location: `/api/mail/careers`,
+					message: `/api/mail/careers: Invalid params`,
 				})
 			}
 		}
@@ -184,7 +185,7 @@ router.post(
 				executed: false,
 				status: false,
 				location: '/api/mail/careers',
-				message: `Caught Error: --> ${err}`,
+				message: `/api/mail/careers: Error --> ${err}`,
 			})
 		}
 	}
