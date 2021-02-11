@@ -111,6 +111,7 @@
 				clientEmail: '',
 				name: '',
 				message: '',
+				position: 'position',
 				file: '',
 				loading: false,
 				reqData: {},
@@ -141,6 +142,7 @@
 					formData.append('name', this.name)
 					formData.append('message', this.message)
 					formData.append('file', this.file)
+					formData.append('position', this.position)
 
 					this.loading = true
 					

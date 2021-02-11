@@ -1,4 +1,4 @@
-// ORDER: to, subject, type, user_id, clientEmail, name, message, html, attachments
+// ORDER: to, subject, type, user_id, clientEmail, name, message, position, html, attachments
 // [REQUIRE] //
 const mongoose = require('mongoose')
 const nodemailer = require('nodemailer')
@@ -30,18 +30,6 @@ function fpiToEmail(type) {
 	if (type == 'scheduling') { return toEmail = config.SCHEDULING_EMAIL }
 	if (type == 'services') { return toEmail = config.SERVICES_EMAIL }
 }
-
-function fpiTemplate(type, clientEmail, name, message) {
-	return `
-		<h1>Customer Quote Request</h1>
-		<h3 style="margin: 0;">Type: ${type}</h3>
-		<h3 style="margin: 0;">Email: ${clientEmail}</h3>
-		<h3 style="margin: 0;">Name: ${name}</h3>
-		
-		<h3 style="margin: 0; margin-top: 20px;">Message:</h3>
-		<p>${message}</p>
-	`
-} 
 
 
 // [DEFAULT] //
@@ -126,7 +114,7 @@ async function sendMail(to, subject, html, attachments) {
 
 
 // [GET-QUOTE] //
-async function sendFpiEmail(subject, type, clientEmail, name, message, attachments) {
+async function sendGetQuoteEmail(subject, type, clientEmail, name, message, attachments) {
 	try {
 		// [VALIDATE] subject //
 		if (!validator.isAscii(subject)) {
@@ -151,7 +139,81 @@ async function sendFpiEmail(subject, type, clientEmail, name, message, attachmen
 		// [INIT] //
 		const to = fpiToEmail(type)
 		const subject2 = `Client Subject: ${subject}`
-		const html = fpiTemplate(type, clientEmail, name, message)
+		const html = `
+			<h1>Customer Quote Request</h1>
+			<h3 style="margin: 0;">Type: ${type}</h3>
+			<h3 style="margin: 0;">Email: ${clientEmail}</h3>
+			<h3 style="margin: 0;">Name: ${name}</h3>
+			<h3 style="margin: 0; margin-top: 20px;">Message:</h3>
+			<p>${message}</p>
+		`
+
+		const transporter = nodemailer.createTransport({
+			service: service,
+			auth: auth
+		})
+
+		// [SEND-MAIL] //
+		await transporter.sendMail({
+			from: email,
+			to: to,
+			subject: subject2,
+			html: html,
+			attachments: attachments,
+		})
+
+		return {
+			executed: true,
+			status: true,
+			send: true,
+			message: 'Email Sent',
+		}
+	}
+	catch (err) {
+		return {
+			executed: false,
+			status: false,
+			message: `mailerUtil: Error --> ${err}`,
+		}
+	}
+}
+
+
+// [GET-QUOTE] //
+async function sendCareersEmail(subject, clientEmail, name, message, position, attachments) {
+	try {
+		// [VALIDATE] subject //
+		if (!validator.isAscii(subject)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid subject',
+			}
+		}
+
+		// [VALIDATE] html xss //
+		if (attachments) {
+			if (!Array.isArray(attachments)) {
+				return {
+					executed: true,
+					status: false,
+					message: 'mailerUtil: Attachments must be an array',
+				}
+			}
+		}
+
+		// [INIT] //
+		const to = fpiToEmail('careers')
+		const subject2 = `Client Subject: ${subject}`
+		const html = `
+			<h1>Customer Quote Request</h1>
+			<h3 style="margin: 0;">Type: Careers</h3>
+			<h3 style="margin: 0;">Email: ${clientEmail}</h3>
+			<h3 style="margin: 0;">Name: ${name}</h3>
+			<h3 style="margin: 0;">Position: ${position}</h3>
+			<h3 style="margin: 0; margin-top: 20px;">Message:</h3>
+			<p>${message}</p>
+		`
 
 		const transporter = nodemailer.createTransport({
 			service: service,
@@ -288,7 +350,8 @@ async function sendPasswordResetEmail(to, user_id, VCode) {
 // [EXPORT] //
 module.exports = {
 	sendMail,
-	sendFpiEmail,
+	sendGetQuoteEmail,
+	sendCareersEmail,
 	sendVerificationMail,
 	sendPasswordResetEmail,
 }

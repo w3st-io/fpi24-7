@@ -8,7 +8,6 @@ const validator = require('validator')
 
 // [REQUIRE] Personal //
 const mailerUtil = require('../../s-utils/mailerUtil')
-const config = require('../../s-config')
 
 
 // [EXPRESS + USE] //
@@ -54,7 +53,7 @@ router.post(
 				req.body.message
 			) {
 				// [MAIL-UTIL] //
-				const mObj = await mailerUtil.sendFpiEmail(
+				const mObj = await mailerUtil.sendGetQuoteEmail(
 					req.body.subject,
 					req.body.type,
 					req.body.clientEmail,
@@ -95,49 +94,64 @@ router.post(
 	upload.single('file'),
 	async (req, res) => {
 		try {
-			// [MAIL-UTIL] //
-			if (req.file) {
-				const mObj = await mailerUtil.sendFpiEmail(
-					req.body.subject,
-					'careers',
-					req.body.clientEmail,
-					req.body.name,
-					req.body.message,
-					[ { path: req.file.path } ]
-				)
+			if (
+				validator.isAscii(req.body.subject) &&
+				validator.isAscii(req.body.clientEmail) &&
+				validator.isAscii(req.body.name) &&
+				req.body.message &&
+				validator.isAscii(req.body.position)
+			) {
+				// [MAIL-UTIL] //
+				if (req.file) {
+					const mObj = await mailerUtil.sendCareersEmail(
+						req.body.subject,
+						req.body.clientEmail,
+						req.body.name,
+						req.body.message,
+						req.body.position,
+						[ { path: req.file.path } ],
+					)
 
-				// [DELETE] //
-				fs.unlink(req.file.path, async (err) => {
-					if (!err) {
-						res.status(200).send({
-							executed: true,
-							status: true,
-							message: mObj.message,
-						})
-					}
-					else {
-						res.status(200).send({
-							executed: true,
-							status: true,
-							location: '/api/mail/careers',
-							message: `Caught Error: --> ${err}`,
-						})
-					}
-				})
+					// [DELETE] //
+					fs.unlink(req.file.path, async (err) => {
+						if (!err) {
+							res.status(200).send({
+								executed: true,
+								status: true,
+								message: mObj.message,
+							})
+						}
+						else {
+							res.status(200).send({
+								executed: true,
+								status: true,
+								location: '/api/mail/careers',
+								message: `/api/mail/careers: Error --> ${err}`,
+							})
+						}
+					})
+				}
+				else {
+					const mObj = await mailerUtil.sendCareersEmail(
+						req.body.subject,
+						req.body.clientEmail,
+						req.body.name,
+						req.body.message,
+						req.body.position,
+					)
+
+					res.status(200).send({
+						executed: true,
+						status: true,
+						message: mObj.message,
+					})
+				}
 			}
 			else {
-				const mObj = await mailerUtil.sendFpiEmail(
-					req.body.subject,
-					'careers',
-					req.body.clientEmail,
-					req.body.name,
-					req.body.message,
-				)
-
 				res.status(200).send({
 					executed: true,
-					status: true,
-					message: mObj.message,
+					status: false,
+					message: `/api/mail/careers: Invalid params`
 				})
 			}
 		}
