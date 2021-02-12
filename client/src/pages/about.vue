@@ -151,10 +151,10 @@
 
 <script>
 	// [IMPORT] Personal //
-	import Parallax from '../components/display/Parallax'
-	import defaultData from '../defaults/pages/about'
-	import router from '../router'
-	import Conveyor from '../components/display/Conveyor'
+	import Conveyor from '@/components/display/Conveyor'
+	import Parallax from '@/components/display/Parallax'
+	import defaultData from '@/defaults/pages/about'
+	import router from '@/router'
 
 
 	export default {
