@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 3 }">
 				<!-- [R1] -->
 				<BRow class="mb-4">
 					<!-- Main Title -->
@@ -16,7 +16,7 @@
 					</BCol>
 
 					<!-- Title Image -->
-					<BCol cols="12" sm="4" class="text-center" v-rellax="{ speed: 2 }" >
+					<BCol cols="12" sm="4" class="text-center" v-rellax="{ speed: .5 }" >
 						<img
 							:src="defaultData.cnt1.r1.c2.image"
 							class="d-none d-md-block w-100 p-3 bg-white rounded-lg shadow"
