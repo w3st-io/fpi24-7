@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 3 }">
 				<!-- [R1] About -->
 				<BRow>
 					<BCol data-aos="fade-up" cols="12" md="6">
@@ -32,7 +32,7 @@
 					</BCol>
 
 					<!-- [R3.C2] Staff -->
-					<BCol cols="12" class="mb-5">
+					<BCol cols="12" class="mb-3">
 						<Conveyor
 							:images="defaultData.r2.c2.images"
 							:totalOnLg="4"
@@ -43,14 +43,7 @@
 					</BCol>
 
 					<!-- [R3.C3] CEO -->
-					<BCol
-						cols="12" md="4"
-						v-rellax
-						data-rellax-xs-speed="0"
-						data-rellax-mobile-speed="0"
-						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1"
-					>
+					<BCol cols="12" md="4" data-aos="fade">
 						<!-- Text -->
 						<div>
 							<h3 class="text-primary">{{ defaultData.r2.c3.name }}</h3>
@@ -71,12 +64,13 @@
 					<!-- [R3.C4] Co-Owner -->
 					<BCol
 						cols="12" md="4"
+						class="mt-3"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						data-rellax-desktop-speed="0"
-						class="mt-3"
+						data-aos="fade"
 					>
 						<!-- Image -->
 						<img
@@ -99,12 +93,13 @@
 					<!-- [R3.C4] the 24/7 staff -->
 					<BCol
 						cols="12" md="4"
+						class="mt-0"
 						v-rellax
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="-2"
-						class="mt-0"
+						data-rellax-desktop-speed="-1"
+						data-aos="fade"
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
 							<h2 class="mb-3 text-center">
@@ -144,7 +139,8 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="1"
+						data-rellax-desktop-speed=".5"
+						data-aos="fade-up"
 					><img :src="defaultData.r3.c3.image" class="w-100"></BCol>
 				</BRow>
 			</BCard>
