@@ -20,7 +20,8 @@
     "vue-feather-icons": "^5.1.0",
     "vue-rellax": "^0.2.0",
     "vue-router": "^3.2.0",
-    "vue-tiny-slider": "^0.1.39"
+    "vue-tiny-slider": "^0.1.39",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "@editorjs/code": "^2.6.0",
