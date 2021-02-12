@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 3 }">
 				<!-- [R1] -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
@@ -19,7 +19,7 @@
 						data-rellax-xs-speed="0"
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="2"
+						data-rellax-desktop-speed=".5"
 					><img :src="defaultData.r1.c2.image" class="w-100 rounded-lg"></BCol>
 				</BRow>
 
@@ -41,6 +41,7 @@
 						data-rellax-mobile-speed="0"
 						data-rellax-tablet-speed="0"
 						data-rellax-desktop-speed="-1"
+						data-aos="fade-down"
 					>
 						<img
 							:src="defaultData.r3.c1.image"
@@ -74,14 +75,7 @@
 							</li>
 						</ul>
 					</BCol>
-					<BCol
-						cols="12" md="5" lg="4"
-						v-rellax
-						data-rellax-xs-speed="0"
-						data-rellax-mobile-speed="0"
-						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed=".2"
-					>
+					<BCol cols="12" md="5" lg="4" data-aos="fade-down">
 						<img
 							:src="defaultData.r4.c2.image"
 							class="w-100 mb-3 rounded-lg shadow"

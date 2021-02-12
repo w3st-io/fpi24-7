@@ -5,7 +5,7 @@
 
 		<!-- Content -->
 		<BContainer>
-			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 4 }">
+			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 3 }">
 				<!-- [R1] -->
 				<BRow class="mb-3">
 					<BCol cols="12" md="7" lg="8">
@@ -45,7 +45,7 @@
 				</BRow>
 
 				<!-- [R2] -->
-				<BRow class="mb-3">
+				<BRow class="mb-4">
 					<BCol cols="12">
 						<h1 class="text-center text-primary">
 							Benefits
@@ -56,6 +56,7 @@
 						v-for="(col, index) in defaultData.r3.cx"
 						:key="index"
 						cols="12" sm="6" md="4" lg="3"
+						data-aos="fade-right"
 					>
 						<img :src="col.image" alt="No Image" class="w-100 px-5">
 						<h4 class="text-center text-primary">{{ col.text }}</h4>
@@ -68,7 +69,7 @@
 						<div class="text-center">
 							<RouterLink to="/careers/apply">
 								<BButton variant="primary" size="lg">
-									Apply Now
+									Apply Now and Start Your Journey!
 								</BButton>
 							</RouterLink>
 						</div>
