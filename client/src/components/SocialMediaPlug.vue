@@ -5,14 +5,18 @@
 		</a>
 
 		<a :href="defaultData.instagramLink" class="text-light">
-			<InstagramIcon :size="size" class="ml-3" />
+			<InstagramIcon :size="size" class="mr-3" />
+		</a>
+
+		<a :href="defaultData.youtubeLink" class="text-light">
+			<YoutubeIcon :size="size" class="" />
 		</a>
 	</div>
 </template>
 
 <script>
 	import defaultData from '../defaults/companyInfo'
-	import { FacebookIcon, InstagramIcon } from 'vue-feather-icons'
+	import { FacebookIcon, InstagramIcon, YoutubeIcon } from 'vue-feather-icons'
 
 	export default {
 		props: {
@@ -25,6 +29,7 @@
 		components: {
 			FacebookIcon,
 			InstagramIcon,
+			YoutubeIcon
 		},
 		
 		data() {

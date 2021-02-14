@@ -26,4 +26,5 @@ module.exports = {
 
 	facebookLink: 'https://www.facebook.com/247-Fire-Protection-Inc-408666163014552/',
 	instagramLink: 'https://www.instagram.com/247fireprotection/?hl=en',
+	youtubeLink: 'https://www.youtube.com/channel/UCxgrQx3Bm8mPiaXDW3EEbaQ',
 }
