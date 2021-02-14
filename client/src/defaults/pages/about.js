@@ -1,5 +1,7 @@
 // [EXPORT] //
 module.exports = {
+	parallaxImg: require('../../assets/images/pages/about/parallax.png'),
+
 	// About //
 	r1: {
 		c1: {
@@ -27,7 +29,7 @@ module.exports = {
 				require('../../assets/images/pages/about/jason.webp'),
 			],
 
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+			description: 'Our headquarters is located in Belleville New Jersey, a place we call home. We serve all areas in New Jersey focusing on locations like Newark, Jersey City, Hackensack, and more. We aim to please our customers by installing systems that help prevent fires, protect assets, and most importantly save lives! We hope you love our services just as much as we love serving you New Jersey! You can see above our great team that we have that work hard everyday to make sure that your assets are prepared for anything life throws at it. 24/7!'
 		},
 
 		// CEO //

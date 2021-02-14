@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- Parallax Image Above -->
-		<Parallax />
+		<Parallax :imgURL="defaultData.parallaxImg" />
 
 		<!-- Content -->
 		<BContainer>
