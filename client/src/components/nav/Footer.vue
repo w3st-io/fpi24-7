@@ -1,30 +1,76 @@
 <template>
-	<div class="w-100 bg-secondary text-light" style="height: 500px;">
+	<div class="w-100 bg-dark text-light">
 		<BContainer>
-			<BRow>
-				<BCol cols="12" class="my-3 text-center">
-					<small>© 2021</small>
+			<BRow class="pt-4">
+				<BCol cols="12" class="text-center text-light">
+					<h5>
+						{{ companyInfo.companyName }} {{ new Date().getFullYear() }}
+					</h5>
+					<h6 v-html="companyInfo.companyCaption" class="text-primary">
+					</h6>
+					<hr>
 				</BCol>
 
-				<BCol cols="4">
-					<h5>Features</h5>
+				<BCol cols="12" sm="4" class="text-center">
+					<h4>Services</h4>
 					<ul class="list-unstyled text-small">
-						<li><a class="text-muted" href="#">Cool stuff</a></li>
+						<li>
+							<RouterLink to="/Designs">
+								Design
+							</RouterLink>
+						</li>
+						<li>
+							<RouterLink to="/installs">
+								Installs
+							</RouterLink>
+						</li>
+						<li>
+							<RouterLink to="/service">
+								Service
+							</RouterLink>
+						</li>
 					</ul>
 				</BCol>
 
-				<BCol cols="4">
-					<h5>Resources</h5>
+				<BCol cols="12" sm="4" class="text-center">
+					<h4>Company</h4>
 					<ul class="list-unstyled text-small">
-						<li><a class="text-muted" href="#">Resource</a></li>
+						<li>
+							<RouterLink to="/contact-us">
+								Contact Us
+							</RouterLink>
+						</li>
+						<li>
+							<RouterLink to="/about">
+								About
+							</RouterLink>
+						</li>
+						<li>
+							<RouterLink to="/gallery">
+								Gallery
+							</RouterLink>
+						</li>
 					</ul>
 				</BCol>
 
-				<BCol cols="4">
-					<h5>About</h5>
+				<BCol cols="12" sm="4" class="text-center">
+					<h4>Careers</h4>
 					<ul class="list-unstyled text-small">
-						<li><a class="text-muted" href="#">Team</a></li>
+						<li>
+							<RouterLink to="/careers">
+								Careers
+							</RouterLink>
+						</li>
+						<li>
+							<RouterLink to="/careers/apply">
+								Apply
+							</RouterLink>
+						</li>
 					</ul>
+				</BCol>
+
+				<BCol cols="12" class="my-3 text-center text-secondary">
+					<h6>© w3st.io {{ new Date().getFullYear() }}</h6>
 				</BCol>
 			</BRow>
 		</BContainer>
@@ -32,11 +78,13 @@
 </template>
 
 <script>
-export default {
-	data() {
-		return {
-			caption1: 'Album example is © Bootstrap, but please download and customize it for yourself!'
-		}
+	import companyInfo from '../../defaults/companyInfo'
+
+	export default {
+		data() {
+			return {
+				companyInfo: companyInfo
+			}
+		},
 	}
-}
 </script>

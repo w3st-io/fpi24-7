@@ -5,15 +5,15 @@ const companyInfo = require('../companyInfo')
 // [INIT] //
 const textHtml = `
 	<div class="d-none d-md-block mb-2 badge badge-dark shadow">
-		<h1 class="m-0 text-primary" style="text-shadow: none;">
+		<h1 class="m-0 text-light" style="text-shadow: none;">
 			${companyInfo.companyName}
 		</h1>
-		<h4 class="m-0" style="text-shadow: none;">
+		<h4 class="m-0 text-primary" style="text-shadow: none;">
 			${companyInfo.companyCaption}
 		</h4>
 	</div>
 	<br>
-	<a href="/company-info">
+	<a href="/about">
 		<button class="btn btn-lg btn-primary shadow">
 			Our Services
 		</button>

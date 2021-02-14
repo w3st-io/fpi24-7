@@ -132,11 +132,15 @@ const router = new VueRouter({
 				title: '404 Not Found..'
 			},
 		},
-	]
+	],
+
+	scrollBehavior () {
+		return { x: 0, y: 0 }
+	}
 })
 
 
-// [VUE-ROUTER-SET-TITLE] //
+// [VUE-ROUTER] Set Title //
 router.beforeEach((to, from, next) => {
 	document.title = `${to.meta.title} - 24/7 Fire Protection Inc `
 	next()

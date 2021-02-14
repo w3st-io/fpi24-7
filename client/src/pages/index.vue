@@ -35,11 +35,11 @@
 
 									<p class="text-dark">{{ col.description }}</p>
 
-									<a href="/about">
+									<RouterLink to="/about">
 										<BButton pill variant="primary" class="w-100">
 											Read More
 										</BButton>
-									</a>
+									</RouterLink>
 								</BCard>
 							</BCol>
 						</BRow>
