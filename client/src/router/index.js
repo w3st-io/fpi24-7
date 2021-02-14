@@ -134,6 +134,7 @@ const router = new VueRouter({
 		},
 	],
 
+	// [VUE-ROUTER] Scroll Behavior //
 	scrollBehavior () {
 		return { x: 0, y: 0 }
 	}
