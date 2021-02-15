@@ -15,7 +15,7 @@ async function authAxios() {
 
 
 /******************* [URL + PORT] *******************/
-async function s_getQuote(subject, type, clientEmail, name, message) {
+async function s_getQuote({ subject, type, clientEmail, name, message }) {
 	try {
 		const authAxios = await this.authAxios()
 

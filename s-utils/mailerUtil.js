@@ -52,89 +52,8 @@ function fpiToEmail(type) {
 }
 
 
-// [DEFAULT] //
-async function sendMail(to, subject, html, attachments) {
-	try {
-		// [VALIDATE] to //
-		if (!validator.isEmail(to)) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid email',
-			}
-		}
-
-		// [VALIDATE] subject //
-		if (!validator.isAscii(subject)) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid subject',
-			}
-		}
-
-		// [VALIDATE] html //
-		if (!html) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid html',
-			}
-		}
-
-		// [VALIDATE] html xss //
-		if (html.includes('<script') || html.includes('</script>')) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid html (XSS)',
-			}
-		}
-
-		// [VALIDATE] html xss //
-		if (attachments) {
-			if (!Array.isArray(attachments)) {
-				return {
-					executed: true,
-					status: false,
-					message: 'mailerUtil: Attachments must be an array',
-				}
-			}
-		}
-
-		const transporter = nodemailer.createTransport({
-			service: service,
-			auth: auth
-		})
-
-		// [SEND-MAIL] //
-		await transporter.sendMail({
-			from: email,
-			to: to,
-			subject: subject,
-			html: html,
-			attachments: attachments,
-		})
-
-		return {
-			executed: true,
-			status: true,
-			send: true,
-			message: 'Email Sent',
-		}
-	}
-	catch (err) {
-		return {
-			executed: false,
-			status: false,
-			message: `mailerUtil: Error --> ${err}`,
-		}
-	}
-}
-
-
 // [GET-QUOTE] //
-async function sendGetQuoteEmail(subject, type, clientEmail, name, message, attachments) {
+async function sendGetQuoteEmail({ subject, type, clientEmail, name, message, attachments }) {
 	try {
 		// [VALIDATE] subject //
 		if (!validator.isAscii(subject)) {
@@ -227,7 +146,7 @@ async function sendGetQuoteEmail(subject, type, clientEmail, name, message, atta
 
 
 // [GET-QUOTE] //
-async function sendCareersEmail(subject, clientEmail, name, message, position, attachments) {
+async function sendCareersEmail({ subject, clientEmail, name, message, position, attachments }) {
 	try {
 		// [VALIDATE] subject //
 		if (!validator.isAscii(subject)) {
@@ -320,112 +239,8 @@ async function sendCareersEmail(subject, clientEmail, name, message, position, a
 }
 
 
-// [VERIFICATION] //
-async function sendVerificationMail(to, user_id, VCode) {
-	try {
-		// [VALIDATE] //
-		if (
-			!validator.isEmail(to) ||
-			!mongoose.isValidObjectId(user_id) ||
-			!validator.isAscii(VCode)
-		) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid params'
-			}
-		}
-
-		const transporter = nodemailer.createTransport({
-			service: service,
-			auth: auth
-		})
-
-		// [SEND-MAIL] //
-		const sentEmail = await transporter.sendMail({
-			from: email,
-			to: to,
-			subject: 'Verify Your BlockBased.io Account',
-			html: `
-				<h1>Thank you creating an account! Verify & Join us!<h1/>
-				<a href="${baseURL}/user/verify/${user_id}/${VCode}">
-					<button>Click to Verify</button>
-				</a>
-			`
-		})
-
-		return {
-			executed: true,
-			status: true,
-			message: 'Email Sent',
-		}
-	}
-	catch (err) {
-		return {
-			executed: false,
-			status: false,
-			message: `mailerUtil: Error --> ${err}`,
-		}
-	}
-}
-
-
-// [PASSWORD-RESET] //
-async function sendPasswordResetEmail(to, user_id, VCode) {
-	try {
-		// [VALIDATE] //
-		if (
-			!validator.isEmail(to) ||
-			!mongoose.isValidObjectId(user_id) ||
-			!validator.isAscii(VCode)
-		) {
-			return {
-				executed: true,
-				status: false,
-				message: 'mailerUtil: Invalid params'
-			}
-		}
-
-		const transporter = nodemailer.createTransport({
-			service: service,
-			auth: auth
-		})
-
-		// [SEND-MAIL] //
-		const sentEmail = await transporter.sendMail({
-			from: email,
-			to: to,
-			subject: 'Reset Password For Your BlockBased.io Account',
-			html: `
-				<h1>Click the Link Below to Reset Your Password<h1/>
-				<h4>If you did not request to change your password ignore this email</h4>
-				<a href="${baseURL}/user/password/reset/${user_id}/${VCode}">
-					<button>Click to Reset Password</button>
-				</a>
-			`
-		})
-
-		return {
-			executed: true,
-			status: true,
-			message: 'Email Sent',
-		}
-	}
-	catch (err) {
-		return {
-			executed: false,
-			status: false,
-			message: `mailerUtil: Error --> ${err}`,
-		}
-	}
-}
-
-
 // [EXPORT] //
 module.exports = {
-	sendMail,
 	sendGetQuoteEmail,
 	sendCareersEmail,
-	sendVerificationMail,
-	sendPasswordResetEmail,
 }
