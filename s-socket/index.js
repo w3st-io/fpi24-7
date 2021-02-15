@@ -7,7 +7,7 @@ module.exports = {
 	start: (io) => {
 		io.on('connection', (socket) => {
 			// [LOG] //
-			console.log('[WEB-SOCKET] New Connected')
+			//console.log('[WEB-SOCKET] New Connected')
 		
 
 			// [EMIT] User //
@@ -27,7 +27,7 @@ module.exports = {
 					socket.broadcast.emit('user', socketUtil.getUserSocket(socket.id))
 					
 					// [LOG] //
-					console.log('[WEB-SOCKET] Room:', socketUtil.getAllUserSockets())
+					//console.log('[WEB-SOCKET] Join Room:', socketUtil.getAllUserSockets())
 				}
 			})
 			
@@ -37,7 +37,7 @@ module.exports = {
 				socketUtil.leave(socket.id)
 
 				// [LOG] //
-				console.log('[WEB-SOCKET] Room:', socketUtil.getAllUserSockets())
+				//console.log('[WEB-SOCKET] Leave Room:', socketUtil.getAllUserSockets())
 			})
 		
 		
