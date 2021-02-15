@@ -89,6 +89,15 @@ async function sendGetQuoteEmail({ subject, type, clientEmail, name, message, at
 			}
 		}
 
+		// [VALIDATE] name //
+		if (!validator.isAscii(message)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid message (Must be Ascii)',
+			}
+		}
+
 		// [VALIDATE] html xss //
 		if (attachments) {
 			if (!Array.isArray(attachments)) {
@@ -170,6 +179,15 @@ async function sendCareersEmail({ subject, clientEmail, name, message, position,
 				executed: true,
 				status: false,
 				message: 'mailerUtil: Invalid name',
+			}
+		}
+
+		// [VALIDATE] message //
+		if (!validator.isAscii(message)) {
+			return {
+				executed: true,
+				status: false,
+				message: 'mailerUtil: Invalid message',
 			}
 		}
 
