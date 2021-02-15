@@ -81,7 +81,7 @@
 				<BCol cols="lg">
 					<SocialMediaPlug size="34" class="d-none d-md-block mb-3" />
 
-					<a :href="companyInfo.phoneNumberLink" class="text-dark">
+					<a :href="companyInfo.phoneNumberLink">
 						<h4 class="text-center">
 							<BButton variant="outline-light" class="mx-auto rounded-pill">
 								Call Us: {{ companyInfo.phoneNumber }}
