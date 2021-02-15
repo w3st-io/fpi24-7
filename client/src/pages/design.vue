@@ -6,11 +6,11 @@
 		<!-- Content -->
 		<BContainer>
 			<BCard bg-variant="white" class="my-4" v-rellax="{ speed: 5 }">
-				<!-- [R1] -->
+				<!-- [R1] Page Title -->
 				<BRow>
 					<BCol cols="12" md="7" lg="8">
-						<h3 class="text-primary">{{ defaultData.r1.c1.title }}</h3>
-						<p>{{ defaultData.r1.c1.description }}</p>
+						<h2 class="text-primary">{{ defaultData.r1.c1.title }}</h2>
+						<p class="h4">{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
 					<BCol
@@ -23,11 +23,13 @@
 					><img :src="defaultData.r1.c2.image" class="w-100"></BCol>
 				</BRow>
 
-				<!-- [R2] -->
+				<!-- [R2] Title -->
 				<BRow>
 					<BCol cols="12" md="12" class="my-4">
 						<BCard no-body bg-variant="primary" class="py-2 text-light">
-							<h2 class="m-0 text-center">{{ defaultData.r2.c1.title }}</h2>
+							<h2 class="m-0 text-center">
+								{{ defaultData.r2.c1.title }}
+							</h2>
 						</BCard>
 					</BCol>
 				</BRow>
@@ -50,12 +52,14 @@
 
 					<BCol cols="12" md="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r3.c2.title }}</h3>
-						<p>{{ defaultData.r3.c2.description }}</p>
+						<p class="h5 mb-3">{{ defaultData.r3.c2.description }}</p>
 
-						<h4 class="text-primary">{{ defaultData.r3.c2.listTitle }}</h4>
-						<ul>
+						<h4 class="text-primary">
+							{{ defaultData.r3.c2.listTitle }}
+						</h4>
+						<ul class="mb-4">
 							<li v-for="(li, index) in defaultData.r3.c2.list" :key="index">
-								{{ li }}
+								<p class="h5">{{ li }}</p>
 							</li>
 						</ul>
 					</BCol>
@@ -65,12 +69,15 @@
 				<BRow class="mb-5 bg-light">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
-						<p>{{ defaultData.r4.c1.description }}</p>
+						<p class="h4 mb-3">{{ defaultData.r4.c1.description }}</p>
 
-						<h4 class="text-primary">{{ defaultData.r4.c1.listTitle }}</h4>
-						<ul>
+						<h4 class="text-primary">
+							{{ defaultData.r4.c1.listTitle }}
+						</h4>
+
+						<ul class="mb-4">
 							<li v-for="(li, index) in defaultData.r4.c1.list" :key="index">
-								{{ li }}
+								<p class="h5">{{ li }}</p>
 							</li>
 						</ul>
 					</BCol>

@@ -27,10 +27,10 @@
 					><img :src="defaultData.r1.c2.image" class="w-100 shadow rounded"></BCol>
 				</BRow>
 
-				<!-- [R2] -->
+				<!-- [R2] Why Work at 24/7 -->
 				<BRow class="mb-3">
 					<BCol cols="12">
-						<h1 class="text-center text-primary">
+						<h1 class="mb-4 text-center text-primary">
 							{{ defaultData.r2.c1.title }}
 						</h1>
 					</BCol>
@@ -40,7 +40,9 @@
 					</BCol>
 
 					<BCol cols="12" md="8" lg="9">
-						<h6>{{ defaultData.r2.c3.description }}</h6>
+						<h3>{{ defaultData.r2.c3.description1 }}</h3>
+						<br>
+						<h3>{{ defaultData.r2.c3.description2 }}</h3>
 					</BCol>
 				</BRow>
 

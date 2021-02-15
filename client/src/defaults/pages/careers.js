@@ -1,3 +1,5 @@
+const companyInfo = require('../companyInfo')
+
 // [EXPORT] //
 module.exports = {
 	parallaxImg: require('../../assets/images/pages/careers/parallax.jpg'),
@@ -13,10 +15,12 @@ module.exports = {
 	r2: {
 		c1: { title: 'Why work at 24?', },
 
-		c2: { image: require('../../assets/images/logo.webp') },
+		c2: { image: companyInfo.companyLogo },
 
 		c3: {
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+			description1: '24/7 Fire Protection is more than just a business. it is built on values that trickle down from top management to employees. Our professionalism and belief in being the best in the industry is matched by our desire to treat every employee as a member of our Family',
+
+			description2: 'By joining 24/7 you will not only find what you are looking for, but you will also have the ability to rise within the company ranks. We believe that every member of this group is special and deserves the opportunity to grow with us.',
 		},
 	},
 

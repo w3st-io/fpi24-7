@@ -1,6 +1,6 @@
 // [EXPORT] //
 module.exports = {
-	companyLogo: require('../assets/images/logo.webp'),
+	companyLogo: require('../assets/images/logo.svg'),
 	companyName: '24/7 Fire Protection Inc.',
 	companyCaption: 'Commercial &#8226; Residential &#8226; Industrial',
 
