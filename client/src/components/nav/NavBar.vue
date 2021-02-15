@@ -137,7 +137,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.nav {
 		top: 0;
 		z-index: 10;
