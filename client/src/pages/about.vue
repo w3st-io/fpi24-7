@@ -93,12 +93,12 @@
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
 							<h2 class="mb-3 text-center">
-								{{ defaultData.r2.c5.title }}
+								{{ defaultData.r2.c4.title }}
 							</h2>
 
 							<ul>
 								<li
-									v-for="(sm, index) in defaultData.r2.c5.staffMembers"
+									v-for="(sm, index) in defaultData.r2.c4.staffMembers"
 									:key="index"
 								>
 									<h6>{{ sm.name }} - {{ sm.title }}</h6>
