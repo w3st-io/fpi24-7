@@ -27,49 +27,49 @@
 					</RouterLink>
 
 					<div class="mb-3 d-none d-md-block text-center">
-						<RouterLink to="/" class="text-dark">
+						<RouterLink to="/">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Home
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/about" class="text-light">
+						<RouterLink to="/about">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								About
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/design" class="text-dark">
+						<RouterLink to="/design">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Design
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/installs" class="text-dark">
+						<RouterLink to="/installs">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Installs
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/service" class="text-dark">
+						<RouterLink to="/service">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Service
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/careers" class="text-dark">
+						<RouterLink to="/careers">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Careers
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/gallery" class="text-dark">
+						<RouterLink to="/gallery">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Gallery
 							</BButton>
 						</RouterLink>
 
-						<RouterLink to="/contact-us" class="text-dark">
+						<RouterLink to="/contact-us">
 							<BButton variant="primary" size="sm" class="font-weight-bold mx-2">
 								Contact Us
 							</BButton>
