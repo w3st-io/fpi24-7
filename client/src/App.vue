@@ -76,7 +76,7 @@
 </script>
 
 <style lang="scss">
-	// Cuprum // Zilla Slab //
+	// [IMPORT] // Cuprum // Zilla Slab //
 	@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
