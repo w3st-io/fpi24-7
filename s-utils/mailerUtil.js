@@ -1,6 +1,5 @@
 // ORDER: to, subject, type, user_id, clientEmail, name, message, position, html, attachments
 // [REQUIRE] //
-const mongoose = require('mongoose')
 const nodemailer = require('nodemailer')
 const validator = require('validator')
 
@@ -13,7 +12,6 @@ const config = require('../s-config')
 const service = config.EMAIL_SERVICE
 const email = config.EMAIL
 const emailPassword = config.EMAIL_PASSWORD
-const baseURL = config.CLIENT_BASE_URL
 const auth = {
 	user: email,
 	pass: emailPassword
