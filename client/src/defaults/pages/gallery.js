@@ -34,27 +34,27 @@ module.exports = {
 	r5: {
 		cx: [
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=-VHWTaylk9U',
+				youtubeURL: 'https://www.youtube.com/watch?v=QsC-Uvih6Eo',
 				description: '', 
 			},
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=JwRZv243GgI',
+				youtubeURL: 'https://www.youtube.com/watch?v=1qK4UdWHTWo',
 				description: '', 
 			},
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=Hv77Ls3thME',
+				youtubeURL: 'https://www.youtube.com/watch?v=sv3wNurrXEg',
 				description: '', 
 			},
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=0kZFw3Gz8kc',
+				youtubeURL: 'https://www.youtube.com/watch?v=DiKfSZSYBsU',
 				description: '', 
 			},
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=jHLl493snTs',
+				youtubeURL: 'https://www.youtube.com/watch?v=HfSVrenFSbY',
 				description: '', 
 			},
 			{
-				youtubeURL: 'https://www.youtube.com/watch?v=TcTHwkYug24',
+				youtubeURL: 'https://www.youtube.com/watch?v=5ixsRcryko4',
 				description: '', 
 			},
 		],
