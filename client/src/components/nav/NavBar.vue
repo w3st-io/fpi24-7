@@ -112,8 +112,8 @@
 
 	// [IMPORT] Personal //
 	import SideMenu from '@/components/nav/SideMenu'
-	import companyInfo from '../../defaults/companyInfo'
-	import SocialMediaPlug from '../SocialMediaPlug'
+	import companyInfo from '@/defaults/companyInfo'
+	import SocialMediaPlug from '@/components/SocialMediaPlug'
 
 	export default {
 		components: {
