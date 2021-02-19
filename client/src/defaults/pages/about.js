@@ -29,27 +29,28 @@ module.exports = {
 				require('../../assets/images/pages/about/jason.webp'),
 			],
 
-			description: 'Our headquarters is located in Belleville New Jersey, a place we call home. We serve all areas in New Jersey focusing on locations like Newark, Jersey City, Hackensack, and more. We aim to please our customers by installing systems that help prevent fires, protect assets, and most importantly save lives! We hope you love our services just as much as we love serving you New Jersey! You can see above our great team that we have that work hard everyday to make sure that your assets are prepared for anything life throws at it. 24/7!'
+			description: 'Our headquarters is located in Belleville New Jersey, a place we call home. Although we are based in New Jersey there is no location too far for us. We aim to please our customers by installing systems that help prevent fires, protect assets, and most importantly save lives! You can see above our wonderful and hard working team above. Each individual works hard every single day to make sure that you are protected 24/7! We hope you love our services just as much as we love serving you!'
 		},
 
-		// CEO //
-		c3: {
-			image: require('../../assets/images/pages/about/jason.webp'),
-			name: 'Jason Tielve',
-			title: 'Co-Owner & CEO',
-			description: 'Co-Owner and CEO of 24/7, Jason brings his military service, 15 years of fire protection knowledge and business skills to build a team of qualified installers and personnel intent on providing quality driven, fire protection installation and service, adding value to your project\'s bottom line.',
-			comtactEmail: 'mailto:jason@24-7fireprotection.com?subject=Sales/Service Question',
-		},
+		// BOSSES //
+		cx: [
+			{
+				image: require('../../assets/images/pages/about/jason.webp'),
+				name: 'Jason Tielve',
+				title: 'Co-Owner & CEO',
+				description: 'Co-Owner and CEO of 24/7, Jason brings his military service, 15 years of fire protection knowledge and business skills to build a team of qualified installers and personnel intent on providing quality driven, fire protection installation and service, adding value to your project\'s bottom line.',
+				contactEmail: 'mailto:jason@24-7fireprotection.com?subject=Sales/Service%20Question',
+			},
+			{
+				image: require('../../assets/images/pages/about/harry.webp'),
+				name: 'Harry San Martin',
+				title: 'Co-Owner & President',
+				description: 'Co-Owner and President of 24/7, Harry manages all projects from installation to final inspection. With over 20 years within the industry Harry also trains and mentors all foremen and mechanics to insure all aspects of your projects are managed and completed in a timely fashion.',
+				contactEmail: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
+			},
+		],
 
-		// Co-Owner //
 		c4: {
-			image: require('../../assets/images/pages/about/harry.webp'),
-			name: 'Harry San Martin',
-			title: 'Co-Owner & President',
-			description: 'Co-Owner and President of 24/7, Harry manages all projects from installation to final inspection. With over 20 years within the industry Harry also trains and mentors all foremen and mechanics to insure all aspects of your projects are managed and completed in a timely fashion.',
-			contactEmail: 'mailto:harry@24-7fireprotection.com?subject=Service/Install%20Question',
-		},
-		c5: {
 			title: 'The 24/7 Staff',
 			staffMembers: [
 				{

@@ -10,7 +10,7 @@
 				<BRow>
 					<BCol data-aos="fade-up" cols="12" md="6">
 						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
-						<p>{{ defaultData.r1.c1.description }}</p>
+						<p class="h4">{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
 					<BCol
@@ -39,53 +39,43 @@
 							class="mb-4"
 						/>
 
-						<p>{{ defaultData.r2.c2.description }}</p>
+						<p class="h4">{{ defaultData.r2.c2.description }}</p>
 					</BCol>
 
-					<!-- [R3.C3] CEO -->
-					<BCol cols="12" md="4" data-aos="fade">
-						<!-- Text -->
-						<div>
-							<h3 class="text-primary">{{ defaultData.r2.c3.name }}</h3>
-							<p>{{ defaultData.r2.c3.description }}</p>	
-						</div>
-						<!-- Image -->
-						<img
-							:src="defaultData.r2.c3.image"
-							class="w-100 mb-3 rounded-lg shadow"
-						>
-						<a :href="defaultData.r2.c3.contactEmail">
-							<BButton size="sm" pill class="w-100 mb-3">
-								Contact {{ defaultData.r2.c3.name }}
-							</BButton>
-						</a>
-					</BCol>
-
-					<!-- [R3.C4] Co-Owner -->
+					<!-- [R3.CX] Bosses -->
 					<BCol
+						v-for="(col, index) in defaultData.r2.cx"
+						:key="index"
 						cols="12" md="4"
-						class="mt-3"
-						v-rellax
-						data-rellax-xs-speed="0"
-						data-rellax-mobile-speed="0"
-						data-rellax-tablet-speed="0"
-						data-rellax-desktop-speed="0"
 						data-aos="fade"
 					>
-						<!-- Image -->
-						<img
-							:src="defaultData.r2.c4.image"
-							class="w-100 mb-3 rounded-lg shadow bg-warning"
-						>
 						<!-- Text -->
-						<div>
-							<h3 class="text-primary">{{ defaultData.r2.c4.name }}</h3>
-							<p>{{ defaultData.r2.c4.description }}</p>
+						<div v-if="isOdd(index)">
+							<!-- Image -->
+							<img
+								:src="col.image"
+								class="w-100 mb-3 rounded-lg shadow"
+							>
+
+							<h3 class="text-primary">{{ col.name }}</h3>
+							<p class="h5 mb-3">{{ col.description }}</p>	
 						</div>
 
-						<a :href="defaultData.r2.c4.contactEmail">
+						<!-- Text -->
+						<div v-else>
+							<h3 class="text-primary">{{ col.name }}</h3>
+							<p class="h5 mb-3">{{ col.description }}</p>	
+
+							<!-- Image -->
+							<img
+								:src="col.image"
+								class="w-100 mb-3 rounded-lg shadow"
+							>
+						</div>
+
+						<a :href="col.contactEmail">
 							<BButton size="sm" pill class="w-100 mb-3">
-								Contact {{ defaultData.r2.c2.name }}
+								Contact {{ col.name }}
 							</BButton>
 						</a>
 					</BCol>
@@ -103,12 +93,12 @@
 					>
 						<BCard bg-variant="primary" class="text-light shadow">
 							<h2 class="mb-3 text-center">
-								{{ defaultData.r2.c5.title }}
+								{{ defaultData.r2.c4.title }}
 							</h2>
 
 							<ul>
 								<li
-									v-for="(sm, index) in defaultData.r2.c5.staffMembers"
+									v-for="(sm, index) in defaultData.r2.c4.staffMembers"
 									:key="index"
 								>
 									<h6>{{ sm.name }} - {{ sm.title }}</h6>
@@ -129,7 +119,7 @@
 
 					<!-- Text -->
 					<BCol cols="12" md="8" class="mt-3">
-						<p>{{ defaultData.r3.c2.description }}</p>
+						<p class="h4">{{ defaultData.r3.c2.description }}</p>
 					</BCol>
 					
 					<!-- Image -->
@@ -170,6 +160,8 @@
 		},
 
 		methods: {
+			isOdd(num) { return num % 2 },
+
 			redirect() {
 				router.push({
 					name: 'post',

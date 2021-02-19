@@ -28,12 +28,12 @@
 								class="mb-3"
 							>
 								<BCard class="shadow">
-									<div class="text-center">
+									<div class="text-center mb-3">
 										<h4 class="text-primary">{{ col.title }}</h4>
 										<img :src="col.image" alt="Card Image" class="rounded">
 									</div>
 
-									<p class="text-dark">{{ col.description }}</p>
+									<p class="h5 text-dark">{{ col.description }}</p>
 
 									<RouterLink to="/about">
 										<BButton
@@ -79,7 +79,7 @@
 
 										<!-- [R1.C1.R3.C3] Our Mission Description -->
 										<BCol cols="12" md="8">
-											<p  class="h5 mb-3">
+											<p  class="h4 mb-3">
 												{{ PageData.cnt1.r1.c1.r3.c3.description }}
 											</p>
 										</BCol>
@@ -95,7 +95,7 @@
 
 										<!-- [R1.C1.R3.C6] Our Service Description -->
 										<BCol cols="12" md="7">
-											<p class="h5 mb-3">
+											<p class="h4 mb-3">
 												{{ PageData.cnt1.r1.c1.r3.c5.description }}
 											</p>
 										</BCol>

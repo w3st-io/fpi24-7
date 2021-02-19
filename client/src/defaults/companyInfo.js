@@ -1,6 +1,6 @@
 // [EXPORT] //
 module.exports = {
-	companyLogo: require('../assets/images/logo.webp'),
+	companyLogo: require('../assets/images/logo.svg'),
 	companyName: '24/7 Fire Protection Inc.',
 	companyCaption: 'Commercial &#8226; Residential &#8226; Industrial',
 
@@ -27,5 +27,5 @@ module.exports = {
 	facebookLink: 'https://www.facebook.com/247-Fire-Protection-Inc-408666163014552/',
 	instagramLink: 'https://www.instagram.com/247fireprotection/?hl=en',
 	twitterLink: '',
-	youtubeLink: 'https://www.youtube.com/channel/UCxgrQx3Bm8mPiaXDW3EEbaQ',
+	youtubeLink: 'https://www.youtube.com/channel/UCARRIq0RPZ3iFrCkAqEH20Q',
 }
