@@ -201,6 +201,6 @@
 	@import '../assets/styles/bootstrap-override.scss';
 
 	.btn:hover {
-		@extend .btn-secondary, .shadow
+		@extend .btn-secondary, .shadow;
 	}
 </style>
