@@ -36,9 +36,11 @@
 									<p class="text-dark">{{ col.description }}</p>
 
 									<RouterLink to="/about">
-										<BButton pill variant="primary" class="w-100">
-											Read More
-										</BButton>
+										<BButton
+											pill
+											variant="primary"
+											class="w-100"
+										>Read More</BButton>
 									</RouterLink>
 								</BCard>
 							</BCol>
@@ -194,3 +196,11 @@
 		},
 	}
 </script>
+
+<style lang="scss" scoped>
+	@import '../assets/styles/bootstrap-override.scss';
+
+	.btn:hover {
+		@extend .btn-secondary, .shadow
+	}
+</style>
