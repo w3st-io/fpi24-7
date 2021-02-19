@@ -29,7 +29,7 @@ module.exports = {
 				require('../../assets/images/pages/about/jason.webp'),
 			],
 
-			description: 'Our headquarters is located in Belleville New Jersey, a place we call home. Although we are based in New Jersey there is no location too far for us. We aim to please our customers by installing systems that help prevent fires, protect assets, and most importantly save lives! You can see above our wonderful and hard working team above. Each individual works hard every single day to make sure that you are protected 24/7! We hope you love our services just as much as we love serving you!'
+			description: 'Our headquarters is located in Belleville New Jersey, a place we call home. Although we are based in New Jersey there is no location too far for us. We aim to please our customers by installing systems that help prevent fires, protect assets, and most importantly save lives! You can see our wonderful and hard working team above. Each individual works hard every single day to make sure that you are protected 24/7! We hope you love our services just as much as we love serving you!'
 		},
 
 		// BOSSES //
