@@ -9,7 +9,7 @@ module.exports = {
 			description: 'We provide quality design, installation, maintenance and repair services for your fire protection projects. We offer competitive pricing, superior quality workmanship and courteous service. You receive code compliant fire sprinkler systems that benefit your bottom line. We hope to secure your business as a return customer.',
 		},
 		c2: {
-			image: require('../../assets/images/pages/about/team.webp'),
+			image: require('../../assets/images/pages/about/group-shot.jpg'),
 		},
 	},
 
@@ -21,11 +21,11 @@ module.exports = {
 		// Staff //
 		c2: {
 			images: [
-				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/small-group.jpg'),
 				require('../../assets/images/pages/about/jason.webp'),
-				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/workers.jpg'),
 				require('../../assets/images/pages/about/harry.webp'),
-				require('../../assets/images/pages/about/team.webp'),
+				require('../../assets/images/pages/about/group-shot.jpg'),
 				require('../../assets/images/pages/about/jason.webp'),
 			],
 
