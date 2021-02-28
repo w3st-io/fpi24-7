@@ -32,7 +32,7 @@ router.get(
 	async (req, res) => {
 		try {
 			const options = { format: 'A4' }
-			const file = { content: reports.standardReport }
+			const file = { content: reports.standardReport2('SDFSDFSDF') }
 	
 			// [CONVERT] //
 			HTMLToPDF.generatePdf(file, options).then(pdfBuffer => {
