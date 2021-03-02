@@ -103,10 +103,10 @@ const understandAndPrivacyPolicy = `
 	</div>
 `
 
-// [PAGE] General Section 1 //
-function generateGeneralSection1() {
+// [PAGE] General Section //
+function generateGeneralSectionPage() {
 	// [INIT] //
-	let returnVal
+	let returnVal = ''
 
 	generalSection = [
 		{
@@ -124,33 +124,70 @@ function generateGeneralSection1() {
 	]
 	
 	generalSection.forEach(gs => {
-		let html
+		let html = ''
 		
 		if (gs.value == true) {
 			html = `
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-					${gs.text}
-					<span class="badge badge-success badge-pill">Yes</span>
-				</li>
+				<div class="col-6 mb-3">
+					<ul class="list-group">
+						<li
+							class="
+								list-group-item
+								d-flex
+								justify-content-between
+								align-items-center
+							"
+						>
+							${gs.text}
+							<span class="badge badge-success badge-pill">Yes</span>
+						</li>
+					</ul>
+				</div>
 			`
 		}
 		else if (gs.value == false) {
 			html = `
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-					${gs.text}
-					<span class="badge badge-danger badge-pill">No</span>
-				</li>
+				<div class="col-6 mb-3">
+					<ul class="list-group">
+						<li
+							class="
+								list-group-item
+								d-flex
+								justify-content-between
+								align-items-center
+							"
+						>
+							${gs.text}
+							<span class="badge badge-danger badge-pill">No</span>
+						</li>
+					</ul>
+				</div>
 			`
 		}
 		else {
 			html = `
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-					${gs.text}
-					<span class="badge badge-secondary badge-pill">${gs.value}</span>
-				</li>
+				<div class="col-6 mb-3">
+					<ul class="list-group">
+						<li
+							class="
+								list-group-item
+								d-flex
+								justify-content-between
+								align-items-center
+							"
+						>
+							${gs.text}
+							<span class="badge badge-secondary badge-pill">
+								${gs.value}
+							</span>
+						</li>
+					</ul>
+				</div>
 			`
 		}
-		
+		console.log(returnVal)
+
+
 		returnVal = returnVal + html
 	})
 
@@ -160,7 +197,7 @@ function generateGeneralSection1() {
 
 // [EXPORT] //
 module.exports = {
-	fireSprinklerInspectionReport: (test) => {
+	fireSprinklerInspectionReport: ({ subjectPropertyAddress }) => {
 		return `
 			${styling}
 			
@@ -177,7 +214,7 @@ module.exports = {
 					<div class="col-12">
 						<h4 class="font-weight-bold">Subject Property</h4>
 						<hr>
-						<h5>123 main st, teaneck, nj</h5>
+						<h5>${subjectPropertyAddress}</h5>
 					</div>
 				</div>
 			
@@ -338,17 +375,7 @@ module.exports = {
 
 			<div class="container page">
 				<div class="row">
-					<div class="col-6">
-						<ul class="list-group">
-							${generateGeneralSection1(1)}
-						</ul>
-					</div>
-
-					<div class="col-6">
-						<ul class="list-group">
-							${generateGeneralSection1(2)}
-						</ul>
-					</div>
+					${generateGeneralSectionPage()}
 				</div>
 			</div>
 		`
