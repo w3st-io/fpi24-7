@@ -41,14 +41,13 @@ router.get(
 					bottom: '.6in',
 					left: '.6in'
 				},
-				displayHeaderFooter: true,
-				footerTemplate: reports.footerDefault,
 				printBackground: true,
 				preferCSSPageSize: true,
 			}
 	
 			// [CONVERT] //
 			HTMLToPDF.generatePdf(file, options).then(pdfBuffer => {
+				res.setHeader('Content-Type', 'application/pdf')
 				res.send(pdfBuffer)
 			})
 		}
