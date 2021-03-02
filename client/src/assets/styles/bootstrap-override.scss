@@ -1,6 +1,10 @@
+// [IMPORT] Personal //
+@import './sass-variables.scss';
+
+
 // [BOOTSTRAP-OVERRIDES] //
 $theme-colors: (
-	"primary": rgb(180, 0, 0),
+	"primary": $fpi247,
 );
 
 
