@@ -1,3 +1,22 @@
+// [IMPORT] Personal //
+@import './sass-variables.scss';
+
+// Comment List Image Fix //
+.comment img { max-width: 100%; }
+
+// Distinct blockquotes //
+.comment blockquote {
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.171);
+	border-color: #535353;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0px 10px;
+}
+
+// Distinct p //
+.comment p { margin: 0; }
+
 .nav-spacer { padding-top: 147px; }
 
 @media only screen and (max-width: 991px) { .nav-spacer { padding-top: 243px; } }
