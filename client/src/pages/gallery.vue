@@ -13,9 +13,7 @@
 			<!-- [R2] -->
 			<BRow class="mb-3" data-aos="fade-right">
 				<BCol cols="12">
-					<h3 class="m-0 text-primary">
-						{{ defaultData.r2.c1.title }}
-					</h3>
+					<h3 class="m-0 text-primary">{{ defaultData.r2.c1.title }}</h3>
 				</BCol>
 			</BRow>
 
