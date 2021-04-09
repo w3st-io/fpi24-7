@@ -96,11 +96,11 @@
 								{{ defaultData.r2.c4.title }}
 							</h2>
 
-							<ul>
+							<ul class="list-unstyled text-center">
 								<li
 									v-for="(sm, i) in defaultData.r2.c4.staffMembers"
 									:key="i"
-								><h6>{{ sm.name }} - {{ sm.title }}</h6></li>
+								><h5>{{ sm.name }} - {{ sm.title }}</h5></li>
 							</ul>
 						</BCard>
 					</BCol>
