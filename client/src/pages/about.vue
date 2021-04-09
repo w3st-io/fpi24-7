@@ -98,8 +98,8 @@
 
 							<ul>
 								<li
-									v-for="(sm, index) in defaultData.r2.c4.staffMembers"
-									:key="index"
+									v-for="(sm, i) in defaultData.r2.c4.staffMembers"
+									:key="i"
 								>
 									<h6>{{ sm.name }} - {{ sm.title }}</h6>
 								</li>
@@ -113,7 +113,9 @@
 					<!-- Title -->
 					<BCol cols="12" md="12" class="my-4">
 						<BCard no-body bg-variant="primary" class="py-2 text-light">
-							<h2 class="m-0 text-center">{{ defaultData.r3.c1.title }}</h2>
+							<h2 class="m-0 text-center">
+								{{ defaultData.r3.c1.title }}
+							</h2>
 						</BCard>
 					</BCol>
 

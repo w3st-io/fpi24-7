@@ -40,7 +40,7 @@ module.exports = {
 				title: 'Our Location',
 				address: companyInfo.address,
 				googleMapsLink: companyInfo.googleMapsLink,
-				googleMapsImage: companyInfo.googleMapsImage,
+				googleMapsEmbed: companyInfo.googleMapsEmbed,
 			},
 		},
 	

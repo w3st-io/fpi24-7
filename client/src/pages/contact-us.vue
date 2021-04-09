@@ -80,12 +80,15 @@
 								</BButton>
 							</div>
 
-							<BCard variant="bg-white" class="mx-5 p-1 shadow">
-								<img
-									:src="defaultData.cnt1.r2.c2.googleMapsImage"
-									alt="Google maps image here"
-									class="w-100"
-								>
+							<BCard variant="bg-white" class="shadow">
+								<iframe
+									:src="defaultData.cnt1.r2.c2.googleMapsEmbed"
+									width="100%"
+									height="450"
+									style="border:0;"
+									allowfullscreen=""
+									loading="lazy"
+								></iframe>
 							</BCard>
 						</a>
 					</BCol>
