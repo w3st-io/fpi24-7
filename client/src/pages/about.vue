@@ -100,9 +100,7 @@
 								<li
 									v-for="(sm, i) in defaultData.r2.c4.staffMembers"
 									:key="i"
-								>
-									<h6>{{ sm.name }} - {{ sm.title }}</h6>
-								</li>
+								><h6>{{ sm.name }} - {{ sm.title }}</h6></li>
 							</ul>
 						</BCard>
 					</BCol>
