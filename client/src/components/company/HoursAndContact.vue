@@ -19,11 +19,18 @@
 		</BListGroup>
 
 		<!-- Location -->
-		<p class="mt-3 h4 text-primary">Location</p>
+		<p class="mt-3 h4 text-primary">Office</p>
 		<a
 			:href="companyInfo.googleMapsLink"
 			class="mt-3 text-light"
 		>{{ companyInfo.address }}</a>
+
+		<!-- Location 2 -->
+		<p class="mt-3 h4 text-primary">Warehouse Location</p>
+		<a
+			:href="companyInfo.googleMapsLink2"
+			class="mt-3 text-light"
+		>{{ companyInfo.address2 }}</a>
 
 		<!-- Phone # -->
 		<p class="h4 mt-3 text-primary">Phone Number</p>

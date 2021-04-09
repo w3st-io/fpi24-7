@@ -62,7 +62,7 @@ module.exports = {
 					title: 'Service Coordinator',
 				},
 				{
-					name: 'Andrew S. & Yandri',
+					name: 'Andrew S.',
 					title: 'Design Project Manager',
 				},
 				{

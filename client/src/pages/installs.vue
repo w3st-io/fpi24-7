@@ -10,7 +10,7 @@
 				<BRow>
 					<BCol cols="12" md="7" lg="8" >
 						<h2 class="text-primary">{{ defaultData.r1.c1.title }}</h2>
-						<p class="h4">{{ defaultData.r1.c1.description }}</p>
+						<p class="h5 text-justify">{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
 					<BCol
@@ -55,7 +55,7 @@
 
 					<BCol cols="12" md="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r3.c2.title }}</h3>
-						<p class="h4 mb-3">{{ defaultData.r3.c2.description }}</p>
+						<p class="mb-3 h5 text-justify">{{ defaultData.r3.c2.description }}</p>
 
 						<h4 class="text-primary">
 							{{ defaultData.r3.c2.listTitle }}
@@ -73,7 +73,7 @@
 				<BRow class="bg-light">
 					<BCol cols="12" md="7" lg="8" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r4.c1.title }}</h3>
-						<p class="h4 mb-3">{{ defaultData.r4.c1.description }}</p>
+						<p class="mb-3 h5 text-justify">{{ defaultData.r4.c1.description }}</p>
 
 						<h4 class="text-primary">
 							{{ defaultData.r4.c1.listTitle }}
@@ -97,7 +97,7 @@
 				<BRow class="bg-light">
 					<BCol cols="12" class="mt-3">
 						<h3 class="text-primary">{{ defaultData.r5.c1.title }}</h3>
-						<p class="h4">{{ defaultData.r5.c1.description }}</p>
+						<p class="h5 text-justify">{{ defaultData.r5.c1.description }}</p>
 					</BCol>
 				</BRow>
 			</BCard>

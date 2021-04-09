@@ -10,7 +10,7 @@
 				<BRow>
 					<BCol data-aos="fade-up" cols="12" md="6">
 						<h1 class="text-primary">{{ defaultData.r1.c1.title }}</h1>
-						<p class="h4">{{ defaultData.r1.c1.description }}</p>
+						<p class="h5 text-justify">{{ defaultData.r1.c1.description }}</p>
 					</BCol>
 
 					<BCol
@@ -39,7 +39,7 @@
 							class="mb-4"
 						/>
 
-						<p class="h4">{{ defaultData.r2.c2.description }}</p>
+						<p class="h5 text-justify">{{ defaultData.r2.c2.description }}</p>
 					</BCol>
 
 					<!-- [R3.CX] Bosses -->
@@ -58,13 +58,13 @@
 							>
 
 							<h3 class="text-primary">{{ col.name }}</h3>
-							<p class="h5 mb-3">{{ col.description }}</p>	
+							<p class="mb-3 h5 text-justify">{{ col.description }}</p>	
 						</div>
 
 						<!-- Text -->
 						<div v-else>
 							<h3 class="text-primary">{{ col.name }}</h3>
-							<p class="h5 mb-3">{{ col.description }}</p>	
+							<p class="mb-3 h5 text-justify">{{ col.description }}</p>	
 
 							<!-- Image -->
 							<img
@@ -111,15 +111,13 @@
 					<!-- Title -->
 					<BCol cols="12" md="12" class="my-4">
 						<BCard no-body bg-variant="primary" class="py-2 text-light">
-							<h2 class="m-0 text-center">
-								{{ defaultData.r3.c1.title }}
-							</h2>
+							<h2 class="m-0 text-center">{{ defaultData.r3.c1.title }}</h2>
 						</BCard>
 					</BCol>
 
 					<!-- Text -->
 					<BCol cols="12" md="8" class="mt-3">
-						<p class="h4">{{ defaultData.r3.c2.description }}</p>
+						<p class="h5 text-justify">{{ defaultData.r3.c2.description }}</p>
 					</BCol>
 					
 					<!-- Image -->

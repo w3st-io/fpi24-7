@@ -12,9 +12,9 @@
 						<h1 class="text-center text-primary">
 							{{ defaultData.r1.c1.title }}
 						</h1>
-						<h4 class="text-center text-secondary">
+						<h5 class="text-center text-secondary">
 							{{ defaultData.r1.c1.description }}
-						</h4>
+						</h5>
 					</BCol>
 
 					<BCol
@@ -40,9 +40,9 @@
 					</BCol>
 
 					<BCol cols="12" md="8" lg="9">
-						<h3>{{ defaultData.r2.c3.description1 }}</h3>
+						<p class="h5">{{ defaultData.r2.c3.description1 }}</p>
 						<br>
-						<h3>{{ defaultData.r2.c3.description2 }}</h3>
+						<p class="h5">{{ defaultData.r2.c3.description2 }}</p>
 					</BCol>
 				</BRow>
 

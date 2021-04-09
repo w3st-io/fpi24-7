@@ -79,7 +79,7 @@
 
 										<!-- [R1.C1.R3.C3] Our Mission Description -->
 										<BCol cols="12" md="8">
-											<p  class="h4 mb-3">
+											<p class="mb-3 h5 text-justify">
 												{{ PageData.cnt1.r1.c1.r3.c3.description }}
 											</p>
 										</BCol>
@@ -95,7 +95,7 @@
 
 										<!-- [R1.C1.R3.C6] Our Service Description -->
 										<BCol cols="12" md="7">
-											<p class="h4 mb-3">
+											<p class="mb-3 h5 text-justify">
 												{{ PageData.cnt1.r1.c1.r3.c5.description }}
 											</p>
 										</BCol>
