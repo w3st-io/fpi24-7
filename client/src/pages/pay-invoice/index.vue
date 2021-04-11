@@ -11,13 +11,21 @@
 				class="form-control mb-3"
 			>
 
-			<BButton variant="primary" class="w-100">Pay Invoice</BButton>
+			<BButton
+				@click="pay()"
+				variant="primary"
+				class="w-100"
+			>Pay Invoice</BButton>
+
+			{{ reqData }}
+
+			<h6 v-if="error" class="text-danger">{{ error }}</h6>
 		</BCard>
 	</BContainer>
 </template>
 
 <script>
-	//import PayInvoiceService from ''
+	import PayInvoiceService from '../../services/PayInvoiceService'
 
 	export default {
 		data() {
@@ -28,13 +36,19 @@
 					exp_year: '',
 					cvc: '',
 				},
+
+				reqData: '',
+				error: '',
 			}
 		},
 
-		created() {
-			
-		},
+		methods: {
+			async pay() {
+				this.reqData = await PayInvoiceService.s_()
 
-		methods: {},	
+				if (this.reqData.status) { console.log('Success') }
+				else { this.error = 'Something went wrong. Please try again.' }
+			}
+		},	
 	}
 </script>

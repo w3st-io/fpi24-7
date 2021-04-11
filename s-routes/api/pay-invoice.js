@@ -16,30 +16,44 @@ const stripe = Stripe(config.STRIPE_SECRET_KEY)
 const router = express.Router().use(cors())
 
 
-router.get(
+router.post(
 	'/',
 	async (req, res) => {
-		const token = await stripe.tokens.create({
-			card: {
-				number: '4242424242424242',
-				exp_month: 4,
-				exp_year: 2022,
-				cvc: '314',
-			},
-		})
+		try {
+			// [STRIPE] Create Token //
+			const token = await stripe.tokens.create({
+				card: {
+					number: '4242424242424242',
+					exp_month: 4,
+					exp_year: 2022,
+					cvc: '314',
+				},
+			})
 
-		const charge = await stripe.charges.create({
-			amount: 2000,
-			currency: 'usd',
-			source: token.id,
-			description: 'My First Test Charge (created for API docs)',
-		 })
+			// [STRIPE] Create Charge //
+			const charge = await stripee.charges.create({
+				amount: 2000,
+				currency: 'usd',
+				source: token.id,
+				description: 'My First Test Charge (created for API docs)',
+			})
 
-		res.send({
-			executed: true,
-			status: true,
-			charge: charge,
-		})
+			res.status(200).send({
+				executed: true,
+				status: true,
+				charge: charge,
+				message: 'Success!'
+			})
+		}
+		catch (err) {
+			console.log('err', err)
+
+			res.status(200).send({
+				executed: false,
+				status: false,
+				message: err,
+			})
+		}
 	}
 )
 
