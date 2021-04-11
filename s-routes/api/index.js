@@ -8,12 +8,12 @@ const Stripe = require('stripe')
 const config = require('../../s-config')
 
 
-// [EXPRESS + USE] //
-const router = express.Router().use(cors())
-
-
 // [STRIPE] //
 const stripe = Stripe(config.STRIPE_SECRET_KEY)
+
+
+// [EXPRESS + USE] //
+const router = express.Router().use(cors())
 
 
 // [MAIN-ROUTE] //
