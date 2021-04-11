@@ -31,12 +31,17 @@ router.post(
 			})
 
 			// [STRIPE] Create Charge //
-			const charge = await stripee.charges.create({
+			const charge = await stripe.charges.create({
 				amount: 2000,
 				currency: 'usd',
 				source: token.id,
 				description: 'My First Test Charge (created for API docs)',
 			})
+
+			// [VERIFY] Paid //
+			if (charge.paid) {
+				console.log('Success!')
+			}
 
 			res.status(200).send({
 				executed: true,
