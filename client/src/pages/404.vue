@@ -9,18 +9,6 @@
 					Return Home
 				</BButton>
 			</a>
-
-			<S/>
 		</BCard>
 	</BContainer>
 </template>
-
-<script>
-	import S from './pay-invoice'
-
-	export default {
-		components: {
-			S,
-		}
-	}
-</script>

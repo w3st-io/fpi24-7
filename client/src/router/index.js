@@ -13,6 +13,7 @@ import design from '../pages/design'
 import emailSent from '../pages/email-sent'
 import gallery from '../pages/gallery'
 import installs from '../pages/installs'
+import payInvoice from '../pages/pay-invoice'
 import service from '../pages/service'
 import notFound from '../pages/404'
 
@@ -112,6 +113,16 @@ const router = new VueRouter({
 				title: 'Installs'
 			},
 		},
+		// PAY-INVOICE //
+		{
+			path: '/pay-invoice',
+			name: 'pay-invoice',
+			component: payInvoice,
+			meta: {
+				auth: true,
+				title: 'Pay Invoice'
+			},
+		},
 		// Service //
 		{
 			path: '/service',
@@ -135,9 +146,7 @@ const router = new VueRouter({
 	],
 
 	// [VUE-ROUTER] Scroll Behavior //
-	scrollBehavior() {
-		return { x: 0, y: 0 }
-	}
+	scrollBehavior() { return { x: 0, y: 0 } }
 })
 
 
