@@ -21,14 +21,7 @@ router.post(
 	async (req, res) => {
 		try {
 			// [STRIPE] Create Token //
-			const token = await stripe.tokens.create({
-				card: {
-					number: '4242424242424242',
-					exp_month: 4,
-					exp_year: 2022,
-					cvc: '314',
-				},
-			})
+			const token = await stripe.tokens.create({ card: req.body.card })
 
 			// [STRIPE] Create Charge //
 			const charge = await stripe.charges.create({
@@ -40,19 +33,21 @@ router.post(
 
 			// [VERIFY] Paid //
 			if (charge.paid) {
-				console.log('Success!')
+				res.status(200).send({
+					executed: true,
+					status: true,
+					message: 'Payment Successful'
+				})
 			}
-
-			res.status(200).send({
-				executed: true,
-				status: true,
-				charge: charge,
-				message: 'Success!'
-			})
+			else {
+				res.status(200).send({
+					executed: true,
+					status: true,
+					message: 'Payment Failed'
+				})
+			}
 		}
 		catch (err) {
-			console.log('err', err)
-
 			res.status(200).send({
 				executed: false,
 				status: false,
