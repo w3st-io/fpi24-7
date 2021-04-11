@@ -72,15 +72,15 @@
 </template>
 
 <script>
-	import PayInvoiceService from '../../services/PayInvoiceService'
+	import PayInvoiceService from '@/services/PayInvoiceService'
 
 	export default {
 		data() {
 			return {
 				card: {
 					number: '4242424242424242',
-					exp_month: 4,
-					exp_year: 2022,
+					exp_month: '4',
+					exp_year: '2022',
 					cvc: '314',
 				},
 
