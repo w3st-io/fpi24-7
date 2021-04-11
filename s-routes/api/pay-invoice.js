@@ -17,7 +17,7 @@ const router = express.Router().use(cors())
 
 
 router.get(
-	'/lit',
+	'/',
 	async (req, res) => {
 		const token = await stripe.tokens.create({
 			card: {
@@ -27,8 +27,6 @@ router.get(
 				cvc: '314',
 			},
 		})
-
-		console.log(token)
 
 		const charge = await stripe.charges.create({
 			amount: 2000,

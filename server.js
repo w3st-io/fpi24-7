@@ -15,6 +15,7 @@ const rateLimiter = require('./s-rate-limiters')
 
 const a_ = require('./s-routes/api')
 const a_mail = require('./s-routes/api/mail')
+const a_payInvoice = require('./s-routes/api/pay-invoice')
 
 
 // [INIT] Const //
@@ -58,6 +59,7 @@ app.use(rateLimiter.limiter)
 // [USE] Personal // API // Pages //
 app.use('/api', a_)
 app.use('/api/mail', a_mail)
+app.use('/api/pay-invoice', a_payInvoice)
 
 
 // [HEROKU] Set Static Folder for Heroku //
