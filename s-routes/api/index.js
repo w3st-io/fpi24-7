@@ -1,15 +1,10 @@
 // [REQUIRE] //
 const cors = require('cors')
 const express = require('express')
-const Stripe = require('stripe')
 
 
 // [REQUIRE] Personal //
 const config = require('../../s-config')
-
-
-// [STRIPE] //
-const stripe = Stripe(config.STRIPE_SECRET_KEY)
 
 
 // [EXPRESS + USE] //
