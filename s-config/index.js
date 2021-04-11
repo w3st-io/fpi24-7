@@ -35,6 +35,9 @@ module.exports = {
 	SALES_EMAIL: process.env.SALES_EMAIL || '',
 	SCHEDULING_EMAIL: process.env.SCHEDULING_EMAIL || '',
 	SERVICES_EMAIL: process.env.SERVICES_EMAIL || '',
+
+	// [STRIPE] //
+	STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || '',
 	
 	// [SECRET] //
 	SECRET_KEY: process.env.SECRET_KEY || 'secret',
