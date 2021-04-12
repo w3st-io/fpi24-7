@@ -3,18 +3,18 @@
 		<BContainer>
 			<BRow>
 				<!-- Logo -->
-				<BCol cols="lg">
+				<BCol cols="xl">
 					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
 						<img
 							:src="companyInfo.companyLogo"
-							class="d-none d-lg-block p-1 rounded-lg"
+							class="d-none d-xl-block p-1 rounded-lg"
 							style="max-width: 110px;"
 						>
 					</RouterLink>
 				</BCol>
 
 				<!-- Title & Nav Buttons -->
-				<BCol cols="12" lg="8">
+				<BCol cols="12" xl="8">
 					<!-- Title + Caption -->
 					<RouterLink to="/" class="text-center text-weight-bold text-decoration-none">
 						<h3 class="text-light font-weight-bold">
@@ -27,14 +27,6 @@
 					</RouterLink>
 
 					<div class="mb-3 d-none d-md-block text-center">
-						<RouterLink to="/">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Home</BButton>
-						</RouterLink>
-
 						<RouterLink to="/about">
 							<BButton
 								variant="primary"
@@ -90,11 +82,19 @@
 								class="font-weight-bold mx-2"
 							>Contact Us</BButton>
 						</RouterLink>
+
+						<RouterLink to="/pay-invoice">
+							<BButton
+								variant="primary"
+								size="sm"
+								class="font-weight-bold mx-2"
+							>Pay Invoice</BButton>
+						</RouterLink>
 					</div>
 				</BCol>
 
 				<!-- Call Us -->
-				<BCol cols="lg">
+				<BCol cols="xl">
 					<SocialMediaPlug size="34" class="d-none d-md-block mb-3" />
 
 					<a :href="companyInfo.phoneNumberLink">
