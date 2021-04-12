@@ -1,11 +1,14 @@
 // [REQUIRE] //
+const e = require('cors')
 const cors = require('cors')
 const express = require('express')
 const Stripe = require('stripe')
+const validator = require('validator')
 
 
 // [REQUIRE] Personal //
 const config = require('../../s-config')
+const paidInvoicesCollection = require('../../s-collections/paidInvoicesCollection')
 
 
 // [STRIPE] //
@@ -20,35 +23,55 @@ router.post(
 	'/',
 	async (req, res) => {
 		try {
-			// [STRIPE] Create Token //
-			const token = await stripe.tokens.create({ card: req.body.card })
-
-			// [STRIPE] Retrieve Price //
-			const price = await stripe.prices.retrieve(
-				config.STRIPE_INVOICE_CHARGE_PRICE_ID
-			)
-
-			// [STRIPE] Create Charge //
-			const charge = await stripe.charges.create({
-				amount: price.unit_amount,
-				currency: price.currency,
-				source: token.id,
-				description:`Invoice Payment - Number: ${req.body.invoiceNumber}`,
-			})
-
-			// [VERIFY] Paid //
-			if (charge.paid) {
-				res.status(200).send({
-					executed: true,
-					status: true,
-					message: 'Payment Successful'
+			if (
+				validator.isAscii(req.body.invoiceNumber) &&
+				validator.isInt(req.body.card.number) &&
+				validator.isInt(req.body.card.exp_month) &&
+				validator.isInt(req.body.card.exp_year) &&
+				validator.isInt(req.body.card.cvc)
+			) {
+				// [STRIPE] Create Token //
+				const token = await stripe.tokens.create({ card: req.body.card })
+	
+				// [STRIPE] Retrieve Price //
+				const price = await stripe.prices.retrieve(
+					config.STRIPE_INVOICE_CHARGE_PRICE_ID
+				)
+	
+				// [STRIPE] Create Charge //
+				const charge = await stripe.charges.create({
+					amount: price.unit_amount,
+					currency: price.currency,
+					source: token.id,
+					description:`Invoice Number: ${req.body.invoiceNumber}`,
 				})
+	
+				// [VERIFY] Paid //
+				if (charge.paid) {
+					const paidInvoice = await paidInvoicesCollection.c_create({
+						invoiceNumber: req.body.invoiceNumber,
+						stripe_charge_id: charge.id,
+					})
+
+					res.status(200).send({
+						executed: true,
+						status: true,
+						message: 'Payment Successful'
+					})
+				}
+				else {
+					res.status(200).send({
+						executed: true,
+						status: true,
+						message: 'Payment Failed'
+					})
+				}
 			}
 			else {
-				res.status(200).send({
+				res.send({
 					executed: true,
-					status: true,
-					message: 'Payment Failed'
+					status: false,
+					message: 'Invalid Input'
 				})
 			}
 		}

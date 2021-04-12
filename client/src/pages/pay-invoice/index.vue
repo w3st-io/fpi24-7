@@ -72,10 +72,14 @@
 
 				<BCol cols="12" class="mb-3">
 					<BButton
+						:disabled="loading"
 						@click="pay()"
 						variant="primary"
 						class="w-100 mb-3"
-					>Pay Invoice</BButton>
+					>
+						<span v-if="!loading">Pay Invoice</span>
+						<span v-else>Please Wait..</span>
+					</BButton>
 				</BCol>
 
 				<BCol cols="12" class="mb-3">
@@ -97,20 +101,38 @@
 				invoiceNumber: '',
 
 				card: {
-					number: '4242424242424242',
-					exp_month: '4',
-					exp_year: '2022',
-					cvc: '314',
+					number: '',
+					exp_month: '',
+					exp_year: '',
+					cvc: '',
 				},
 
+				loading: true,
 				reqData: '',
 				error: '',
 				success: '',
 			}
 		},
 
+		created() {
+			this.loading = false
+
+			// This is for the developer
+			if (localStorage.node_env == 'development') {
+				this.invoiceNumber = 'Fake-Invoice-Number'
+				this.card = {
+					number: '4242424242424242',
+					exp_month: '4',
+					exp_year: '2022',
+					cvc: '314',
+				}
+			}
+		},
+
 		methods: {
 			async pay() {
+				this.loading = true
+
 				this.reqData = await PayInvoiceService.s_({
 					card: this.card,
 					invoiceNumber: this.invoiceNumber
@@ -119,12 +141,18 @@
 				if (this.reqData.status) {
 					this.success = this.reqData.message
 
-					setTimeout(
-						() => { router.push({ name: 'pay-invoice_success' }) },
-						2000
-					)
+					setTimeout(() => {
+						router.push({ name: 'pay-invoice_success' })
+					}, 2000)
 				}
-				else { this.error = 'Something went wrong. Please try again.' }
+				else {
+					this.loading = false
+
+					if (this.reqData.message != {}) {
+						this.error = this.reqData.message
+					}
+					else { this.error = 'Something went wrong. Please try again.' }
+				}
 			}
 		},	
 	}

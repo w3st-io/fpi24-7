@@ -4,20 +4,20 @@ const mongoose = require('mongoose')
 
 // [EXPORT] //
 module.exports = mongoose.model(
-	'CommentLike',
+	'PaidInvoice',
 	mongoose.Schema({
 		_id: mongoose.Schema.Types.ObjectId,
-
-		paid: {
-			type: Boolean,
-			required: false,
-			default: false,
-		},
 
 		invoiceNumber: {
 			type: String,
 			required: [true, 'This is required'],
 			maxlength: 24,
+		},
+		
+		stripe_charge_id: {
+			type: String,
+			required: false,
+
 		},
 
 		created_at: {
