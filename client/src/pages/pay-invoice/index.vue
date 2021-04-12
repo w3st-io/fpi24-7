@@ -7,6 +7,18 @@
 				</BCol>
 
 				<BCol cols="12" class="mb-3">
+					<label for="invoiceNumber" class="h3 text-primary">
+						Invoice Number 
+					</label>
+					<input
+						v-model="invoiceNumber"
+						name="invoiceNumber"
+						type="text"
+						class="form-control"
+					>
+				</BCol>
+
+				<BCol cols="12" class="mb-3">
 					<label for="card_number" class="h3 text-primary">
 						Card Number
 					</label>
@@ -15,6 +27,7 @@
 						name="card_number"
 						type="text"
 						class="form-control"
+						placeholder="4242424242424242"
 					>
 				</BCol>
 
@@ -26,6 +39,7 @@
 						v-model="card.exp_month"
 						name="card_exp_month"
 						type="text"
+						placeholder="4"
 						class="form-control"
 					>
 				</BCol>
@@ -38,6 +52,7 @@
 						v-model="card.exp_year"
 						name="card_exp_year"
 						type="text"
+						placeholder="2022"
 						class="form-control"
 					>
 				</BCol>
@@ -50,6 +65,7 @@
 						v-model="card.cvc"
 						name="card_cvc"
 						type="text"
+						placeholder="314"
 						class="form-control"
 					>
 				</BCol>
@@ -64,7 +80,7 @@
 
 				<BCol cols="12" class="mb-3">
 					<h6 v-if="error" class="text-danger">{{ error }}</h6>
-					<h6 class="text-success">{{ reqData }}</h6>
+					<h6 v-if="success" class="text-success">{{ success }}</h6>
 				</BCol>
 			</BRow>			
 		</BCard>
@@ -72,11 +88,14 @@
 </template>
 
 <script>
+	import router from '@/router'
 	import PayInvoiceService from '@/services/PayInvoiceService'
 
 	export default {
 		data() {
 			return {
+				invoiceNumber: '',
+
 				card: {
 					number: '4242424242424242',
 					exp_month: '4',
@@ -86,14 +105,25 @@
 
 				reqData: '',
 				error: '',
+				success: '',
 			}
 		},
 
 		methods: {
 			async pay() {
-				this.reqData = await PayInvoiceService.s_({ card: this.card })
+				this.reqData = await PayInvoiceService.s_({
+					card: this.card,
+					invoiceNumber: this.invoiceNumber
+				})
 
-				if (this.reqData.status) { console.log('Success') }
+				if (this.reqData.status) {
+					this.success = this.reqData.message
+
+					setTimeout(
+						() => { router.push({ name: 'pay-invoice_success' }) },
+						2000
+					)
+				}
 				else { this.error = 'Something went wrong. Please try again.' }
 			}
 		},	

@@ -13,11 +13,11 @@ const authAxios = async () => {
 	})
 }
 
-async function s_({ card }) {
+async function s_({ card, invoiceNumber }) {
 	try {
 		const authAxios = await this.authAxios()
 
-		return (await authAxios.post('/', { card: card })).data
+		return (await authAxios.post('/', { card, invoiceNumber })).data
 	}
 	catch(e) {
 		return {

@@ -23,12 +23,17 @@ router.post(
 			// [STRIPE] Create Token //
 			const token = await stripe.tokens.create({ card: req.body.card })
 
+			// [STRIPE] Retrieve Price //
+			const price = await stripe.prices.retrieve(
+				config.STRIPE_INVOICE_CHARGE_PRICE_ID
+			)
+
 			// [STRIPE] Create Charge //
 			const charge = await stripe.charges.create({
-				amount: 2000,
-				currency: 'usd',
+				amount: price.unit_amount,
+				currency: price.currency,
 				source: token.id,
-				description: 'My First Test Charge (created for API docs)',
+				description:`Invoice Payment - Number: ${req.body.invoiceNumber}`,
 			})
 
 			// [VERIFY] Paid //
@@ -48,10 +53,11 @@ router.post(
 			}
 		}
 		catch (err) {
+			console.log(err)
 			res.status(200).send({
 				executed: false,
 				status: false,
-				message: err,
+				message: `Error --> ${err}`,
 			})
 		}
 	}
