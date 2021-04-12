@@ -1,5 +1,5 @@
 <template>
-	<BContainer class="nav-spacer my-3">
+	<BContainer class="nav-spacer my-4">
 		<BCard bg-variant="none" class="shadow">
 			<BRow>
 				<BCol cols="12" class="mb-3">
@@ -29,7 +29,7 @@
 						name="card_number"
 						type="text"
 						class="form-control"
-						placeholder="4242424242424242"
+						placeholder="No spaces or hyphens"
 					>
 				</BCol>
 
