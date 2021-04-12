@@ -6,6 +6,7 @@
 					<h1 class="text-center text-primary">Pay Your Invoice</h1>
 				</BCol>
 
+				<!-- Invoice Number -->
 				<BCol cols="12" class="mb-3">
 					<label for="invoiceNumber" class="h3 text-primary">
 						Invoice Number 
@@ -18,6 +19,7 @@
 					>
 				</BCol>
 
+				<!-- Card Number -->
 				<BCol cols="12" class="mb-3">
 					<label for="card_number" class="h3 text-primary">
 						Card Number
@@ -31,6 +33,7 @@
 					>
 				</BCol>
 
+				<!-- Card Exp Month -->
 				<BCol cols="12" md="5" class="mb-3">
 					<label for="card_exp_month" class="h3 text-primary">
 						Card Exp Month
@@ -44,6 +47,7 @@
 					>
 				</BCol>
 
+				<!-- Card Exp Year -->
 				<BCol cols="12" md="5" class="mb-3">
 					<label for="card_exp_year" class="h3 text-primary">
 						Card Exp Year
@@ -57,6 +61,7 @@
 					>
 				</BCol>
 
+				<!-- Card CVC -->
 				<BCol cols="12" md="2" class="mb-3">
 					<label for="card_cvc" class="h3 text-primary">
 						Card CVC
@@ -70,6 +75,7 @@
 					>
 				</BCol>
 
+				<!-- Submit -->
 				<BCol cols="12" class="mb-3">
 					<BButton
 						:disabled="loading"

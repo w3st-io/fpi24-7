@@ -15,7 +15,7 @@ const router = express.Router().use(cors())
 router.get(
 	'/',
 	async (req, res) => {
-		res.send({
+		res.status(200).send({
 			executed: true,
 			status: true,
 			node_env: config.NODE_ENV,

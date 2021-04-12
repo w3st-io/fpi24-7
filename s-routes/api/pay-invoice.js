@@ -68,7 +68,7 @@ router.post(
 				}
 			}
 			else {
-				res.send({
+				res.status(200).send({
 					executed: true,
 					status: false,
 					message: 'Invalid Input'
