@@ -43,7 +43,7 @@ router.post(
 					amount: price.unit_amount,
 					currency: price.currency,
 					source: token.id,
-					description:`Invoice Number: ${req.body.invoiceNumber}`,
+					description: `Invoice Number: ${req.body.invoiceNumber}`,
 				})
 	
 				// [VERIFY] Paid //
