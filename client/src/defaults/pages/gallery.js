@@ -2,9 +2,7 @@
 module.exports = {
 	r1: { c1: { title: 'Gallery', }, },
 
-	r2: { c1: { title: 'Images', }, },
-
-	r3: {
+	r2: {
 		cx: [
 			{
 				image: require('../../assets/media/pages/gallery/shadowbrook-shrewsbury-nj.jpg'),
@@ -20,6 +18,26 @@ module.exports = {
 			},
 			{
 				image: require('../../assets/media/pages/gallery/3.jpg'),
+				description: '', 
+			},
+			{
+				image: require('../../assets/media/pages/gallery/4.jpg'),
+				description: '', 
+			},
+			{
+				image: require('../../assets/media/pages/gallery/5.jpg'),
+				description: '', 
+			},
+			{
+				image: require('../../assets/media/pages/gallery/6.jpg'),
+				description: '', 
+			},
+			{
+				image: require('../../assets/media/pages/gallery/7.jpg'),
+				description: '', 
+			},
+			{
+				image: require('../../assets/media/pages/gallery/8.jpg'),
 				description: '', 
 			},
 			{

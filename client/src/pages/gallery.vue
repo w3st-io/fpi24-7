@@ -10,25 +10,19 @@
 				</BCol>
 			</BRow>
 
-			<!-- [R2] -->
-			<BRow class="mb-3" data-aos="fade-right">
-				<BCol cols="12">
-					<h3 class="m-0 text-primary">{{ defaultData.r2.c1.title }}</h3>
-				</BCol>
-			</BRow>
-
 			<!-- viewer -->
 			<viewer :options="{ title: false, transition: false, }">
-				<!-- [R3] -->
+				<!-- [R2] data-aos="fade-up" -->
 				<BRow class="mb-3">
 					<BCol
-						v-for="(col, i) in defaultData.r3.cx"
+						v-for="(col, i) in defaultData.r2.cx"
 						:key="i"
 						cols="12" sm="6" md="4" lg="3" xl="3"
 						class="mb-3"
-						data-aos="fade-up"
+						
 					>
 						<img
+							v-lazy="col.image"
 							:src="col.image"
 							alt="No Photo"
 							class="w-100"
