@@ -63,9 +63,9 @@ module.exports = {
 		],
 	},
 
-	r4: { c1: { title: 'Videos', }, },
+	r3: { c1: { title: 'Videos', }, },
 
-	r5: {
+	r4: {
 		cx: [
 			{
 				youtubeURL: 'https://www.youtube.com/watch?v=QsC-Uvih6Eo',

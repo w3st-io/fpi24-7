@@ -41,14 +41,14 @@
 			<BRow class="mb-3">
 				<BCol cols="12">
 					<h3 class="m-0 text-primary" data-aos="fade-right">
-						{{ defaultData.r4.c1.title }}
+						{{ defaultData.r3.c1.title }}
 					</h3>
 				</BCol>
 			</BRow>
 
 			<BRow class="mb-3">
 				<BCol
-					v-for="(col, i) in defaultData.r5.cx"
+					v-for="(col, i) in defaultData.r4.cx"
 					:key="i"
 					cols="12" sm="6"
 					class="mb-3 p-3"
