@@ -12,7 +12,7 @@
 
 			<!-- viewer -->
 			<viewer :options="{ title: false, transition: false, }">
-				<!-- [R2] data-aos="fade-up" -->
+				<!-- [R2] -->
 				<BRow class="mb-2">
 					<BCol
 						v-for="(col, i) in defaultData.r2.cx"
@@ -27,6 +27,7 @@
 							alt="No Photo"
 							class="w-100 mb-2"
 							style="height: 300px; object-fit: cover;"
+							data-aos="fade-up"
 						>
 					
 						<p v-if="col.description" class="h6 text-center">
