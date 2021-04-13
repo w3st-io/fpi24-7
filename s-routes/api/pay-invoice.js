@@ -25,15 +25,15 @@ router.post(
 		try {
 			if (
 				validator.isAscii(req.body.invoiceNumber) &&
-				Number.isInteger(req.body.balance) &&
+				validator.isInt(req.body.balance) &&
 				validator.isInt(req.body.card.number) &&
 				validator.isInt(req.body.card.exp_month) &&
 				validator.isInt(req.body.card.exp_year) &&
 				validator.isInt(req.body.card.cvc)
 			) {
 				// [INIT] //
-				const stripeAmount = req.body.balance * 100
-
+				let stripeAmount = parseInt(req.body.balance) * 100
+				
 				// [STRIPE] Create Token //
 				const token = await stripe.tokens.create({ card: req.body.card })
 	

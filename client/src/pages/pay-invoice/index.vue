@@ -34,7 +34,7 @@
 						<input
 							v-model="balance"
 							name="balance"
-							type="text"
+							type="number"
 							placeholder="Insert Dollar Amount (No &quot;$&quot;)"
 							class="form-control"
 						>
