@@ -15,8 +15,30 @@
 						v-model="invoiceNumber"
 						name="invoiceNumber"
 						type="text"
+						placeholder="###"
 						class="form-control"
 					>
+				</BCol>
+
+				<!-- Balance -->
+				<BCol cols="12" class="mb-3">
+					<label for="balance" class="h3 text-primary">
+						Invoice Balance Amount
+					</label>
+					<br>
+					<div class="input-group mb-2">
+						<div class="input-group-prepend">
+							<div class="input-group-text">$</div>
+						</div>
+
+						<input
+							v-model="balance"
+							name="balance"
+							type="text"
+							placeholder="Insert Dollar Amount (No &quot;$&quot;)"
+							class="form-control"
+						>
+					</div>
 				</BCol>
 
 				<!-- Card Number -->
@@ -105,6 +127,7 @@
 		data() {
 			return {
 				invoiceNumber: '',
+				balance: '',
 
 				card: {
 					number: '',
@@ -126,6 +149,7 @@
 			// This is for the developer
 			if (localStorage.node_env == 'development') {
 				this.invoiceNumber = 'Fake-Invoice-Number'
+				this.balance = 20
 				this.card = {
 					number: '4242424242424242',
 					exp_month: '4',
@@ -140,8 +164,9 @@
 				this.loading = true
 
 				this.reqData = await PayInvoiceService.s_({
+					invoiceNumber: this.invoiceNumber,
+					balance: this.balance,
 					card: this.card,
-					invoiceNumber: this.invoiceNumber
 				})
 
 				if (this.reqData.status) {

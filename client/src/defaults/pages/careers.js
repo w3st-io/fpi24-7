@@ -2,14 +2,14 @@ const companyInfo = require('../companyInfo')
 
 // [EXPORT] //
 module.exports = {
-	parallaxImg: require('../../assets/images/pages/careers/parallax.jpg'),
+	parallaxImg: require('../../assets/media/pages/careers/parallax.jpg'),
 
 	r1: {
 		c1: {
 			title: 'Careers',
 			description: 'Our Service 24/7! No Exceptions!',
 		},
-		c2: { image: require('../../assets/images/pages/careers/careers.jpg'), },
+		c2: { image: require('../../assets/media/pages/careers/careers.jpg'), },
 	},
 
 	r2: {
@@ -29,19 +29,19 @@ module.exports = {
 
 		cx: [
 			{
-				image: require('../../assets/images/pages/careers/medical.jpg'),
+				image: require('../../assets/media/pages/careers/medical.jpg'),
 				text: 'Health Insurance',
 			},
 			{
-				image: require('../../assets/images/pages/careers/life-insurance.jpg'),
+				image: require('../../assets/media/pages/careers/life-insurance.jpg'),
 				text: 'Life Insurance',
 			},
 			{
-				image: require('../../assets/images/pages/careers/vacation-time.jpg'),
+				image: require('../../assets/media/pages/careers/vacation-time.jpg'),
 				text: 'Vacation Time',
 			},
 			{
-				image: require('../../assets/images/pages/careers/sick-time.jpg'),
+				image: require('../../assets/media/pages/careers/sick-time.jpg'),
 				text: 'Sick Time',
 			},
 		],

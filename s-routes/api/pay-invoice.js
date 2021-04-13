@@ -25,30 +25,29 @@ router.post(
 		try {
 			if (
 				validator.isAscii(req.body.invoiceNumber) &&
+				Number.isInteger(req.body.balance) &&
 				validator.isInt(req.body.card.number) &&
 				validator.isInt(req.body.card.exp_month) &&
 				validator.isInt(req.body.card.exp_year) &&
 				validator.isInt(req.body.card.cvc)
 			) {
+				// [INIT] //
+				const stripeAmount = req.body.balance * 100
+
 				// [STRIPE] Create Token //
 				const token = await stripe.tokens.create({ card: req.body.card })
 	
-				// [STRIPE] Retrieve Price //
-				const price = await stripe.prices.retrieve(
-					config.STRIPE_INVOICE_CHARGE_PRICE_ID
-				)
-	
 				// [STRIPE] Create Charge //
 				const charge = await stripe.charges.create({
-					amount: price.unit_amount,
-					currency: price.currency,
+					amount: stripeAmount,
+  					currency: 'usd',
 					source: token.id,
 					description: `Invoice Number: ${req.body.invoiceNumber}`,
 				})
 	
 				// [VERIFY] Paid //
 				if (charge.paid) {
-					const paidInvoice = await paidInvoicesCollection.c_create({
+					const paidInvoiceObj = await paidInvoicesCollection.c_create({
 						invoiceNumber: req.body.invoiceNumber,
 						stripe_charge_id: charge.id,
 					})

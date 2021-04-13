@@ -1,19 +1,19 @@
 // [EXPORT] //
 module.exports = {
-	parallaxImg: require('../../assets/images/pages/installs/parallax.jpg'),
+	parallaxImg: require('../../assets/media/pages/installs/parallax.jpg'),
 
 	r1: {
 		c1: {
 			title: 'Each sprinkler system is installed by a fire sprinkler professional who has undergone extensive training in their craft.',
 			description: 'Safety, accuracy and efficiency are paramount when installing fire sprinkler systems. If its worth doing, its worth doing right, the first time.',
 		},
-		c2: { image: require('../../assets/images/pages/about/team.webp'), },
+		c2: { image: require('../../assets/media/pages/about/team.webp'), },
 	},
 
 	r2: { c1: { title: 'Installations' }, },
 
 	r3: {
-		c1: { image: require('../../assets/images/pages/installs/pi.webp'), },
+		c1: { image: require('../../assets/media/pages/installs/pi.webp'), },
 		c2: {
 			title: 'Professional Installation',
 			description: 'We currently employ a highly qualified team of installers that specialize in all aspects of installation, including residential, commercial and industrial. We have crews devoted to various specialties including CPVC installers, steel pipe fitters and a crew that specializes in commercial relocation projects. We have multiple foreman for simultaneous projects and each installer is continuously trained to meet OSHA safety protocol and continuing education requirements.',
@@ -46,7 +46,7 @@ module.exports = {
 				'Coordination meetings',
 			],
 		},
-		c2: { image: require('../../assets/images/pages/installs/facility.webp'), },
+		c2: { image: require('../../assets/media/pages/installs/facility.webp'), },
 	},
 
 	r5: {

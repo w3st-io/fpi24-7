@@ -1,19 +1,19 @@
 // [EXPORT] //
 module.exports = {
-	parallaxImg: require('../../assets/images/pages/design/parallax.jpg'),
+	parallaxImg: require('../../assets/media/pages/design/parallax.jpg'),
 
 	r1: {
 		c1: {
 			title: 'Good design practice and accurate plans equate to quicker approvals by city and state officials.',
 			description: 'When soliciting bids for your projects, make sure your contractors pay attention to the details that can slow your projects down.',
 		},
-		c2: { image: require('../../assets/images/pages/design/gooddesign.webp'), },
+		c2: { image: require('../../assets/media/pages/design/gooddesign.webp'), },
 	},
 
 	r2: { c1: { title: 'Design & Engineering' }, },
 
 	r3: {
-		c1: { image: require('../../assets/images/pages/design/fpd.webp'), },
+		c1: { image: require('../../assets/media/pages/design/fpd.webp'), },
 		c2: {
 			title: 'Fire Protection Design',
 			description: 'Our staff includes NICET certified technicians who use state-of-the-art CAD programs to produce accurate, detail oriented and  code compliant fire sprinkler plans for the use of obtaining permits, performing hydraulic calculations, guiding installation and recording \'as-built\' conditions upon project completion. Our engineering department provides fast and reliable plans and reports to expedite all phases of your project.',
@@ -47,6 +47,6 @@ module.exports = {
 				'Coordination drawings',
 			],
 		},
-		c2: { image: require('../../assets/images/pages/design/sample.webp'), },
+		c2: { image: require('../../assets/media/pages/design/sample.webp'), },
 	},
 }

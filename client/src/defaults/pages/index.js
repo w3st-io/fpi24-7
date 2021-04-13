@@ -23,7 +23,7 @@ const textHtml = `
 
 // [EXPORT] //
 module.exports = {
-	parallaxImg: require('../../assets/images/pages/index/parallax.jpg'),
+	parallaxImg: require('../../assets/media/pages/index/parallax.jpg'),
 
 	cnt1: {
 		r1: {
@@ -35,15 +35,15 @@ module.exports = {
 						caraousel: [
 							{
 								textHtml: textHtml,
-								img: require('../../assets/images/pages/index/industry.jpg'),
+								img: require('../../assets/media/pages/index/industry.jpg'),
 							},
 							{
 								textHtml: textHtml,
-								img: require('../../assets/images/pages/index/building.jpg'),
+								img: require('../../assets/media/pages/index/building.jpg'),
 							},
 							{
 								textHtml: textHtml,
-								img: require('../../assets/images/pages/index/inspection.jpg'),
+								img: require('../../assets/media/pages/index/inspection.jpg'),
 							},
 						],
 					}
@@ -54,17 +54,17 @@ module.exports = {
 					cx: [
 						{
 							title: 'Residential',
-							image: require('../../assets/images/pages/index/residential.webp'),
+							image: require('../../assets/media/pages/index/residential.webp'),
 							description: 'Small, medium or large we offer professionally designed and installed wet and dry fire sprinkler systems.',
 						},
 						{
 							title: 'Commercial',
-							image: require('../../assets/images/pages/index/commercial.webp'),
+							image: require('../../assets/media/pages/index/commercial.webp'),
 							description: 'We provide quality design and installation for retail, office, store front, gyms, hospitals, schools and more.',
 						},
 						{
 							title: 'Industrial',
-							image: require('../../assets/images/pages/index/industrial.webp'),
+							image: require('../../assets/media/pages/index/industrial.webp'),
 							description: 'Whatever your storage needs, we can offer ESFR warehouse storage, control mode and density design fire protection.',
 						}
 					]
@@ -73,7 +73,7 @@ module.exports = {
 				// Our Mission + Our Service //
 				r3: {
 					c1: { titleHTML: 'Our Mission' },
-					c2: { image: require('../../assets/images/our-mission.webp'), },
+					c2: { image: require('../../assets/media/our-mission.webp'), },
 					c3: {
 						description: 'At 24/7 Fire Protection Inc., it is our mission to create a competetive edge within the fire protection industry by offering quality design and installation services for your fire sprinkler needs. We begin by building relationships that secure the trust of customers within the common understanding that we are only successful if our customers are successful.',
 					},
@@ -81,7 +81,7 @@ module.exports = {
 					c5: {
 						description: 'Located in Belleville, NJ we are centrally located to offer all of New Jersey quality fire sprinkler design and installation services. Please call us today for your Fire Protection needs.',
 					},
-					c6: { image: require('../../assets/images/pages/index/welcome.webp'), },
+					c6: { image: require('../../assets/media/pages/index/our-service.jpg'), },
 				},
 			},
 		},
@@ -92,12 +92,12 @@ module.exports = {
 		r1: {
 			c1: {
 				images: [
-					require('../../assets/images/affiliates/affiliation-afsa.png'),
-					require('../../assets/images/affiliates/affiliation-fssa.png'),
-					require('../../assets/images/affiliates/affiliation-icc.png'),
-					require('../../assets/images/affiliates/affiliation-nfpa.png'),
-					require('../../assets/images/affiliates/affiliation-nicet.png'),
-					require('../../assets/images/affiliates/affiliation-osha.png'),
+					require('../../assets/media/affiliates/affiliation-afsa.png'),
+					require('../../assets/media/affiliates/affiliation-fssa.png'),
+					require('../../assets/media/affiliates/affiliation-icc.png'),
+					require('../../assets/media/affiliates/affiliation-nfpa.png'),
+					require('../../assets/media/affiliates/affiliation-nicet.png'),
+					require('../../assets/media/affiliates/affiliation-osha.png'),
 				],
 			},
 		},

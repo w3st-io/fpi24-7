@@ -19,7 +19,7 @@
 	export default {
 		props: {
 			imgURL: {
-				default: require('../../assets/images/default-parallax.jpg'),
+				default: require('../../assets/media/default-parallax.jpg'),
 			},
 
 			height: {

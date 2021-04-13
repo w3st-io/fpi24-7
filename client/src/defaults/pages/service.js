@@ -1,19 +1,19 @@
 // [EXPORT] //
 module.exports = {
-	parallaxImg: require('../../assets/images/pages/service/parallax.jpg'),
+	parallaxImg: require('../../assets/media/pages/service/parallax.jpg'),
 
 	r1: {
 		c1: {
 			title: 'Fire sprinklers save lives and property. Be sure your systems are maintained and serviced by qualified licensed professionals.',
 			description: 'We provide an array of services including repair, maintenance, testing,  and quarterly and annual inspections. Our service crews are certified professionals in their field and we\'re on call 24 hours a day 7 days a week.',
 		},
-		c2: { image: require('../../assets/images/pages/service/service.webp'), },
+		c2: { image: require('../../assets/media/pages/service/service.webp'), },
 	},
 
 	r2: { c1: { title: 'Service/Inspections' }, },
 
 	r3: {
-		c1: { image: require('../../assets/images/pages/design/fpd.webp'), },
+		c1: { image: require('../../assets/media/pages/design/fpd.webp'), },
 		c2: {
 			title: 'Maintenance & Repair',
 			description: '24/7 Fire Protection Inc., prides itself on quality service and repair with prompt courteous service. We provide a variety of inspection services geared toward the continued maintenance and operation of your facility\'s fire sprinkler systems. We provide pump tests, system testing, backflow certification and inspections. We provide computer generated reports for all tests and inspections. We are vested in helping you maintain your investment.',
@@ -46,7 +46,7 @@ module.exports = {
 				'Coordination meetings',
 			],
 		},
-		c2: { image: require('../../assets/images/pages/installs/facility.webp'), },
+		c2: { image: require('../../assets/media/pages/installs/facility.webp'), },
 	},
 
 	r5: {

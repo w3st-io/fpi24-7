@@ -7,39 +7,39 @@ module.exports = {
 	r3: {
 		cx: [
 			{
-				image: require('../../assets/images/pages/gallery/shadowbrook-shrewsbury-nj.jpg'),
+				image: require('../../assets/media/pages/gallery/shadowbrook-shrewsbury-nj.jpg'),
 				description: 'Shadowbrook Shrewsbury NJ', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/1.jpg'),
+				image: require('../../assets/media/pages/gallery/1.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/2.jpg'),
+				image: require('../../assets/media/pages/gallery/2.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/3.jpg'),
+				image: require('../../assets/media/pages/gallery/3.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/mcgowan-cliffside-park-nj.jpg'),
+				image: require('../../assets/media/pages/gallery/mcgowan-cliffside-park-nj.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/4.jpg'),
+				image: require('../../assets/media/pages/gallery/4.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/group-shot.jpg'),
+				image: require('../../assets/media/pages/gallery/group-shot.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/small-group.jpg'),
+				image: require('../../assets/media/pages/gallery/small-group.jpg'),
 				description: '', 
 			},
 			{
-				image: require('../../assets/images/pages/gallery/workers.jpg'),
+				image: require('../../assets/media/pages/gallery/workers.jpg'),
 				description: '', 
 			},
 		],

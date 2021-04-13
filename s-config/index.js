@@ -38,7 +38,6 @@ module.exports = {
 
 	// [STRIPE] //
 	STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || '',
-	STRIPE_INVOICE_CHARGE_PRICE_ID: process.env.STRIPE_INVOICE_CHARGE_PRICE_ID || '',
 
 	// [SECRET] //
 	SECRET_KEY: process.env.SECRET_KEY || 'secret',
