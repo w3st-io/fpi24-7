@@ -13,23 +13,23 @@
 			<!-- viewer -->
 			<viewer :options="{ title: false, transition: false, }">
 				<!-- [R2] data-aos="fade-up" -->
-				<BRow class="mb-3">
+				<BRow class="mb-2">
 					<BCol
 						v-for="(col, i) in defaultData.r2.cx"
 						:key="i"
 						cols="12" sm="6" md="4" lg="3" xl="3"
-						class="mb-3"
+						class="mb-2 px-2 py-0"
 						
 					>
 						<img
 							v-lazy="col.image"
 							:src="col.image"
 							alt="No Photo"
-							class="w-100"
+							class="w-100 mb-2"
 							style="height: 300px; object-fit: cover;"
 						>
 					
-						<p class="h6 text-center mt-4">
+						<p class="h6 text-center">
 							{{ col.description }}
 							<span class="text-white">.</span>
 						</p>
