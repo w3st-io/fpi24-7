@@ -7,66 +7,26 @@
 			v-show="sideMenuOpen"
 			variant="primary"
 			class="w-100 mb-3 p-4 text-light"
-			@click="closeMenu"
+			@click="closeMenu()"
 		><XIcon size="36" /></BButton>
 
-		<BButton
+		<RouterLink
 			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="home()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Home</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="about()"
-		><span aria-hidden="true" style="font-size: 1.5em;">About</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="design()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Design</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="installs()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Installs</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="service()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Service</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="careers()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Careers</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="gallery()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Gallery</span></BButton>
-
-		<BButton
-			v-show="sideMenuOpen"
-			variant="outline-seconadry"
-			class="w-100 p-2 text-primary"
-			@click="contactUs()"
-		><span aria-hidden="true" style="font-size: 1.5em;">Contact Us</span></BButton>
+			v-for="(button, i) in buttons"
+			:key="i"
+			:to="button.path"
+		>
+			<!-- Menu Items -->
+			<BButton
+				variant="outline-seconadry"
+				class="w-100 text-primary"
+				@click="closeMenu()"
+			>
+				<p v-if="button.text" class="h1 my-1">{{ button.text }}</p>
+				<span v-else v-html="button.sideMenuIcon"></span>
+			</BButton>
+		</RouterLink>
 		
-
 		<SocialMediaPlug v-show="sideMenuOpen" size="48" class="my-3" />
 	</nav>
 </template>
@@ -78,6 +38,7 @@
 	// [IMPORT] Personal //
 	import router from '../../router'
 	import SocialMediaPlug from '../SocialMediaPlug'
+	import buttons from '@/defaults/pageLinks'
 
 	// [EXPORT] //
 	export default {
@@ -95,7 +56,8 @@
 
 		data() {
 			return {
-				query: ''
+				query: '',
+				buttons: buttons,
 			}
 		},
 

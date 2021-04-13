@@ -27,68 +27,18 @@
 					</RouterLink>
 
 					<div class="mb-3 d-none d-md-block text-center">
-						<RouterLink to="/about">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>About</BButton>
-						</RouterLink>
 
-						<RouterLink to="/design">
+						<RouterLink
+							v-for="(button, i) in buttons"
+							:key="i"
+							:to="button.path"
+						>
+							<!-- Menu Items -->
 							<BButton
 								variant="primary"
 								size="sm"
 								class="font-weight-bold mx-2"
-							>Design</BButton>
-						</RouterLink>
-
-						<RouterLink to="/installs">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Installs</BButton>
-						</RouterLink>
-
-						<RouterLink to="/service">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Service</BButton>
-						</RouterLink>
-
-						<RouterLink to="/careers">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Careers</BButton>
-						</RouterLink>
-
-						<RouterLink to="/gallery">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Gallery</BButton>
-						</RouterLink>
-
-						<RouterLink to="/contact-us">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Contact Us</BButton>
-						</RouterLink>
-
-						<RouterLink to="/pay-invoice">
-							<BButton
-								variant="primary"
-								size="sm"
-								class="font-weight-bold mx-2"
-							>Pay Invoice</BButton>
+							>{{ button.text }}</BButton>
 						</RouterLink>
 					</div>
 				</BCol>
@@ -128,8 +78,9 @@
 
 	// [IMPORT] Personal //
 	import SideMenu from '@/components/nav/SideMenu'
-	import companyInfo from '@/defaults/companyInfo'
 	import SocialMediaPlug from '@/components/SocialMediaPlug'
+	import companyInfo from '@/defaults/companyInfo'
+	import buttons from '@/defaults/pageLinks'
 
 	export default {
 		components: {
@@ -143,7 +94,8 @@
 				companyInfo: companyInfo,
 				loggedIn: false,
 				decoded: {},
-				sideMenuOpen: false
+				sideMenuOpen: false,
+				buttons: buttons,
 			}
 		},
 
