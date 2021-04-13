@@ -29,7 +29,7 @@
 							style="height: 300px; object-fit: cover;"
 						>
 					
-						<p class="h6 text-center">
+						<p v-if="col.description" class="h6 text-center">
 							{{ col.description }}
 							<span class="text-white">.</span>
 						</p>
