@@ -7,7 +7,7 @@
 
 * PORT = < Set by heroku >
 
-* MONG_URI = blah
+* MONGO_URI = blah
 
 * EMAIL_SERVICE = example
 * EMAIL = john@example.com

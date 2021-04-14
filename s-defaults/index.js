@@ -4,6 +4,6 @@ const config = require('../s-config')
 module.exports = [
 	{
 		title: 'starter-code',
-		database: config.MONG_URI
+		database: config.MONGO_URI
 	}
 ]

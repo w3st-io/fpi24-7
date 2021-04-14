@@ -19,7 +19,7 @@ module.exports = {
 	PORT: process.env.PORT || 5000,
 	
 	// [MONGODB] //
-	MONG_URI: process.env.MONGO_URI || 'mongodb://localhost:27017/fpi24-7',
+	MONGO_URI: process.env.MONGO_URI || 'mongodb://localhost:27017/fpi24-7',
 	
 	// [EMAIL] //
 	EMAIL_SERVICE: process.env.EMAIL_SERVICE || '',
