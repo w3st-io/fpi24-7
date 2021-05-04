@@ -109,7 +109,9 @@
 				console.log('MailService.s_getQuote:', mObj)
 
 				if (mObj.status) { router.push({ name: 'email-sent' }) }
-				else { this.error = mObj.message }
+				else {
+					this.error = `${mObj.message} - PLEASE CONTACT: jcastillo@24-7fireprotection.com`
+				}
 
 				this.loading = false
 			}
