@@ -2,9 +2,13 @@
 	<BContainer class="nav-spacer my-4">
 		<BCard bg-variant="none" class="shadow">
 			<BRow>
-				<BCol cols="12" class="mb-3">
-					<h1 class="text-center text-primary">Pay Your Invoice</h1>
+				<BCol cols="12" md="8" class="">
+					<h1 class="text-primary">Pay Your Invoice</h1>
 				</BCol>
+
+					<BCol cols="12" md="4" class="text-center text-md-right">
+						<img :src="image" style="max-width: 200px;">
+					</BCol>
 
 				<!-- Invoice Number -->
 				<BCol cols="12" class="mb-3">
@@ -126,6 +130,7 @@
 	export default {
 		data() {
 			return {
+				image: require('../../assets/media/pages/pay-invoice/accepted-payments.png'),
 				invoiceNumber: '',
 				balance: '',
 
