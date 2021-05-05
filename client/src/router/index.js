@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 // [IMPORT] Personal //
 import index from '../pages'
 import about from '../pages/about'
+import billBoard from '../pages/billboard'
 import careers from '../pages/careers'
 import careers_apply from '../pages/careers/apply'
 import contactUs from '../pages/contact-us'
@@ -43,6 +44,16 @@ const router = new VueRouter({
 			meta: {
 				auth: true,
 				title: 'About'
+			},
+		},
+		// About //
+		{
+			path: '/billboard',
+			name: 'billboard',
+			component: billBoard,
+			meta: {
+				auth: true,
+				title: 'Bill Board'
 			},
 		},
 		// Careers //

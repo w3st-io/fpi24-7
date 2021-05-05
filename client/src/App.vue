@@ -1,13 +1,13 @@
 <template>
 	<div id="app" :key="appKey" class="bg-light">
 		<!-- Navbar -->
-		<NavBar />
+		<NavBar v-if="showNav" />
 
 		<!-- Router -->
 		<RouterView :key="$route.name + ($route.params.id || '')" />
 
 		<!-- Footer -->
-		<Footer />
+		<Footer v-if="showNav" />
 
 		<!-- Socket -->
 		<Socket />
@@ -36,6 +36,15 @@
 			}
 		},
 
+		computed: {
+			showNav() {
+				if (
+					this.$route.name + (this.$route.params.id || '') == 'billboard'
+				) { return false }
+				else { return true }
+			},
+		},
+
 		async created() {
 			this.forceRerender()
 
@@ -53,8 +62,6 @@
 			async setNodeEnv() {
 				try {
 					this.reqData = await Service.index()
-
-					console.log('reqData:', this.reqData)
 
 					if (this.reqData.status) {
 						localStorage.setItem('node_env', this.reqData.node_env)

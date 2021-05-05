@@ -1,6 +1,7 @@
 // [EXPORT] //
 module.exports = {
 	companyLogo: require('../assets/media/logo.png'),
+	companyBigLogo: require('../assets/media/fpi-big-logo.jpg'),
 	companyName: '24/7 Fire Protection Inc.',
 	companyCaption: 'Commercial &#8226; Residential &#8226; Industrial',
 
