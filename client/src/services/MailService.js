@@ -36,7 +36,7 @@ async function s_getQuote({ subject, type, clientEmail, name, message }) {
 		return {
 			executed: false,
 			status: false,
-			error: `MailService: Error --> ${err}`,
+			message: `MailService: Error --> ${err}`,
 		}
 	}
 }
@@ -52,7 +52,7 @@ async function s_careers(formData) {
 		return {
 			executed: false,
 			status: false,
-			error: `MailService: Error --> ${err}`,
+			message: `MailService: Error --> ${err}`,
 		}
 	}
 }
