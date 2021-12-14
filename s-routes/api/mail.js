@@ -103,7 +103,7 @@ router.post(
 					req.body.position == 'installers'
 				)
 			) {
-				// [MAIL-UTIL] //
+				// [MAIL-UTIL] WITH ATTACHMENT //
 				if (req.file) {
 					const mObj = await mailerUtil.sendCareersEmail({
 						subject: req.body.subject,
@@ -151,6 +151,7 @@ router.post(
 						})
 					}
 				}
+				// [MAIL-UTIL] WITHOUT ATTACHMENT //
 				else {
 					const mObj = await mailerUtil.sendCareersEmail({
 						subject: req.body.subject,
